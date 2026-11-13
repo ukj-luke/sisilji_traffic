@@ -1,3 +1,0 @@
-policy,objective_j,terminal_vehicles,terminal_uninserted,arrived,teleports,collisions,recommendations,abstentions,relative_j_change_vs_fixed,demand_sha256
-fixed,33020.0,0,0,267,0,0,0,0,0.0,d0e7f7d95edce3b886201cf666e649aa468b14aa2b9d57f4191de6848c00c090
-recommended,32684.0,0,0,267,0,0,1,0,-0.01017565112053301,d0e7f7d95edce3b886201cf666e649aa468b14aa2b9d57f4191de6848c00c090
