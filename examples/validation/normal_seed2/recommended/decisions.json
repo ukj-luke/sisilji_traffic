@@ -1,0 +1,1890 @@
+[
+  {
+    "cutoff": 580,
+    "apply_at": 600,
+    "planning_end": 840,
+    "horizon_cycles": 2,
+    "state": {
+      "observed_at": 580,
+      "queues": [
+        2,
+        3,
+        4,
+        0
+      ],
+      "capacities": [
+        38,
+        25,
+        38,
+        25
+      ],
+      "downstream_counts": [
+        5,
+        0,
+        5,
+        1
+      ],
+      "downstream_capacities": [
+        38,
+        25,
+        38,
+        25
+      ],
+      "cycles": [
+        {
+          "inflow": [
+            1,
+            4,
+            9,
+            7
+          ],
+          "residual_queues": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "green_no_discharge": [
+            false,
+            false,
+            true,
+            false
+          ],
+          "queues_end": [
+            1,
+            3,
+            4,
+            0
+          ]
+        },
+        {
+          "inflow": [
+            4,
+            6,
+            10,
+            7
+          ],
+          "residual_queues": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "green_no_discharge": [
+            true,
+            false,
+            true,
+            false
+          ],
+          "queues_end": [
+            1,
+            4,
+            5,
+            1
+          ]
+        },
+        {
+          "inflow": [
+            11,
+            8,
+            10,
+            12
+          ],
+          "residual_queues": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "green_no_discharge": [
+            true,
+            false,
+            true,
+            false
+          ],
+          "queues_end": [
+            6,
+            3,
+            5,
+            0
+          ]
+        },
+        {
+          "inflow": [
+            7,
+            8,
+            8,
+            2
+          ],
+          "residual_queues": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "green_no_discharge": [
+            true,
+            false,
+            true,
+            false
+          ],
+          "queues_end": [
+            2,
+            5,
+            3,
+            0
+          ]
+        }
+      ],
+      "valid_fraction": 1.0,
+      "signal_complete": true,
+      "state_valid": true
+    },
+    "observed_route_rates": {
+      "eastbound": 0.06666666666666667,
+      "westbound": 0.08333333333333333,
+      "A_ns": 0.041666666666666664,
+      "A_sn": 0.03611111111111111,
+      "B_ns": 0.06111111111111111,
+      "B_sn": 0.058333333333333334,
+      "C_ns": 0.058333333333333334,
+      "C_sn": 0.03888888888888889
+    },
+    "planning_seed": 10000,
+    "planning_samples": [
+      {
+        "sample_id": "scale0.8-arrival0",
+        "scale": 0.8,
+        "request_count": 83,
+        "sha256": "a23c68927b406950d5bc37c5e3127f52c84e6788419564456bfc22db02b118b4"
+      },
+      {
+        "sample_id": "scale0.8-arrival1",
+        "scale": 0.8,
+        "request_count": 98,
+        "sha256": "727d33013b4db5134bf50818d47f205de5d4370f1872aa7440f2d3b8224708e8"
+      },
+      {
+        "sample_id": "scale0.8-arrival2",
+        "scale": 0.8,
+        "request_count": 78,
+        "sha256": "9712bd01611bd8ee1d0f4958b7340ac2c3a0af6eeb2feae6203e5f3e35515a1f"
+      },
+      {
+        "sample_id": "scale1.0-arrival0",
+        "scale": 1.0,
+        "request_count": 102,
+        "sha256": "c7580e81e7d5dba5a8ca0dc6c79db2c0d4b7772aafe962047d49b4e03bba49a0"
+      },
+      {
+        "sample_id": "scale1.0-arrival1",
+        "scale": 1.0,
+        "request_count": 123,
+        "sha256": "ca08a0c272cf7091b45baa8ec219b700a7b0ca5b4b57cbac698a23058506bcdd"
+      },
+      {
+        "sample_id": "scale1.0-arrival2",
+        "scale": 1.0,
+        "request_count": 106,
+        "sha256": "cff2106a6a66741656e1fba17421600de9b078ed9744112cbb1f478339fbd98d"
+      },
+      {
+        "sample_id": "scale1.2-arrival0",
+        "scale": 1.2,
+        "request_count": 120,
+        "sha256": "05642580dcc55233ade8c536229ba0e8f0f2f306fd28692d7ffb11459143c561"
+      },
+      {
+        "sample_id": "scale1.2-arrival1",
+        "scale": 1.2,
+        "request_count": 139,
+        "sha256": "2c7efbe936e5c629ef55576a9be8c93fa6df13df45db35c1ac4a9ce2a29361f7"
+      },
+      {
+        "sample_id": "scale1.2-arrival2",
+        "scale": 1.2,
+        "request_count": 125,
+        "sha256": "d12de67fc0c99b403ff320008d7ab2485fdfd172ed940ba1944daf211d1d987f"
+      }
+    ],
+    "candidate_ids": [
+      "baseline",
+      "p1_to_p2",
+      "p1_to_p4",
+      "p2_to_p1",
+      "p2_to_p3"
+    ],
+    "evaluations": [
+      {
+        "candidate_id": "baseline",
+        "samples": [
+          {
+            "sample_id": "scale0.8-arrival0",
+            "objective_j": 11884.0,
+            "terminal_vehicles": 39,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              3,
+              7,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival1",
+            "objective_j": 12905.0,
+            "terminal_vehicles": 41,
+            "terminal_uninserted": 1,
+            "terminal_queues": [
+              3,
+              7,
+              2,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival2",
+            "objective_j": 11387.0,
+            "terminal_vehicles": 33,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              0,
+              4,
+              4,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival0",
+            "objective_j": 13130.0,
+            "terminal_vehicles": 57,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              4,
+              4,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival1",
+            "objective_j": 14992.0,
+            "terminal_vehicles": 54,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              4,
+              4,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival2",
+            "objective_j": 14248.0,
+            "terminal_vehicles": 57,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              0,
+              5,
+              7,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival0",
+            "objective_j": 15501.0,
+            "terminal_vehicles": 52,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              5,
+              2,
+              2,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival1",
+            "objective_j": 17189.0,
+            "terminal_vehicles": 58,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              6,
+              3,
+              3,
+              1
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival2",
+            "objective_j": 16011.0,
+            "terminal_vehicles": 61,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              8,
+              5,
+              3,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "p1_to_p2",
+        "samples": [
+          {
+            "sample_id": "scale0.8-arrival0",
+            "objective_j": 11908.0,
+            "terminal_vehicles": 39,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              3,
+              7,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival1",
+            "objective_j": 13007.0,
+            "terminal_vehicles": 42,
+            "terminal_uninserted": 1,
+            "terminal_queues": [
+              3,
+              7,
+              2,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival2",
+            "objective_j": 11559.0,
+            "terminal_vehicles": 35,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              0,
+              4,
+              4,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival0",
+            "objective_j": 13151.0,
+            "terminal_vehicles": 57,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              4,
+              4,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival1",
+            "objective_j": 15080.0,
+            "terminal_vehicles": 55,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              4,
+              4,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival2",
+            "objective_j": 14274.0,
+            "terminal_vehicles": 57,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              0,
+              5,
+              7,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival0",
+            "objective_j": 15733.0,
+            "terminal_vehicles": 55,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              5,
+              2,
+              2,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival1",
+            "objective_j": 17346.0,
+            "terminal_vehicles": 60,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              6,
+              3,
+              3,
+              1
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival2",
+            "objective_j": 16098.0,
+            "terminal_vehicles": 62,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              8,
+              5,
+              3,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "p1_to_p4",
+        "samples": [
+          {
+            "sample_id": "scale0.8-arrival0",
+            "objective_j": 12065.0,
+            "terminal_vehicles": 42,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              3,
+              7,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival1",
+            "objective_j": 13049.0,
+            "terminal_vehicles": 44,
+            "terminal_uninserted": 1,
+            "terminal_queues": [
+              3,
+              7,
+              2,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival2",
+            "objective_j": 11716.0,
+            "terminal_vehicles": 38,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              0,
+              4,
+              4,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival0",
+            "objective_j": 13221.0,
+            "terminal_vehicles": 60,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              4,
+              4,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival1",
+            "objective_j": 15130.0,
+            "terminal_vehicles": 58,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              4,
+              4,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival2",
+            "objective_j": 14324.0,
+            "terminal_vehicles": 60,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              0,
+              5,
+              7,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival0",
+            "objective_j": 15759.0,
+            "terminal_vehicles": 58,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              5,
+              2,
+              2,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival1",
+            "objective_j": 17501.0,
+            "terminal_vehicles": 63,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              6,
+              3,
+              3,
+              1
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival2",
+            "objective_j": 16270.0,
+            "terminal_vehicles": 65,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              8,
+              5,
+              3,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "p2_to_p1",
+        "samples": [
+          {
+            "sample_id": "scale0.8-arrival0",
+            "objective_j": 12022.0,
+            "terminal_vehicles": 39,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              3,
+              7,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival1",
+            "objective_j": 12899.0,
+            "terminal_vehicles": 41,
+            "terminal_uninserted": 1,
+            "terminal_queues": [
+              3,
+              7,
+              2,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival2",
+            "objective_j": 11383.0,
+            "terminal_vehicles": 33,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              0,
+              4,
+              4,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival0",
+            "objective_j": 13160.0,
+            "terminal_vehicles": 57,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              4,
+              4,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival1",
+            "objective_j": 15127.0,
+            "terminal_vehicles": 54,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              4,
+              4,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival2",
+            "objective_j": 14270.0,
+            "terminal_vehicles": 57,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              0,
+              5,
+              7,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival0",
+            "objective_j": 15495.0,
+            "terminal_vehicles": 52,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              5,
+              2,
+              2,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival1",
+            "objective_j": 17444.0,
+            "terminal_vehicles": 58,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              6,
+              3,
+              3,
+              1
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival2",
+            "objective_j": 16247.0,
+            "terminal_vehicles": 61,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              8,
+              5,
+              3,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "p2_to_p3",
+        "samples": [
+          {
+            "sample_id": "scale0.8-arrival0",
+            "objective_j": 11971.0,
+            "terminal_vehicles": 39,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              3,
+              7,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival1",
+            "objective_j": 12885.0,
+            "terminal_vehicles": 41,
+            "terminal_uninserted": 1,
+            "terminal_queues": [
+              3,
+              7,
+              2,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival2",
+            "objective_j": 11479.0,
+            "terminal_vehicles": 33,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              0,
+              4,
+              4,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival0",
+            "objective_j": 13110.0,
+            "terminal_vehicles": 57,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              4,
+              4,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival1",
+            "objective_j": 15093.0,
+            "terminal_vehicles": 54,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              4,
+              4,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival2",
+            "objective_j": 14228.0,
+            "terminal_vehicles": 57,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              0,
+              5,
+              7,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival0",
+            "objective_j": 15481.0,
+            "terminal_vehicles": 52,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              5,
+              2,
+              2,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival1",
+            "objective_j": 17413.0,
+            "terminal_vehicles": 58,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              6,
+              3,
+              3,
+              1
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival2",
+            "objective_j": 16223.0,
+            "terminal_vehicles": 61,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              8,
+              5,
+              3,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          }
+        ]
+      }
+    ],
+    "elapsed_seconds": 8.453939040999103,
+    "deadline_seconds": 20,
+    "timed_out": false,
+    "decision": {
+      "status": "keep",
+      "candidate_id": "baseline",
+      "greens": [
+        30,
+        20,
+        30,
+        20
+      ],
+      "reason": "no candidate passes all configured planning gates",
+      "diagnoses": [
+        {
+          "cause": "inflow_surge",
+          "directions": [
+            "north"
+          ],
+          "evidence": [
+            "north: latest inflow 8 > 1.2 × preceding 3-cycle mean 6; queue 3 → 5"
+          ],
+          "evidence_id": "inflow_surge:north:580"
+        }
+      ],
+      "assessments": [
+        {
+          "candidate_id": "p1_to_p2",
+          "accepted": false,
+          "reasons": [
+            "scale1.2-arrival0: terminal active vehicle count exceeds allowance",
+            "mean paired relative-J improvement below configured minimum"
+          ],
+          "mean_relative_change": 0.0070951859884727025,
+          "worst_relative_change": 0.015104944234653552
+        },
+        {
+          "candidate_id": "p1_to_p4",
+          "accepted": false,
+          "reasons": [
+            "scale0.8-arrival0: terminal active vehicle count exceeds allowance",
+            "scale0.8-arrival1: terminal active vehicle count exceeds allowance",
+            "scale0.8-arrival2: J deterioration exceeds limit",
+            "scale0.8-arrival2: terminal active vehicle count exceeds allowance",
+            "scale1.0-arrival0: terminal active vehicle count exceeds allowance",
+            "scale1.0-arrival1: terminal active vehicle count exceeds allowance",
+            "scale1.0-arrival2: terminal active vehicle count exceeds allowance",
+            "scale1.2-arrival0: terminal active vehicle count exceeds allowance",
+            "scale1.2-arrival1: terminal active vehicle count exceeds allowance",
+            "scale1.2-arrival2: terminal active vehicle count exceeds allowance",
+            "mean paired relative-J improvement below configured minimum"
+          ],
+          "mean_relative_change": 0.014191435372631518,
+          "worst_relative_change": 0.028892596820936155
+        },
+        {
+          "candidate_id": "p2_to_p1",
+          "accepted": false,
+          "reasons": [
+            "mean paired relative-J improvement below configured minimum"
+          ],
+          "mean_relative_change": 0.005868624910484929,
+          "worst_relative_change": 0.014835068939438013
+        },
+        {
+          "candidate_id": "p2_to_p3",
+          "accepted": false,
+          "reasons": [
+            "mean paired relative-J improvement below configured minimum"
+          ],
+          "mean_relative_change": 0.004738067570725955,
+          "worst_relative_change": 0.013240896883392668
+        }
+      ]
+    }
+  },
+  {
+    "cutoff": 700,
+    "apply_at": 720,
+    "planning_end": 960,
+    "horizon_cycles": 2,
+    "state": {
+      "observed_at": 700,
+      "queues": [
+        3,
+        2,
+        5,
+        1
+      ],
+      "capacities": [
+        38,
+        25,
+        38,
+        25
+      ],
+      "downstream_counts": [
+        5,
+        0,
+        5,
+        2
+      ],
+      "downstream_capacities": [
+        38,
+        25,
+        38,
+        25
+      ],
+      "cycles": [
+        {
+          "inflow": [
+            4,
+            6,
+            10,
+            7
+          ],
+          "residual_queues": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "green_no_discharge": [
+            true,
+            false,
+            true,
+            false
+          ],
+          "queues_end": [
+            1,
+            4,
+            5,
+            1
+          ]
+        },
+        {
+          "inflow": [
+            11,
+            8,
+            10,
+            12
+          ],
+          "residual_queues": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "green_no_discharge": [
+            true,
+            false,
+            true,
+            false
+          ],
+          "queues_end": [
+            6,
+            3,
+            5,
+            0
+          ]
+        },
+        {
+          "inflow": [
+            7,
+            8,
+            8,
+            2
+          ],
+          "residual_queues": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "green_no_discharge": [
+            true,
+            false,
+            true,
+            false
+          ],
+          "queues_end": [
+            2,
+            5,
+            3,
+            0
+          ]
+        },
+        {
+          "inflow": [
+            7,
+            5,
+            9,
+            4
+          ],
+          "residual_queues": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "green_no_discharge": [
+            true,
+            false,
+            true,
+            true
+          ],
+          "queues_end": [
+            2,
+            5,
+            4,
+            1
+          ]
+        }
+      ],
+      "valid_fraction": 1.0,
+      "signal_complete": true,
+      "state_valid": true
+    },
+    "observed_route_rates": {
+      "eastbound": 0.06111111111111111,
+      "westbound": 0.08611111111111111,
+      "A_ns": 0.04722222222222222,
+      "A_sn": 0.03888888888888889,
+      "B_ns": 0.058333333333333334,
+      "B_sn": 0.05,
+      "C_ns": 0.058333333333333334,
+      "C_sn": 0.03888888888888889
+    },
+    "planning_seed": 10100,
+    "planning_samples": [
+      {
+        "sample_id": "scale0.8-arrival0",
+        "scale": 0.8,
+        "request_count": 84,
+        "sha256": "8986f950a800be5e15138ef278b09ba84d1b847116a85292dc2b148a7f9eb63d"
+      },
+      {
+        "sample_id": "scale0.8-arrival1",
+        "scale": 0.8,
+        "request_count": 99,
+        "sha256": "64058acb7484ea2c6739a406b2801347a133ba9396b78528796bc24e8d73d08e"
+      },
+      {
+        "sample_id": "scale0.8-arrival2",
+        "scale": 0.8,
+        "request_count": 111,
+        "sha256": "5e408f30f0343188a6db3bf70284a5f42188963bfc7e9fec38fd808a68196bee"
+      },
+      {
+        "sample_id": "scale1.0-arrival0",
+        "scale": 1.0,
+        "request_count": 109,
+        "sha256": "a5333ac0bf5eff9068178fe9de0e0f392226a90402951f4f1b311aa52cd8b160"
+      },
+      {
+        "sample_id": "scale1.0-arrival1",
+        "scale": 1.0,
+        "request_count": 112,
+        "sha256": "bea296dfd6a02aa5038ff7720412fb91dd671f23a58bb717f737d3067eec42d4"
+      },
+      {
+        "sample_id": "scale1.0-arrival2",
+        "scale": 1.0,
+        "request_count": 134,
+        "sha256": "32261b4f8a29e867fa7dacb47e820f635432c58ab4099d0132ff3c3d497e2b57"
+      },
+      {
+        "sample_id": "scale1.2-arrival0",
+        "scale": 1.2,
+        "request_count": 139,
+        "sha256": "81d5f2b7a3c6532de6e9e49c8cee64d8d2e632505d342a0eda2f78bc18895d22"
+      },
+      {
+        "sample_id": "scale1.2-arrival1",
+        "scale": 1.2,
+        "request_count": 143,
+        "sha256": "258b53971d97f51106d3088f49f33da27ec1dbdbe348731404e1df6d11d26ae8"
+      },
+      {
+        "sample_id": "scale1.2-arrival2",
+        "scale": 1.2,
+        "request_count": 155,
+        "sha256": "c0c1a7f86f64bd30ea5b6ff05cb91c5cc94af80a882c8053db475c1ad58a6692"
+      }
+    ],
+    "candidate_ids": [
+      "baseline",
+      "p1_to_p2",
+      "p1_to_p4",
+      "p2_to_p1",
+      "p2_to_p3"
+    ],
+    "evaluations": [
+      {
+        "candidate_id": "baseline",
+        "samples": [
+          {
+            "sample_id": "scale0.8-arrival0",
+            "objective_j": 12535.0,
+            "terminal_vehicles": 34,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              4,
+              5,
+              1,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival1",
+            "objective_j": 14076.0,
+            "terminal_vehicles": 41,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              1,
+              6,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival2",
+            "objective_j": 15992.0,
+            "terminal_vehicles": 62,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              8,
+              4,
+              8,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival0",
+            "objective_j": 14184.0,
+            "terminal_vehicles": 53,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              2,
+              4,
+              6,
+              1
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival1",
+            "objective_j": 13828.0,
+            "terminal_vehicles": 57,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              5,
+              3,
+              2,
+              1
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival2",
+            "objective_j": 17126.0,
+            "terminal_vehicles": 58,
+            "terminal_uninserted": 1,
+            "terminal_queues": [
+              10,
+              3,
+              5,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival0",
+            "objective_j": 16713.0,
+            "terminal_vehicles": 66,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              4,
+              13,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival1",
+            "objective_j": 17646.0,
+            "terminal_vehicles": 64,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              0,
+              9,
+              11,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival2",
+            "objective_j": 18344.0,
+            "terminal_vehicles": 68,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              6,
+              4,
+              6,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "p1_to_p2",
+        "samples": [
+          {
+            "sample_id": "scale0.8-arrival0",
+            "objective_j": 12567.0,
+            "terminal_vehicles": 34,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              4,
+              5,
+              1,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival1",
+            "objective_j": 14178.0,
+            "terminal_vehicles": 42,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              1,
+              6,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival2",
+            "objective_j": 16028.0,
+            "terminal_vehicles": 62,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              8,
+              4,
+              8,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival0",
+            "objective_j": 14210.0,
+            "terminal_vehicles": 53,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              2,
+              4,
+              6,
+              1
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival1",
+            "objective_j": 13844.0,
+            "terminal_vehicles": 57,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              5,
+              3,
+              2,
+              1
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival2",
+            "objective_j": 17153.0,
+            "terminal_vehicles": 58,
+            "terminal_uninserted": 1,
+            "terminal_queues": [
+              10,
+              3,
+              5,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival0",
+            "objective_j": 16715.0,
+            "terminal_vehicles": 66,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              4,
+              13,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival1",
+            "objective_j": 17675.0,
+            "terminal_vehicles": 64,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              0,
+              9,
+              11,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival2",
+            "objective_j": 18380.0,
+            "terminal_vehicles": 68,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              6,
+              4,
+              6,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "p1_to_p4",
+        "samples": [
+          {
+            "sample_id": "scale0.8-arrival0",
+            "objective_j": 12278.0,
+            "terminal_vehicles": 35,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              4,
+              5,
+              1,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival1",
+            "objective_j": 14033.0,
+            "terminal_vehicles": 45,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              1,
+              6,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival2",
+            "objective_j": 15768.0,
+            "terminal_vehicles": 65,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              8,
+              4,
+              10,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival0",
+            "objective_j": 13944.0,
+            "terminal_vehicles": 56,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              2,
+              4,
+              6,
+              1
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival1",
+            "objective_j": 13553.0,
+            "terminal_vehicles": 60,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              5,
+              3,
+              2,
+              1
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival2",
+            "objective_j": 17005.0,
+            "terminal_vehicles": 61,
+            "terminal_uninserted": 1,
+            "terminal_queues": [
+              10,
+              3,
+              5,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival0",
+            "objective_j": 16667.0,
+            "terminal_vehicles": 69,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              4,
+              13,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival1",
+            "objective_j": 17399.0,
+            "terminal_vehicles": 67,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              0,
+              9,
+              11,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival2",
+            "objective_j": 18104.0,
+            "terminal_vehicles": 71,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              6,
+              4,
+              6,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "p2_to_p1",
+        "samples": [
+          {
+            "sample_id": "scale0.8-arrival0",
+            "objective_j": 12565.0,
+            "terminal_vehicles": 34,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              4,
+              5,
+              1,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival1",
+            "objective_j": 14071.0,
+            "terminal_vehicles": 41,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              1,
+              6,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival2",
+            "objective_j": 16004.0,
+            "terminal_vehicles": 62,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              8,
+              4,
+              8,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival0",
+            "objective_j": 14199.0,
+            "terminal_vehicles": 53,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              2,
+              4,
+              6,
+              1
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival1",
+            "objective_j": 13838.0,
+            "terminal_vehicles": 57,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              5,
+              3,
+              2,
+              1
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival2",
+            "objective_j": 17127.0,
+            "terminal_vehicles": 58,
+            "terminal_uninserted": 1,
+            "terminal_queues": [
+              10,
+              3,
+              5,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival0",
+            "objective_j": 16869.0,
+            "terminal_vehicles": 66,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              4,
+              13,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival1",
+            "objective_j": 17644.0,
+            "terminal_vehicles": 64,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              0,
+              9,
+              11,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival2",
+            "objective_j": 18375.0,
+            "terminal_vehicles": 68,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              6,
+              4,
+              6,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "p2_to_p3",
+        "samples": [
+          {
+            "sample_id": "scale0.8-arrival0",
+            "objective_j": 12199.0,
+            "terminal_vehicles": 34,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              4,
+              5,
+              1,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival1",
+            "objective_j": 13856.0,
+            "terminal_vehicles": 41,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              1,
+              6,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale0.8-arrival2",
+            "objective_j": 15656.0,
+            "terminal_vehicles": 62,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              8,
+              4,
+              8,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival0",
+            "objective_j": 13848.0,
+            "terminal_vehicles": 53,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              2,
+              4,
+              6,
+              1
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival1",
+            "objective_j": 13492.0,
+            "terminal_vehicles": 57,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              5,
+              3,
+              2,
+              1
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.0-arrival2",
+            "objective_j": 16905.0,
+            "terminal_vehicles": 58,
+            "terminal_uninserted": 1,
+            "terminal_queues": [
+              10,
+              3,
+              5,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival0",
+            "objective_j": 16610.0,
+            "terminal_vehicles": 66,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              3,
+              4,
+              13,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival1",
+            "objective_j": 17310.0,
+            "terminal_vehicles": 64,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              0,
+              9,
+              11,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          },
+          {
+            "sample_id": "scale1.2-arrival2",
+            "objective_j": 18008.0,
+            "terminal_vehicles": 68,
+            "terminal_uninserted": 0,
+            "terminal_queues": [
+              6,
+              4,
+              6,
+              0
+            ],
+            "teleports": 0,
+            "collisions": 0
+          }
+        ]
+      }
+    ],
+    "elapsed_seconds": 8.540885708000133,
+    "deadline_seconds": 20,
+    "timed_out": false,
+    "decision": {
+      "status": "recommend",
+      "candidate_id": "p2_to_p3",
+      "greens": [
+        30,
+        15,
+        35,
+        20
+      ],
+      "reason": "passes paired planning gates; minimum worst relative J, then mean and ID",
+      "diagnoses": [
+        {
+          "cause": "unknown",
+          "directions": [],
+          "evidence": [
+            "congestion is observed but no implemented cause rule is supported"
+          ],
+          "evidence_id": "unexplained:700"
+        }
+      ],
+      "assessments": [
+        {
+          "candidate_id": "p1_to_p2",
+          "accepted": false,
+          "reasons": [
+            "mean paired relative-J improvement below configured minimum"
+          ],
+          "mean_relative_change": 0.0022602913786253296,
+          "worst_relative_change": 0.007246376811594203
+        },
+        {
+          "candidate_id": "p1_to_p4",
+          "accepted": false,
+          "reasons": [
+            "scale0.8-arrival1: terminal active vehicle count exceeds allowance",
+            "scale0.8-arrival2: terminal active vehicle count exceeds allowance",
+            "scale1.0-arrival0: terminal active vehicle count exceeds allowance",
+            "scale1.0-arrival1: terminal active vehicle count exceeds allowance",
+            "scale1.0-arrival2: terminal active vehicle count exceeds allowance",
+            "scale1.2-arrival0: terminal active vehicle count exceeds allowance",
+            "scale1.2-arrival1: terminal active vehicle count exceeds allowance",
+            "scale1.2-arrival2: terminal active vehicle count exceeds allowance"
+          ],
+          "mean_relative_change": -0.01236339260014959,
+          "worst_relative_change": -0.0027523484712499253
+        },
+        {
+          "candidate_id": "p2_to_p1",
+          "accepted": false,
+          "reasons": [
+            "mean paired relative-J improvement below configured minimum"
+          ],
+          "mean_relative_change": 0.0017264652452224042,
+          "worst_relative_change": 0.009334051337282354
+        },
+        {
+          "candidate_id": "p2_to_p3",
+          "accepted": true,
+          "reasons": [],
+          "mean_relative_change": -0.018650784559457775,
+          "worst_relative_change": -0.006162867229103093
+        }
+      ]
+    }
+  }
+]

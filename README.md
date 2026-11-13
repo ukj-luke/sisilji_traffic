@@ -4,6 +4,60 @@
 
 설계 기준일  2026년 11월 13일
 
+## 초기 모델 구현 및 실행
+
+이 저장소에는 아래 설계서의 첫 실행 모델이 포함되어 있다. 실제 둔대교차로가 아닌 **가상 A–B–C 도로축**이며, 초기 추천기는 학습 데이터가 필요 없는 설명 가능한 규칙·제약 검사·SUMO 후보 비교로 동작한다. 영상 AI·학습형 예측 모델과 실제 신호기 연계는 아직 구현하지 않았다.
+
+**초기 구현에 외부 데이터셋은 필요하지 않다.** 코드가 도로망, 신호 계획, 차량 출발 요청을 생성한다. 이후 현장 검증에는 실제 차로 연결·시간대별 회전 교통량·실행 신호 로그·대기행렬 자료가 필요하다. 실제 영상은 영상 계측기를 추가할 때 확보한다.
+
+### 빠른 실행
+
+Python 3.10 이상에서 저장소 루트 기준으로 실행한다. SUMO 1.28.0 실행 파일과 TraCI는 프로젝트 의존성으로 설치된다.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
+python -m sisilji_traffic demo --out runs/demo
+python -m unittest discover -s tests -v
+```
+
+Windows에서는 가상환경 활성화 명령을 `.venv\Scripts\activate`로 바꾼다. SUMO와 Python 사이의 로컬 TCP 연결이 필요하다. macOS에서 SUMO 실행 파일의 추가 시스템 라이브러리가 필요하면 [공식 설치 문서](https://eclipse.dev/sumo/docs/Downloads.html)를 따른다.
+
+실행 결과는 `runs/demo/report.html`, `summary.json`, `metrics.csv`와 정책별 `decisions.json`·`history.csv`에 저장된다. HTML은 브라우저에서 열어 고정 신호 대비 J 변화와 종료 차량·미진입 대기를 비교할 수 있다. `network/`에는 netconvert 입력 XML과 생성된 SUMO 도로망이, `realized_demand.json`에는 평가 전용 실제 가상 수요가 저장된다.
+
+```bash
+# 추천 판단 1회로 기능 확인
+python -m sisilji_traffic demo --decisions 1 --out runs/quick
+
+# 동일 수요 시드의 고정 신호·추천 정책 반복 비교
+python -m sisilji_traffic benchmark --seeds 1 2 --decisions 2 \
+  --scenarios normal imbalanced downstream --policies fixed recommended \
+  --out runs/benchmark
+
+# 평가 지평에 대한 민감도 검토: 모든 비교 정책에 동일 조건 적용
+python -m sisilji_traffic demo --horizon-cycles 4 --out runs/horizon4
+```
+
+기본 실행은 `fixed`, `no_diagnosis`, `recommended`를 비교한다. `full_search`는 9개 허용 후보 전체를 평가하는 참조 정책이다. 모두 같은 실현 출발 요청을 사용하며 정책별 상태를 독립적으로 발전시킨다. `normal`·`imbalanced`·`surge`·`downstream`은 합성 수요 생성 조건이다. `downstream`은 C의 교차 수요를 높인 스트레스 조건이며 병목 원인이 확정된 정답 라벨은 아니다.
+
+### 구현 범위
+
+| 구성 | 현재 동작 |
+| --- | --- |
+| 도로망 | 신호교차로 3개, 중심 간 300m, 방향별 1차로·직진 전용 |
+| 신호 | W·N·E·S 순서, 녹색 30·20·30·20초 + 각 황색 3초·전적색 2초, 총 120초 |
+| 변경 대상 | B의 녹색 배분만 변경, A/C 프로그램·옵셋은 고정 |
+| 추천 | 최근 완료 주기 관측 → 원인 후보 → 최대 5개 후보 → 9개 계획 수요로 비교 → 추천·유지·보류 |
+| 검증 | 미진입·미완료 수요를 포함한 누적 차량초 J, 종료 잔여량, B 방향별 행렬, 충돌·텔레포트 |
+| 결과 | 입력·코드 해시, 후보별 표본 지표·탈락 근거, 계산시간과 적용 시각, HTML·JSON·CSV |
+
+기본 `--deadline-seconds 20`은 가상 계산 예산이다. 계산이 늦거나 품질·악화 조건을 만족하지 못하면 추천하지 않는다. 예산과 하드웨어에 따라 보류 여부가 달라질 수 있다. 다른 예산을 사용할 경우 비교 정책에도 같은 값을 사용하고, 실제 20초 내 동작을 달성한 것으로 표현하지 않는다.
+
+[구현 상세와 데이터·지표 정의](docs/initial-model.md) · [실제로 실행한 예제 결과](examples/validation/README.md)
+
+---
+
 ## 사업 제안
 
 영상·교통량·신호 자료에서 교통 상태와 병목 원인 후보를 파악하고, 운영 제약을 충족하는 대안을 비교해 담당자에게 추천하는 소프트웨어를 개발한다. 시흥시의 교통·ITS 업무 부서와 관리 대상이 명확한 공기업을 고객 후보로 삼는다. 기관의 기존 계측·관제체계에 자료 입력과 결과 모듈로 연결하는 제품을 지향한다.

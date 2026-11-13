@@ -1,0 +1,47 @@
+{
+  "interpretation": "Negative paired J difference favors proposed policy. Small synthetic samples are exploratory; no field claim.",
+  "comparisons": [
+    {
+      "scenario": "downstream",
+      "policy": "recommended",
+      "runs": 2,
+      "paired_j_differences": [
+        0.0,
+        0.0
+      ],
+      "mean_j_difference": 0.0,
+      "ci95_student_t_approx": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "scenario": "imbalanced",
+      "policy": "recommended",
+      "runs": 2,
+      "paired_j_differences": [
+        -687.0,
+        0.0
+      ],
+      "mean_j_difference": -343.5,
+      "ci95_student_t_approx": [
+        -4708.0109999999995,
+        4021.0109999999995
+      ]
+    },
+    {
+      "scenario": "normal",
+      "policy": "recommended",
+      "runs": 2,
+      "paired_j_differences": [
+        0.0,
+        -336.0
+      ],
+      "mean_j_difference": -168.0,
+      "ci95_student_t_approx": [
+        -2302.6079999999997,
+        1966.6079999999997
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "package_version": "0.1.0",
+  "source_sha256": {
+    "__init__.py": "61036ddda888483500a9a0530010a8e8489075476df776675ed5778df9b96974",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "cli.py": "b06fe4c8aaa7bae5df21affe96160da14ec9000529d82a4cd5d82dd2c08b40f8",
+    "demand.py": "aff1bab2405253f678e86b0e3b6cf405bda17c16ff0514962282eab95ace3836",
+    "experiment.py": "4f18c15a29f46181e60377ab6d982c3798f291e91020246f26298310b5b7b8f5",
+    "network.py": "5779b4d28f25e713e2e90543723d89ff2b26b1ec6a45975c39be0ad45c9d2e66",
+    "planner.py": "f3c9e5b8b66345bd28d7a2561707af83d85fa28c5f663ce1dfc96d1bfeae2208",
+    "simulation.py": "d1d5f6fa9e137f1d89ad670c8c343321c7ebe2ac52508726982e58ed94c011dd"
+  },
+  "signal_config": {
+    "reference": [
+      30,
+      20,
+      30,
+      20
+    ],
+    "min_green": 15,
+    "max_green": 45,
+    "transfer": 5,
+    "yellow": 3,
+    "all_red": 2,
+    "max_candidates": 5,
+    "min_valid_fraction": 0.9,
+    "min_mean_improvement": 0.01,
+    "max_sample_deterioration": 0.02,
+    "terminal_vehicle_allowance": 2.0,
+    "direction_queue_factor": 1.1,
+    "direction_queue_allowance": 2.0
+  },
+  "sumo_version": [
+    22,
+    "SUMO 1.28.0"
+  ],
+  "assumptions": {
+    "data": "synthetic, not measured Dundae data",
+    "state_initialization": "full SUMO state with known active routes",
+    "movements": "straight-only; one protected approach per green",
+    "controlled_signal": "B only; A/C identical across policies",
+    "forecast": "past completed external request counts, not realized future",
+    "pedestrians_buses_turns": "not modeled",
+    "evaluation_window": [
+      480,
+      1200
+    ],
+    "clearance_seconds": 240,
+    "field_effect": "not evaluated"
+  },
+  "config": {
+    "scenario": "imbalanced",
+    "seed": 2,
+    "duration": 1200,
+    "demand_duration": 960,
+    "decisions": 2,
+    "planning_seed": 10000,
+    "deadline_seconds": 20,
+    "policies": [
+      "fixed",
+      "recommended"
+    ],
+    "horizon_cycles": 2
+  },
+  "demand_sha256": "cc44ff491c35b6db419fe426edeb0b6ae50ba323b4b1fded012ca8830cf296b1",
+  "scheduled_requests": 421,
+  "results": [
+    {
+      "policy": "fixed",
+      "demand_sha256": "cc44ff491c35b6db419fe426edeb0b6ae50ba323b4b1fded012ca8830cf296b1",
+      "metrics": {
+        "objective_j": 40433.0,
+        "terminal_vehicles": 11,
+        "terminal_uninserted": 0,
+        "terminal_queues": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "teleports": 0,
+        "collisions": 0,
+        "arrived": 272,
+        "departed": 227,
+        "scheduled": 421,
+        "time": 1200
+      },
+      "decisions": 0,
+      "recommendations": 0,
+      "abstentions": 0,
+      "decision_log": "fixed/decisions.json",
+      "relative_j_change_vs_fixed": 0.0
+    },
+    {
+      "policy": "recommended",
+      "demand_sha256": "cc44ff491c35b6db419fe426edeb0b6ae50ba323b4b1fded012ca8830cf296b1",
+      "metrics": {
+        "objective_j": 40433.0,
+        "terminal_vehicles": 11,
+        "terminal_uninserted": 0,
+        "terminal_queues": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "teleports": 0,
+        "collisions": 0,
+        "arrived": 272,
+        "departed": 227,
+        "scheduled": 421,
+        "time": 1200
+      },
+      "decisions": 2,
+      "recommendations": 0,
+      "abstentions": 0,
+      "decision_log": "recommended/decisions.json",
+      "relative_j_change_vs_fixed": 0.0
+    }
+  ]
+}

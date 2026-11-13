@@ -1,0 +1,10 @@
+<!doctype html><html lang="ko"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SUMO 초기 모델 비교 결과</title><style>
+body{font:16px/1.65 system-ui,sans-serif;max-width:1100px;margin:50px auto;padding:0 24px;color:#173047}
+table{border-collapse:collapse;width:100%}th,td{border:1px solid #cbd5df;padding:10px;text-align:right}
+th:first-child,td:first-child{text-align:left}th{background:#eaf0f5}code{word-break:break-all}
+</style><h1>가상 교차로 3개 · 신호 배분 비교</h1>
+<p>실측 둔대교차로의 효과가 아닌 합성 실험 결과입니다. J는 도로망 안 차량과 예정시각을 지난 미삽입 차량의 누적 차량초입니다. 감소가 개선이며 종료 잔여량도 함께 확인해야 합니다.</p>
+<table><thead><tr><th>정책</th><th>J (차량초)</th><th>고정 대비 변화</th><th>종료 차량</th><th>미삽입</th><th>추천</th><th>보류</th></tr></thead><tbody><tr><td>fixed</td><td>33,020</td><td>+0.00%</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>recommended</td><td>32,684</td><td>-1.02%</td><td>0</td><td>0</td><td>1</td><td>0</td></tr></tbody></table>
+<p>같은 실현 수요를 사용하며 각 정책은 자신의 상태로 진화합니다. 완료 차량만의 평균으로 효과를 계산하지 않습니다. 상세 근거·가상 임계값·수요 해시는 JSON에 기록됩니다.</p><p><a href="summary.json">전체 요약</a> · <a href="metrics.csv">지표 CSV</a></p></html>
