@@ -1,0 +1,89 @@
+{
+  "video": "../../assets/now-0937.mp4",
+  "source": "system/backend/engine/green_split.py Movement.sat_headway and system/backend/dundae_case.py service_times in the local project",
+  "scope": "이미 방출 중인 한 차로. 첫 실제 통과 시각으로 정렬하고 차량이 계속 대기한다고 가정한 모형의 통과 간격만 비교. 녹색 시작, 실제 포화 여부, 초기 대기열과 수요는 관측되지 않음.",
+  "raw_pts_windows_seconds": [
+    [
+      1.4,
+      1.8
+    ],
+    [
+      3.6,
+      4.0
+    ],
+    [
+      6.0,
+      6.4
+    ],
+    [
+      8.2,
+      8.6
+    ],
+    [
+      10.8,
+      11.2
+    ],
+    [
+      13.8,
+      14.2
+    ],
+    [
+      15.8,
+      16.2
+    ],
+    [
+      18.2,
+      18.6
+    ]
+  ],
+  "excluded": "첫 프레임에서 앞범퍼가 이미 정지선을 넘은 차량",
+  "lanes": 1,
+  "model_headway_s": 2.0,
+  "comparison_time_s": 15,
+  "predicted_cumulative": 7,
+  "observed_cumulative": 6,
+  "signed_error_vehicles": 1,
+  "first_to_eighth_observed_s_range": [
+    16.4,
+    17.2
+  ],
+  "first_to_eighth_model_s": 14.0,
+  "observed_mean_gap_s_range": [
+    2.343,
+    2.457
+  ],
+  "model_cumulative_crossing_windows_s": [
+    [
+      1.4,
+      1.8
+    ],
+    [
+      3.4,
+      3.8
+    ],
+    [
+      5.4,
+      5.8
+    ],
+    [
+      7.4,
+      7.8
+    ],
+    [
+      9.4,
+      9.8
+    ],
+    [
+      11.4,
+      11.8
+    ],
+    [
+      13.4,
+      13.8
+    ],
+    [
+      15.4,
+      15.8
+    ]
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "rule": "short-window-rule.json",
+  "scenes": [
+    {
+      "scene": "0937",
+      "sha256": "80e2510491f228b4d31341092320277ed9066461a2899bf9483eae2b6b3fa1bf",
+      "frame_start": 30,
+      "start_pts_s": 0.972889,
+      "frame_end": 465,
+      "end_pts_s": 15.470178,
+      "q0": 2,
+      "predicted": 2,
+      "qend": 2,
+      "signed_error": 0,
+      "abs_error": 0,
+      "inbound": 0,
+      "outbound": 0,
+      "extra": "정지 2대의 큰 차체 패치가 양 중심 ±15프레임 전부 노면 대비 (0,0) 픽셀 이동. 중앙분리대 옆 차로만."
+    },
+    {
+      "scene": "0943",
+      "sha256": "a9c63d09df71c1b253318c9f8ef5e81d8d823c0664b3f0dc6bd05e79ba5c5ddf",
+      "frame_start": 30,
+      "start_pts_s": 1.132144,
+      "frame_end": 465,
+      "end_pts_s": 15.628644,
+      "q0": 0,
+      "predicted": 0,
+      "qend": 2,
+      "signed_error": -2,
+      "abs_error": 2,
+      "inbound": 1,
+      "outbound": 0,
+      "extra": "첫 은색차는 F30에 이미 고정 구간 안에서 주행 중. 흰 차 1대만 F30~465 중 상류선으로 진입. 두 차량이 각각 정지한 뒤 F465 양쪽 0.5초에서 차체 무변위."
+    },
+    {
+      "scene": "0949",
+      "sha256": "b82c9d540578fa1efaa95578105a241dc9870c3d42bf3c2ec7f39191e7375ea2",
+      "frame_start": 30,
+      "start_pts_s": 0.973644,
+      "frame_end": 465,
+      "end_pts_s": 15.470011,
+      "q0": 8,
+      "predicted": 8,
+      "qend": 1,
+      "signed_error": 7,
+      "abs_error": 7,
+      "extra": "초기 선두 승용 4대와 파란 버스 및 세 뒤따르는 자동차의 앞범퍼가 고정 구간. 최종 흰 승용차 한 대만 정지 기준. 버스 뒤 세 대는 방출 시 간격이 벌어지는 원본 연속 프레임과 대조했다. 직전과 직후 0.5초를 합친 1초 동안 남은 흰 차는 차체 윤곽 0픽셀·앞쪽 세부 0~1픽셀, 그 앞 회색차 약 3픽셀, 흰차 약 4픽셀 전진."
+    }
+  ],
+  "duplicate_visits": {
+    "0939": "0937",
+    "0941": "0937",
+    "0945": "0943",
+    "0947": "0943"
+  },
+  "n": 3,
+  "sum_absolute_error": 9,
+  "mae": 3.0
+}

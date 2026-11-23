@@ -21,7 +21,7 @@ import {
 } from 'lucide-react'
 import { Dialog, SiteDialog } from './Dialogs'
 import { MapPanel } from './MapPanel'
-import { Simulation } from './Simulation'
+import { isSimulationHash, Simulation } from './Simulation'
 import { districts, displayName, siteNumber, type Intersection } from './types'
 import './style.css'
 
@@ -66,8 +66,13 @@ function Clock() {
     </div>
   )
 }
+function screenFromHash(): 'ops' | 'catalog' | 'sim' {
+  if (isSimulationHash(window.location.hash)) return 'sim'
+  if (window.location.hash === '#catalog') return 'catalog'
+  return 'ops'
+}
 function App() {
-  const [screen, setScreen] = useState<'ops' | 'catalog' | 'sim'>('ops')
+  const [screen, setScreen] = useState(screenFromHash)
   const [sites, setSites] = useState<Intersection[]>([])
   const [loadState, setLoadState] = useState<'loading' | 'ready' | 'error'>(
     'loading',
@@ -122,8 +127,17 @@ function App() {
     setActive(site.id)
     setDetail(site)
   }
+  useEffect(() => {
+    function handleNavigation() {
+      setScreen(screenFromHash())
+      window.scrollTo({ top: 0, behavior: 'instant' })
+    }
+    window.addEventListener('hashchange', handleNavigation)
+    return () => window.removeEventListener('hashchange', handleNavigation)
+  }, [])
   function go(next: typeof screen) {
-    setScreen(next)
+    const hashes = { ops: '', catalog: '#catalog', sim: '#simulation/dundae' }
+    window.location.hash = hashes[next]
     window.scrollTo({ top: 0, behavior: 'instant' })
   }
   const isSim = screen === 'sim'
@@ -270,7 +284,7 @@ function App() {
             </h1>
             <p>
               {isSim
-                ? '가상 교차로의 교통 수요를 바꾸고 현시별 녹색시간을 비교해 보세요.'
+                ? '실제 조사표와 모형 계산을 대조하고, 같은 교통 수요에서 고정 신호와 자동 배분을 비교합니다.'
                 : catalog
                   ? '중부권 스마트교차로를 검색하고 교차로별 상세 정보를 확인하세요.'
                   : '시흥시 중부권의 스마트교차로 위치와 CCTV 연계 현황을 확인하세요.'}

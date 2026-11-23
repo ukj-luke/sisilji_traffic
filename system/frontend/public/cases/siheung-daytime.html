@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>시흥 교차로 · 주간 영상과 시간대별 교통량</title>
+<style>
+:root{color-scheme:light;--ink:#102d33;--muted:#485e65;--line:#d6e2e0;--accent:#066955;--pale:#eaf5f0}
+*{box-sizing:border-box}
+body{margin:0;background:#f3f7f6;color:var(--ink);font:1rem/1.65 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all}
+main,header>div{max-width:940px;margin:auto}
+header{background:#153d41;color:white;padding:2.3rem 1.3rem}
+h1,h2,h3,p{margin:0}
+h1{font-size:clamp(1.85rem,4vw,2.8rem);letter-spacing:-.04em;line-height:1.3}
+header p{color:#daebe7;margin-top:.65rem}
+main{padding:1.4rem 1.1rem 3rem}
+section{background:white;border:1px solid var(--line);border-radius:15px;padding:clamp(1rem,3vw,1.85rem);margin-bottom:1.1rem}
+h2{font-size:clamp(1.3rem,3vw,1.65rem);letter-spacing:-.025em}
+h3{font-size:1rem;margin:1.25rem 0 .5rem}
+.meta{font-size:.9rem;color:var(--muted);margin:.15rem 0 1rem}
+a{color:var(--accent);text-underline-offset:.18em}
+.links{display:flex;flex-wrap:wrap;gap:.35rem 1.2rem;margin-top:.8rem;font-size:.92rem}
+.action{display:inline-block;background:var(--accent);color:white;font-weight:650;text-decoration:none;border-radius:7px;padding:.45rem .9rem}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #d37c11;outline-offset:3px}
+details{border-top:1px solid var(--line);margin-top:1rem;padding-top:.65rem}
+summary{font-weight:650;cursor:pointer;color:var(--accent)}
+.note{color:var(--muted);margin:.7rem 0}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin:.8rem 0}
+th,td{text-align:left;border-bottom:1px solid var(--line);padding:.45rem .5rem}
+th{font-size:.88rem;color:var(--muted)}
+.result{border-left:4px solid var(--accent);background:var(--pale);padding:.8rem 1rem;margin:1rem 0}
+.times{display:grid;grid-template-columns:repeat(6,1fr);gap:.4rem}
+.times button{appearance:none;background:white;border:1px solid #b9c9c7;color:var(--ink);text-align:center;border-radius:8px;padding:.65rem .15rem;cursor:pointer;font:inherit;font-size:.9rem;font-variant-numeric:tabular-nums}
+.times button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:white}
+.times b{display:block;font-size:1.05rem}
+.period{display:flex;align-items:baseline;justify-content:space-between;margin:1.15rem 0 .6rem;gap:.6rem;flex-wrap:wrap}
+.period h3{margin:0}.period strong{font-size:1.5rem}
+.bar-row{display:grid;grid-template-columns:7.3rem 1fr 3.2rem;align-items:center;gap:.65rem;padding:.22rem 0;font-variant-numeric:tabular-nums;font-size:.94rem}
+.bar-row i{background:#edf2f0;border-radius:3px;display:block;overflow:hidden}
+.bar-row i span{display:block;height:10px;background:#27816d}
+.bar-row b{text-align:right}
+#movements{display:flex;flex-wrap:wrap;gap:.3rem 1rem}
+#movements span{white-space:nowrap}
+@media (max-width:620px){.times{grid-template-columns:repeat(3,1fr)}main{padding:1rem .65rem}header{padding:1.5rem 1rem}.bar-row{grid-template-columns:6.6rem 1fr 3rem;gap:.4rem}th,td{padding:.45rem .25rem}}
+</style>
+</head>
+<body>
+<header><div><h1>시흥 교차로의 낮 시간 교통</h1><p>보도2교의 주간 주행 영상과 시청입구 삼거리의 출근·점심·퇴근 조사 기록</p></div></header>
+<main>
+<section aria-labelledby="video-title">
+<h2 id="video-title">보도2교에서 신호가 바뀌는 장면</h2>
+<p class="meta">마유로 시흥창업센터 앞 · 정왕역 방면 · 시그널리포트 주간 주행 영상</p>
+<a class="action" href="https://www.youtube.com/watch?v=_KkSoxwJvFM&amp;t=47s" target="_blank" rel="noopener noreferrer">원본 영상 00:47부터 보기</a>
+<p class="note">화면 중앙의 검은 SUV와 오른쪽 흰 SUV를 보세요. 아래 시각은 영상 재생 위치입니다. 촬영한 시·분은 확인되지 않습니다.</p>
+<table>
+<thead><tr><th scope="col">영상 위치</th><th scope="col">정왕역 방면에서 보이는 움직임</th></tr></thead>
+<tbody>
+<tr><td><a href="https://www.youtube.com/watch?v=_KkSoxwJvFM&amp;t=47s" target="_blank" rel="noopener noreferrer">00:47</a></td><td>전방 적색. 오른쪽 차로 정지선 앞의 선두 자리는 비어 있습니다.</td></tr>
+<tr><td><a href="https://www.youtube.com/watch?v=_KkSoxwJvFM&amp;t=48s" target="_blank" rel="noopener noreferrer">00:48~00:52</a></td><td>오른쪽에서 흰 SUV 한 대가 들어와 정지선 앞에 멈춥니다.</td></tr>
+<tr><td><a href="https://www.youtube.com/watch?v=_KkSoxwJvFM&amp;t=58s" target="_blank" rel="noopener noreferrer">00:58</a></td><td>적색이 계속되고 같은 흰 SUV가 선두 자리에서 대기합니다.</td></tr>
+<tr><td><a href="https://www.youtube.com/watch?v=_KkSoxwJvFM&amp;t=72s" target="_blank" rel="noopener noreferrer">01:12.5~01:12.7</a></td><td>정왕역 방면 신호가 적색에서 원형 녹색으로 바뀝니다.</td></tr>
+<tr><td><a href="https://www.youtube.com/watch?v=_KkSoxwJvFM&amp;t=74s" target="_blank" rel="noopener noreferrer">01:14.0~01:14.4</a></td><td>중앙 차로 선두의 검은 SUV가 움직이기 시작합니다.</td></tr>
+<tr><td><a href="https://www.youtube.com/watch?v=_KkSoxwJvFM&amp;t=75s" target="_blank" rel="noopener noreferrer">01:15.5~01:16.0</a></td><td>검은 SUV의 뒷부분이 정지선을 완전히 지나갑니다. 이어지는 장면에서 직진을 확인할 수 있습니다.</td></tr>
+</tbody></table>
+<p class="result" id="queue-result" aria-live="polite"></p>
+<p><strong>녹색 직후 중앙 차로</strong> · 이 검은 SUV 한 대의 정지선 통과 완료 시각은 영상 판독 01:15.5~01:16.0, 모형 01:15.5~01:15.7입니다. 01:15에 아직 통과를 마치지 않은 표본 차량은 관측과 모형 모두 1대, 01:16에는 모두 0대입니다.</p>
+<details><summary>실측과 계산을 어떻게 대조했나요?</summary>
+<p class="note">정지선 바로 뒤, 흰 SUV 한 대가 선 자리를 관측 범위로 정했습니다. 00:47의 초기 대수와 이후 들어온 차량을 모형에 입력하고, 적색 동안 그 차가 정지선 앞에 머문다고 가정했습니다. 00:58의 관측값은 계산 후 대조에만 사용했습니다. 수기 판독 한 지점·한 시각이므로 혼잡도나 자동 배분의 효과를 평가할 수 있는 표본은 아닙니다.</p>
+<p class="note">검은 SUV는 녹색이 켜지기 전부터 서 있던 중앙 차로의 선두 차량입니다. 프로젝트의 차량 통과 계산을 1개 차로에 적용해 출발 손실 2초, 차량 간격 2초, 첫 통과를 첫 간격의 중간으로 잡았습니다. 녹색 전환 시각의 양 끝에 각각 3초를 더해 예측 범위를 구했습니다. 검은 SUV가 실제로 움직이거나 통과한 시각은 이 계산에 쓰지 않았습니다. 영상의 1초를 계산상의 1초로 두었고 실제 촬영 배속은 확인되지 않았습니다.</p>
+<p class="note">주행 차량이 먼저 교차로를 벗어나 이 방향의 녹색 종료 시점과 뒤쪽 대기열 끝은 보이지 않습니다. 전 방향·신호별 잔류 대수와 그 예측 오차는 미확인입니다.</p>
+<div class="links"><a href="https://www.data.go.kr/data/15090289/fileData.do" target="_blank" rel="noopener noreferrer">시흥시 스마트교차로 목록 · 보도2교</a><a href="https://startup.sida.kr/about/location/location" target="_blank" rel="noopener noreferrer">시흥창업센터 위치</a></div>
+</details>
+</section>
+<section aria-labelledby="survey-title">
+<h2 id="survey-title">시청입구 삼거리의 시간대별 통과 차량</h2>
+<p class="meta">국토교통부 교통영향평가 조사 · 2024년 3월 29일 금요일 · 맑음</p>
+<p>조사한 여섯 시간 중 하나를 선택하면 15분마다 몇 대가 지나갔는지 볼 수 있습니다.</p>
+<h3>조사 시간대</h3><div id="hours" class="times" role="group" aria-label="조사 시간대"></div>
+<div aria-live="polite" aria-atomic="true">
+<div class="period"><h3 id="period-title"></h3><strong id="period-total"></strong></div>
+<div id="quarters"></div>
+</div>
+<details><summary>진행방향 코드별 합계와 신호 시간</summary>
+<p class="note">선택한 한 시간의 통과 대수를 원표의 진행방향 코드 순으로 표시합니다.</p>
+<div id="movements"></div>
+<p class="note">여섯 시간대 모두 1·2·3현시의 녹색은 각각 56·41·44초, 황색은 각 4초입니다. 공개 표에는 방향 코드와 현시를 연결하는 도면, 각 녹색이 끝날 때의 차량 대기열이 없습니다.</p>
+</details>
+<div class="links"><a href="https://tia.molit.go.kr/search/businessCrsrdView.do?bsns_id=2210015054&amp;strct_id=221001505402&amp;examin_dd=2024-03-29" target="_blank" rel="noopener noreferrer">국토교통부 교통량 원표</a><a href="https://tia.molit.go.kr/search/businessGeoView.do?bsns_id=2210015054&amp;strct_id=221001505402&amp;examin_dd=2024-03-29" target="_blank" rel="noopener noreferrer">현시별 녹색·황색 조사표</a></div>
+</section>
+<nav aria-label="관련 화면" id="localnav" hidden>
+<div class="links"><a href="/#simulation/sincheon">07·09·10시 신천사거리 영상 비교</a><a href="/cases/sincheon-morning-20261123.html">11월 23일 신천사거리 출근시간 CCTV 관측</a><a href="/#simulation" id="back">시뮬레이션 화면으로 돌아가기</a></div>
+</nav>
+</main>
+<script>
+const survey = [
+  {hour:7, quarters:[169,193,212,255], movements:[89,169,0,0,0,0,0,177,118,128,0,148]},
+  {hour:8, quarters:[251,335,380,334], movements:[228,272,0,0,0,0,0,234,188,152,0,226]},
+  {hour:12, quarters:[161,193,203,193], movements:[119,127,0,0,0,0,0,183,105,106,0,110]},
+  {hour:13, quarters:[210,198,184,235], movements:[124,119,0,0,0,0,0,208,147,112,0,117]},
+  {hour:17, quarters:[331,331,318,313], movements:[214,374,0,0,0,0,0,261,147,121,0,176]},
+  {hour:18, quarters:[344,362,308,288], movements:[212,312,0,0,0,0,0,286,180,138,0,174]}
+];
+const sum = values => values.reduce((total,n) => total+n,0);
+const format = value => value.toLocaleString('ko-KR');
+const clock = (hour,minute) => String(hour+Math.floor(minute/60)).padStart(2,'0')+':'+String(minute%60).padStart(2,'0');
+const select = id => document.getElementById(id);
+const maximum = Math.max(...survey.flatMap(row=>row.quarters));
+const period = row => clock(row.hour,0)+'~'+clock(row.hour+1,0);
+const timeButtons = survey.map((row,index)=>{
+  const button=document.createElement('button');
+  button.type='button';
+  button.innerHTML=period(row)+'<b>'+format(sum(row.quarters))+'대</b>';
+  button.onclick=()=>show(index);
+  select('hours').append(button);
+  return button;
+});
+function show(index){
+  const row=survey[index];
+  timeButtons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));
+  select('period-title').textContent=period(row)+' · 15분별 통과 대수';
+  select('period-total').textContent=format(sum(row.quarters))+'대';
+  select('quarters').innerHTML=row.quarters.map((count,n)=>{
+    const label=clock(row.hour,15*n)+'~'+clock(row.hour,15*(n+1));
+    return '<div class="bar-row"><span>'+label+'</span><i aria-hidden="true"><span style="width:'+100*count/maximum+'%"></span></i><b>'+count+'대</b></div>';
+  }).join('');
+  select('movements').innerHTML=row.movements.map((count,n)=>'<span>코드 '+(n+1)+' · '+count+'대</span>').join('');
+}
+// Replay observed arrivals during the red segment. Keep the end count out of the model.
+const redSegment = { start:47, end:58, initial:0, arrivals:[48] };
+const observedAtEnd = 1;
+const predictedAtEnd = redSegment.initial + redSegment.arrivals.filter(t=>t>redSegment.start && t<=redSegment.end).length;
+select('queue-result').textContent='00:58 오른쪽 차로 선두 자리 · 영상 관측 '+observedAtEnd+'대 / 적색 구간 모형 '+predictedAtEnd+'대 / 차이 '+Math.abs(predictedAtEnd-observedAtEnd)+'대';
+if(location.protocol!=='file:') select('localnav').hidden=false;
+show(1);
+</script>
+</body></html>

@@ -9,7 +9,9 @@ from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from .engine import GreenSplitController, Movement, MovementMeasure, Phase
+from .engine import GreenSplitController, MovementMeasure
+from .engine.evaluation import PHASES, cycle_rng, evaluate, generate_arrivals, observe_cycle, serve_cycle
+from .field_validation import validate_field_csv
 
 SYSTEM = Path(__file__).resolve().parents[1]
 app = FastAPI(title="시흥 교통관제")
@@ -18,10 +20,6 @@ DISTRICTS = {
     "월곶동": (7, 37, 38, 45, 46, 82), "군자동": (5, 72), "장곡동": (31,),
     "능곡동": (10,), "연성동": (33, 52, 60), "목감동": (14, 15, 16, 53, 83),
 }
-PHASES = [
-    Phase(key, (Movement(key, lanes=lanes),), plan_green=green, min_green=15, max_green=45)
-    for key, lanes, green in [("P1", 2, 30), ("P2", 1, 20), ("P3", 2, 30), ("P4", 1, 20)]
-]
 PLAN = tuple(p.plan_green for p in PHASES)
 
 
@@ -96,6 +94,70 @@ def advance(data: CycleInput):
             "mean": [ctl.mean_arrivals.get(k) for k in keys],
             "weights": [decision.weights[k] for k in keys], "limits": [decision.bound_hits.get(k) for k in keys],
             "fallback": decision.fallback, "oversaturated": decision.oversaturated}
+
+
+VehicleCount = Annotated[int, Field(strict=True, ge=0, le=1000000)]
+InitialCount = Annotated[int, Field(strict=True, ge=0, le=1000)]
+Seed = Annotated[int, Field(strict=True, ge=0, le=2147483647)]
+Condition = Literal["normal", "blocked", "missing"]
+
+
+class EventCycleInput(BaseModel):
+    rates: tuple[Rate, Rate, Rate, Rate]
+    residual: tuple[VehicleCount, VehicleCount, VehicleCount, VehicleCount]
+    current: Greens = PLAN
+    mean: tuple[Count | None, Count | None, Count | None, Count | None] | None = None
+    mode: Literal["auto", "fixed"]
+    condition: Condition = "normal"
+    seed: Seed = 42
+    cycle: Annotated[int, Field(strict=True, ge=0, le=1000000)] = 0
+
+
+@app.post("/api/simulation/trace-step")
+def trace_step(data: EventCycleInput):
+    validate_greens(data.current)
+    keys = [p.id for p in PHASES]
+    greens = PLAN if data.mode == "fixed" else data.current
+    arrivals = generate_arrivals(data.rates, cycle_rng(data.seed, 0, data.cycle))
+    departures = serve_cycle(data.residual, arrivals, greens, data.condition)
+    ctl = GreenSplitController(PHASES)
+    ctl.current = dict(zip(keys, greens))
+    if data.mean is not None:
+        ctl.mean_arrivals = {k: v for k, v in zip(keys, data.mean) if v is not None}
+    next_plan = ctl.step(observe_cycle(data.residual, arrivals, greens, departures, data.condition))
+    return {"applied": greens, "recommended": [next_plan.greens[k] for k in keys],
+            "mean": [ctl.mean_arrivals.get(k) for k in keys],
+            "residual": [n + len(a) - len(d) for n, a, d in zip(data.residual, arrivals, departures)],
+            "weights": [next_plan.weights[k] for k in keys], "limits": [next_plan.bound_hits.get(k) for k in keys],
+            "fallback": next_plan.fallback, "oversaturated": next_plan.oversaturated,
+            "arrivals": arrivals, "departures": departures}
+
+
+class ExperimentInput(BaseModel):
+    rates: tuple[Rate, Rate, Rate, Rate]
+    initial: tuple[InitialCount, InitialCount, InitialCount, InitialCount]
+    condition: Condition = "normal"
+    cycles: Annotated[int, Field(strict=True, ge=1, le=30)] = 10
+    replications: Annotated[int, Field(strict=True, ge=2, le=30)] = 10
+    seed: Seed = 42
+    profile: Literal["steady", "surge"] = "steady"
+
+
+@app.post("/api/simulation/evaluate")
+def experiment(data: ExperimentInput):
+    return evaluate(**data.model_dump())
+
+
+class FieldObservations(BaseModel):
+    csv_text: Annotated[str, Field(min_length=1, max_length=500000)]
+
+
+@app.post("/api/simulation/validate-field")
+def validate_observations(data: FieldObservations):
+    try:
+        return validate_field_csv(data.csv_text)
+    except (ValueError, csv.Error) as exc:
+        raise HTTPException(422, str(exc)) from exc
 
 
 dist = SYSTEM / "frontend" / "dist"

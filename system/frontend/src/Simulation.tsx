@@ -1,4 +1,9 @@
-import { useEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
+import ComparisonResults from './ComparisonResults'
+import EvaluationPanel from './EvaluationPanel'
+import FieldValidation from './FieldValidation'
+import type { MovementTraces } from './trafficMotion'
+import './study.css'
 import {
   Activity,
   CirclePause,
@@ -10,6 +15,9 @@ import {
   Timer,
   Waypoints,
 } from 'lucide-react'
+
+const DundaeCase = lazy(() => import('./DundaeCase'))
+const SincheonComparison = lazy(() => import('./SincheonComparison'))
 
 const phases = ['동서 직진', '동서 좌회전', '남북 직진', '남북 좌회전']
 const colors = ['#26cda2', '#47accb', '#d2aa64', '#ab99d7']
@@ -49,6 +57,8 @@ const scenarios = {
 type Scenario = keyof typeof scenarios
 type Mode = 'auto' | 'fixed' | 'manual'
 type Decision = {
+  arrivals?: number[][]
+  departures?: number[][]
   recommended: number[]
   applied: number[]
   residual: number[]
@@ -58,6 +68,36 @@ type Decision = {
   fallback: string | null
   oversaturated: boolean
 }
+async function advanceCycle(
+  mode: Mode,
+  previous: Decision | null,
+  initial: (typeof scenarios)[Scenario],
+  rates: number[],
+  signal: AbortSignal,
+  manual: number[] | null = null,
+  traceCycle?: number,
+): Promise<Decision> {
+  const traced = traceCycle !== undefined
+  const res = await fetch(traced ? '/api/simulation/trace-step' : '/api/simulation/step', {
+    method: 'POST',
+    signal,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      mode,
+      rates,
+      manual,
+      condition: initial.condition,
+      residual: previous?.residual ?? initial.residual,
+      current: (traced && mode === 'auto' ? previous?.recommended : previous?.applied) ?? plan,
+      ...(traced ? { cycle: traceCycle, seed: 42 } : {}),
+      mean: previous?.mean ?? null,
+    }),
+  })
+  if (!res.ok)
+    throw Error('배분을 계산하지 못했어요. 입력값과 서버 연결을 확인해 주세요.')
+  return res.json()
+}
+
 const roadArms = [0, 90, 180, 270]
 function Junction({ queues, overlay }: { queues: number[]; overlay: boolean }) {
   return (
@@ -168,12 +208,43 @@ function Junction({ queues, overlay }: { queues: number[]; overlay: boolean }) {
     </svg>
   )
 }
+const views = [
+  { key: 'dundae', title: '둔대교차로 실측 사례', hash: '#simulation/dundae' },
+  { key: 'sincheon', title: '신천사거리 CCTV 비교', hash: '#simulation/sincheon' },
+  { key: 'evaluation', title: '운영안 비교 실험', hash: '#simulation/evaluation' },
+  { key: 'replay', title: '교차로 재생', hash: '#simulation' },
+  { key: 'field', title: '현장자료 대조', hash: '#simulation/field' },
+] as const
+export function isSimulationHash(hash: string) {
+  return views.some(view => view.hash === hash)
+}
+
+function currentView() {
+  return views.find(view => view.hash === window.location.hash)?.key ?? 'replay'
+}
+
 export function Simulation() {
+  const [view, setView] = useState(currentView)
+  useEffect(() => {
+    const change = () => {
+      setView(currentView())
+      setPlaying(false)
+    }
+    window.addEventListener('hashchange', change)
+    return () => window.removeEventListener('hashchange', change)
+  }, [])
   const [scenario, setScenario] = useState<Scenario>('evening')
   const [rates, setRates] = useState(scenarios.evening.rates)
-  const [mode, setMode] = useState<Mode>('auto')
+  const [mode, setMode] = useState<Mode | 'compare'>('compare')
   const [manual, setManual] = useState(plan.map(String))
   const [decision, setDecision] = useState<Decision | null>(null)
+  const [fixedDecision, setFixedDecision] = useState<Decision | null>(null)
+  const [cycleStart, setCycleStart] = useState<{
+    fixed: number[]
+    auto: number[]
+    rates: number[]
+    traces: MovementTraces
+  } | null>(null)
   const [cycle, setCycle] = useState(0)
   const [playing, setPlaying] = useState(false)
   const [busy, setBusy] = useState(false)
@@ -182,16 +253,21 @@ export function Simulation() {
   const pending = useRef<AbortController | null>(null)
   const base = scenarios[scenario]
   const queues = decision?.residual ?? base.residual
-  function reset(next: Scenario) {
+  function restartCycles() {
     pending.current?.abort()
     pending.current = null
-    setScenario(next)
-    setRates(scenarios[next].rates)
     setCycle(0)
     setDecision(null)
+    setFixedDecision(null)
+    setCycleStart(null)
     setPlaying(false)
     setBusy(false)
     setError('')
+  }
+  function reset(next: Scenario) {
+    restartCycles()
+    setScenario(next)
+    setRates(scenarios[next].rates)
     setManual(plan.map(String))
   }
   async function step() {
@@ -214,30 +290,37 @@ export function Simulation() {
         throw Error('현시별 허용 범위 안에서 정수 초로 입력해 주세요.')
       if (mode === 'manual' && numbers.reduce((a, b) => a + b, 0) !== 100)
         throw Error('네 현시의 녹색시간 합을 100초로 맞춰 주세요.')
-      const res = await fetch('/api/simulation/step', {
-        method: 'POST',
-        signal: ctrl.signal,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+      const [data, baseline] = await Promise.all([
+        advanceCycle(
+          mode === 'compare' ? 'auto' : mode,
+          decision,
+          base,
           rates,
-          residual: queues,
-          current: decision?.applied ?? plan,
-          mean: decision?.mean ?? null,
-          mode,
-          manual: mode === 'manual' ? numbers : null,
-          condition: base.condition,
-        }),
-      })
-      if (!res.ok)
-        throw Error(
-          '배분을 계산하지 못했어요. 입력값과 서버 연결을 확인해 주세요.',
-        )
-      const data: Decision = await res.json()
+          ctrl.signal,
+          mode === 'manual' ? numbers : null,
+          mode === 'compare' ? cycle : undefined,
+        ),
+        mode === 'compare'
+          ? advanceCycle('fixed', fixedDecision, base, rates, ctrl.signal, null, cycle)
+          : null,
+      ])
       if (ctrl.signal.aborted) return
+      if (baseline) {
+        if (!data.arrivals || !data.departures || !baseline.departures)
+          throw Error('차량 이동 기록을 받지 못했습니다.')
+        setCycleStart({
+          traces: { arrivals: data.arrivals, fixedDepartures: baseline.departures, autoDepartures: data.departures },
+          fixed: fixedDecision?.residual ?? base.residual,
+          auto: queues,
+          rates,
+        })
+      }
       setDecision(data)
+      setFixedDecision(baseline)
       setCycle((c) => c + 1)
     } catch (err) {
       if (!ctrl.signal.aborted) {
+        ctrl.abort()
         setError(err instanceof Error ? err.message : '계산에 실패했어요.')
         setPlaying(false)
       }
@@ -255,22 +338,59 @@ export function Simulation() {
     [],
   )
   useEffect(() => {
-    if (!playing || busy) return
+    if (mode === 'compare' || !playing || busy) return
     const timer = window.setTimeout(() => {
       void step()
     }, 2000)
     return () => clearTimeout(timer)
   })
+  const playbackControls = (
+    <>
+      {error && (
+        <p role="alert" className="error">
+          {error}
+        </p>
+      )}
+      <div className="sim-buttons">
+        <button
+          className="primary"
+          disabled={busy || playing}
+          onClick={() => void step()}
+        >
+          <StepForward size={16} />
+          다음 주기
+        </button>
+        <button
+          aria-pressed={playing}
+          onClick={() => setPlaying(!playing)}
+        >
+          {playing ? <CirclePause size={16} /> : <Play size={16} />}{' '}
+          {playing ? '일시정지' : '자동 진행'}
+        </button>
+        <button
+          className="icon-button"
+          aria-label="시뮬레이션 초기화"
+          onClick={() => reset(scenario)}
+        >
+          <RotateCcw size={16} />
+        </button>
+      </div>
+    </>
+  )
   return (
     <div className="simulation">
-      <div className="sim-overview">
+      <nav className="study-views" aria-label="시뮬레이션 분석 화면">
+        {views.map(v => <a key={v.key} href={v.hash} aria-current={view === v.key ? 'page' : undefined}>{v.title}</a>)}
+        <a href="/cases/siheung-daytime.html">주간 영상·시간대별 교통량</a>
+      </nav>
+      {view === 'replay' && <div className="sim-overview">
         <div>
           <span className="sim-icon">
             <Waypoints />
           </span>
           <div>
             <strong>가상 사거리</strong>
-            <small>기술설계서 6.6절의 4현시 모형</small>
+            <small>직진과 좌회전, 네 가지 신호</small>
           </div>
         </div>
         <div>
@@ -291,13 +411,17 @@ export function Simulation() {
             계산 완료 <b>{cycle}주기</b>
           </span>
         </div>
-      </div>
-      <div className="sim-layout">
+      </div>}
+      {view === 'dundae' && <Suspense fallback={<p role="status">둔대교차로 조사표와 비교 결과를 불러오고 있습니다.</p>}><DundaeCase /></Suspense>}
+      {view === 'sincheon' && <Suspense fallback={<p role="status">신천사거리 CCTV 비교 화면을 불러오고 있습니다.</p>}><SincheonComparison /></Suspense>}
+      {view === 'field' && <FieldValidation />}
+      {(view === 'replay' || view === 'evaluation') && <>
+      <div className={view === 'evaluation' ? 'study-layout' : mode === 'compare' ? 'sim-layout comparison-layout' : 'sim-layout'}>
         <section className="card">
           <div className="panel-head">
             <div className="panel-title">
               <SlidersHorizontal />
-              <h2>교통 수요 설정</h2>
+              <h2>{view === 'evaluation' ? '실험 교통 수요' : '교통 수요 설정'}</h2>
             </div>
           </div>
           <div className="sim-inputs">
@@ -315,7 +439,7 @@ export function Simulation() {
               </select>
             </label>
             <h3>
-              이동류별 유입량 <small>대/시</small>
+              방향별로 들어오는 차 <small>대/시간</small>
             </h3>
             {phases.map((p, i) => (
               <label className="rate" key={p}>
@@ -338,16 +462,21 @@ export function Simulation() {
                 />
               </label>
             ))}
+            {view === 'replay' && <>
             <label className="select-label">
               제어 방식
               <select
                 value={mode}
+                disabled={busy}
                 onChange={(e) => {
-                  setMode(e.target.value as Mode)
+                  const next = e.target.value as typeof mode
+                  if (mode === 'compare' || next === 'compare') restartCycles()
+                  setMode(next)
                   setPlaying(false)
                   setError('')
                 }}
               >
+                <option value="compare">고정 신호 · 자동 배분 비교</option>
                 <option value="auto">AI 자동 배분</option>
                 <option value="fixed">기준 고정 계획</option>
                 <option value="manual">수동 조정</option>
@@ -373,39 +502,40 @@ export function Simulation() {
                 ))}
               </div>
             )}
-            <p className="hint">유입량과 제어 방식은 다음 주기부터 반영돼요.</p>
-            {error && (
-              <p role="alert" className="error">
-                {error}
-              </p>
-            )}
-            <div className="sim-buttons">
-              <button
-                className="primary"
-                disabled={busy || playing}
-                onClick={() => void step()}
-              >
-                <StepForward size={16} />
-                다음 주기
-              </button>
-              <button
-                aria-pressed={playing}
-                onClick={() => setPlaying(!playing)}
-              >
-                {playing ? <CirclePause size={16} /> : <Play size={16} />}{' '}
-                {playing ? '일시정지' : '자동 진행'}
-              </button>
-              <button
-                className="icon-button"
-                aria-label="시뮬레이션 초기화"
-                onClick={() => reset(scenario)}
-              >
-                <RotateCcw size={16} />
-              </button>
-            </div>
+            <p className="hint">
+              {mode === 'compare'
+                ? '유입량을 바꾸면 다음 주기부터 두 방식에 함께 반영돼요.'
+                : '유입량과 제어 방식은 다음 주기부터 반영돼요.'}
+            </p>
+            {mode !== 'compare' && playbackControls}
+            </>}
           </div>
         </section>
-        <section className="card sim-results">
+        {view === 'evaluation' ? (
+          <EvaluationPanel rates={rates} initial={base.residual} condition={base.condition} scenarioName={base.name} />
+        ) : mode === 'compare' ? (
+          <ComparisonResults
+            traces={cycleStart?.traces}
+            playback={{
+              busy,
+              error,
+              continuous: playing,
+              setContinuous: setPlaying,
+              onNext: step,
+              onReset: () => reset(scenario),
+            }}
+            phases={phases}
+            fixed={fixedDecision?.residual ?? base.residual}
+            auto={queues}
+            fixedStart={cycleStart?.fixed ?? base.residual}
+            autoStart={cycleStart?.auto ?? base.residual}
+            fixedGreen={fixedDecision?.applied ?? plan}
+            autoGreen={decision?.applied ?? plan}
+            hourlyRates={cycleStart?.rates ?? rates}
+            condition={base.condition}
+            cycle={cycle}
+          />
+        ) : <section className="card sim-results">
           <div className="panel-head">
             <div className="panel-title">
               <Waypoints />
@@ -507,12 +637,15 @@ export function Simulation() {
               </details>
             )}
           </div>
-        </section>
+        </section>}
       </div>
-      <p className="source-note">
-        주기별 유입량과 통과 가능 대수로 잔류를 추정한 모형이에요. 그림은 현시당
-        최대 5대를 표시해요.
-      </p>
+      {view === 'replay' && mode !== 'compare' && (
+        <p className="source-note">
+          단일 방식은 녹색시간 산식을 살펴보는 간이 계산입니다. 주기 유입량과 통과 용량으로 잔류를 추정하며 그림은 현시당
+          최대 5대를 표시해요.
+        </p>
+      )}
+      </>}
     </div>
   )
 }

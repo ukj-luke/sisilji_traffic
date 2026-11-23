@@ -1,0 +1,59 @@
+{
+  "verifiedNormalPlaybackSessions": 11,
+  "uniqueOriginals": 5,
+  "allSessionsEnded": true,
+  "rawSHA256AndDecodedHashesAgreeOnGroups": true,
+  "firstViewerOpenKST": "2026-11-23T10:32:31.416+09:00",
+  "finalViewerEndedKST": "2026-11-23T10:53:01.906+09:00",
+  "viewerOpenIntervalsSec": [
+    120.001,
+    120.002,
+    119.997,
+    119.914,
+    120.092,
+    119.91,
+    120.084,
+    120.001,
+    119.998,
+    120.001
+  ],
+  "sumUniquePlayerDurationsSec": 150.0385,
+  "uniqueTotalBytes": 13711125,
+  "uniqueTotalFrames": 4468,
+  "pairwiseMatchedDecodedFramesAcrossUniqueMovies": {
+    "1032_1038": 0,
+    "1032_1042": 0,
+    "1032_1048": 0,
+    "1032_1052": 0,
+    "1038_1042": 0,
+    "1038_1048": 0,
+    "1038_1052": 0,
+    "1042_1048": 0,
+    "1042_1052": 0,
+    "1048_1052": 0
+  },
+  "sourceFilmingTimeVerified": false,
+  "sessionsByScene": {
+    "1032": [
+      "1032",
+      "1034",
+      "1036"
+    ],
+    "1038": [
+      "1038",
+      "1040"
+    ],
+    "1042": [
+      "1042",
+      "1044",
+      "1046"
+    ],
+    "1048": [
+      "1048",
+      "1050"
+    ],
+    "1052": [
+      "1052"
+    ]
+  }
+}

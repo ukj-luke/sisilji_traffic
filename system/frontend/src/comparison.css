@@ -1,0 +1,127 @@
+.comparison-results {
+  min-width: 0;
+}
+.comparison-content {
+  padding: clamp(14px, 2vw, 24px);
+}
+.comparison-direction {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: .9rem;
+  font-weight: 650;
+}
+.comparison-direction select {
+  padding: 6px 9px;
+  border: 1px solid #cddadd;
+  background: #f9fbfb;
+  border-radius: 5px;
+  color: var(--ink);
+  font: inherit;
+}
+.comparison-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+.comparison-toolbar .sim-buttons { margin: 0; }
+.comparison-toolbar .error { width: 100%; }
+@media (max-width: 760px) {
+  .comparison-layout .comparison-results { grid-row: 1; }
+}
+.comparison-content h3,
+.comparison-table caption {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: .95rem;
+  font-weight: 650;
+  text-align: left;
+}
+.comparison-cycle {
+  white-space: nowrap;
+  color: var(--dim);
+  font-size: .81rem;
+  font-variant-numeric: tabular-nums;
+}
+.comparison-totals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 24px;
+}
+.comparison-fixed {
+  --method-ink: #3b5f7e;
+  --method-bar: #5883a8;
+  --method-tint: #eff4f8;
+}
+.comparison-auto {
+  --method-ink: #0b6b57;
+  --method-bar: #159175;
+  --method-tint: #edf6f1;
+}
+.comparison-method {
+  background: var(--method-tint);
+  color: var(--method-ink);
+  border-radius: 7px;
+  padding: 13px clamp(10px, 1.5vw, 20px);
+}
+.comparison-method dt {
+  font-size: .85rem;
+  font-weight: 650;
+}
+.comparison-method dd {
+  margin: 6px 0 0;
+  color: var(--ink);
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  line-height: 1.12;
+  font-variant-numeric: tabular-nums;
+}
+.comparison-method small {
+  margin-left: 4px;
+  font-size: .9rem;
+}
+.comparison-table {
+  width: 100%;
+  table-layout: fixed;
+}
+.comparison-table th,
+.comparison-table td {
+  padding: 9px clamp(5px, 1.25vw, 16px);
+  text-align: left;
+}
+.comparison-table thead th:first-child {
+  width: 25%;
+  min-width: 66px;
+}
+.comparison-table tbody th {
+  white-space: normal;
+  word-break: keep-all;
+}
+.comparison-number {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--method-ink);
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+.comparison-track {
+  height: 5px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #e9eef0;
+}
+.comparison-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--method-bar);
+}
+.comparison-note {
+  margin: 13px 0 0;
+  color: var(--dim);
+  font-size: .82rem;
+  line-height: 1.55;
+  word-break: keep-all;
+}

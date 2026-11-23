@@ -1,0 +1,47 @@
+{
+  "verifiedNormalPlaybackSessions": 11,
+  "uniqueOriginals": 5,
+  "rawSHA256AndDecodedHashesAgreeOnGroups": true,
+  "allSessionsEnded": true,
+  "firstViewerOpenKST": "2026-11-23T09:29:50.629+09:00",
+  "finalViewerEndedKST": "2026-11-23T09:49:31.248+09:00",
+  "sumUniquePlayerDurationsSec": 150.034957,
+  "uniqueTotalBytes": 13782716,
+  "uniqueTotalFrames": 4497,
+  "pairwiseMatchedDecodedFramesAcrossUniqueMovies": {
+    "0929_0933": 0,
+    "0929_0937": 0,
+    "0929_0943": 0,
+    "0929_0949": 0,
+    "0933_0937": 0,
+    "0933_0943": 0,
+    "0933_0949": 0,
+    "0937_0943": 0,
+    "0937_0949": 0,
+    "0943_0949": 0
+  },
+  "sourceFilmingTimeVerified": false,
+  "sessionsByScene": {
+    "0929": [
+      "0929",
+      "0931"
+    ],
+    "0933": [
+      "0933",
+      "0935"
+    ],
+    "0937": [
+      "0937",
+      "0939",
+      "0941"
+    ],
+    "0943": [
+      "0943",
+      "0945",
+      "0947"
+    ],
+    "0949": [
+      "0949"
+    ]
+  }
+}

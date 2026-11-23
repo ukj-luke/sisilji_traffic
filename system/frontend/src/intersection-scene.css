@@ -1,0 +1,90 @@
+.junction-scene {
+  min-width: 0;
+  margin: 0;
+  border: 1px solid #cedbdb;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  --scene-accent: #335f80;
+  --scene-head: #ecf3f8;
+}
+.junction-scene.scene-auto {
+  --scene-accent: #106955;
+  --scene-head: #edf6f1;
+}
+.scene-heading, .scene-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px 6px;
+  padding: 7px clamp(6px, 1vw, 12px);
+}
+.scene-heading {
+  background: var(--scene-head);
+  color: var(--scene-accent);
+}
+.scene-heading strong { font-size: .91rem; }
+.scene-signal-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #324752;
+  font-size: .75rem;
+  white-space: nowrap;
+}
+.scene-signal-state i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #849497;
+}
+.scene-signal-state.green i { background: #198054; }
+.scene-signal-state.red i { background: #c54e42; }
+.scene-viewport {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #233f42;
+}
+.scene-footer {
+  color: #314952;
+  line-height: 1.25;
+}
+.scene-footer span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: .78rem;
+  white-space: nowrap;
+}
+.scene-footer i {
+  width: 10px;
+  height: 5px;
+  border: 1px solid #bc902f;
+  border-radius: 2px;
+  background: #ffd073;
+}
+.scene-footer strong {
+  color: #19313d;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+.scene-counts, .scene-counts div {
+  display: flex;
+  align-items: baseline;
+  gap: 3px 10px;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.scene-counts div { gap: 3px 5px; }
+.scene-counts dt { font-size: .73rem; color: var(--dim); }
+.scene-counts dd { margin: 0; font-size: .82rem; font-variant-numeric: tabular-nums; }
+.scene-footer small { margin-left: 2px; font-size: .72rem; }
+@media (max-width: 480px) {
+  .scene-heading { align-items: flex-start; flex-direction: column; }
+  .scene-heading strong { font-size: .82rem; }
+  .scene-signal-state, .scene-footer span { font-size: .68rem; }
+  .scene-footer strong { font-size: .85rem; }
+}

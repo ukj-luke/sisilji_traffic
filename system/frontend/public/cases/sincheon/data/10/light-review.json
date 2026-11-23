@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 1,
+  "camera": "경기도교통정보센터 6575 시흥 신천사거리",
+  "scope": "원본 MP4 고유 장면의 육안 판독. 장면명은 수신 시·분, events.t는 파일 첫 프레임에서 빼지 않은 원본 PTS(초), 15초 통과 대수는 영상 첫 프레임부터 상대 15초까지의 차량 앞범퍼 횡단 건수다. 같은 차량의 신호 및 정지선을 동시 확인할 때만 녹색 종료 잔류로 본다. 차종은 사륜 차량과 이륜 차량을 나누고, 이륜차는 앞바퀴가 정지선을 지나는 순간을 기록한다.",
+  "scenes": [
+    {
+      "scene": "1032",
+      "firstPts": 0.0,
+      "lastPts": 29.973133,
+      "summary": "은행사거리에서 신천고가로 가는 직진 신호가 녹색에서 황색, 적색으로 바뀌었다. 해당 접근로 정지선은 화면 아래에 있다. 신천로 남측 중앙선 옆 차로에서는 검은 차량 1대가 같은 자리에 계속 서 있었다.",
+      "events": [
+        {
+          "t": 17.869989,
+          "from": 17.840167,
+          "direction": "은행사거리 → 신천고가 직진",
+          "kind": "greenEnd",
+          "note": "마지막 녹색 PTS 17.840167초, 첫 황색 17.869989초. 해당 유입로의 정지선과 대기열은 화면 아래에 있다.",
+          "actual": null
+        },
+        {
+          "t": 21.900044,
+          "from": 21.840167,
+          "direction": "은행사거리 → 신천고가 직진",
+          "kind": "redStart",
+          "note": "황색 마지막 프레임 뒤 21.870011초 소등 프레임, 이어 21.900044초 첫 적색.",
+          "actual": null
+        },
+        {
+          "t": 29.973133,
+          "direction": "신천로 남측 · 중앙선 옆 차로",
+          "kind": "visibleWaiting",
+          "note": "정지선 앞 검은 차량 1대가 0~29.973133초 같은 자리에 정차. 같은 차로의 정지선 통과 0대. 가시구간 집계로 전체 대기열은 1대 이상.",
+          "actual": 1
+        }
+      ],
+      "firstCrossing": null,
+      "passedAt15": 0,
+      "passedTotal": 0,
+      "evidence": "../../assets/evidence/1032-1032-detail.jpg",
+      "benchmarkEligible": false,
+      "benchmarkReason": "관측 내내 정지해 첫 통과시점과 연속 방출을 관측하지 못했다.",
+      "sha256": "3ae28cc82268ac5010684e52dc3f13b9c7b5f313ee027b90ac68b37201344a9c",
+      "receivedIn": [
+        "1032",
+        "1034",
+        "1036"
+      ],
+      "composition15": {
+        "fourWheel": 0,
+        "twoWheel": 0
+      },
+      "compositionTotal": {
+        "fourWheel": 0,
+        "twoWheel": 0
+      }
+    },
+    {
+      "scene": "1038",
+      "summary": "은행사거리에서 신천고가 방면 직진 신호가 적색에서 녹색으로 바뀌었다. 신천로 남측 중앙선 옆에는 은색 승용차 1대가 들어와 정지선을 밟은 채 영상 끝까지 멈췄다.",
+      "events": [
+        {
+          "t": 4.900033,
+          "from": 4.829833,
+          "direction": "은행사거리 → 신천고가 직진",
+          "kind": "greenStart",
+          "note": "마지막 적색 약 4.830초, 중간 소등 4.860초, 첫 녹색 4.900초. 은행 쪽 차량의 정지선은 화면 아래다.",
+          "actual": null
+        },
+        {
+          "t": 0,
+          "direction": "신천로 남측 · 중앙선 옆 차로",
+          "kind": "visibleWaiting",
+          "note": "첫 프레임의 정지선 상류 가시구간에 정차 0대. 아래쪽 흰 차는 옆 차로다.",
+          "actual": 0
+        },
+        {
+          "t": 29.999267,
+          "direction": "신천로 남측 · 중앙선 옆 차로",
+          "kind": "visibleWaiting",
+          "note": "은색 승용 1대가 3~6초에 화면 왼쪽에서 정지선으로 와서 끝까지 머물렀다. 실제 교차로로 진입한 차량은 0대. 앞범퍼가 정지선 띠에 걸쳐 있어 통과 간격 비교에서 제외했다.",
+          "actual": 1
+        }
+      ],
+      "firstCrossing": null,
+      "passedAt15": null,
+      "passedTotal": null,
+      "completedPassagesAt15": 0,
+      "completedPassagesTotal": 0,
+      "benchmarkEligible": false,
+      "benchmarkReason": "관측 차로에 도착한 선두 차량이 경계에 멈춰 유출 흐름이 없었다.",
+      "evidence": "../../assets/evidence/1038-1038-detail.jpg",
+      "firstPts": 0.0,
+      "lastPts": 29.999267,
+      "sha256": "f5ad3534a443991affc9fa3624a394822615dfe6a4c0dbfeaa0e74dc0dc04d2d",
+      "receivedIn": [
+        "1038",
+        "1040"
+      ]
+    },
+    {
+      "scene": "1042",
+      "summary": "신천로 남측 중앙선 옆 차로에 정차했던 흰 승용차와 뒤따라온 흰 승합차·이륜차가 정지선을 넘었다. 첫 15초와 전체에서 각각 3대였다. 은행사거리에서 신천고가 방향 직진등은 줄곧 적색이었다.",
+      "events": [
+        {
+          "t": 0.903,
+          "direction": "신천로 남측 · 중앙선 옆 차로",
+          "kind": "visibleWaiting",
+          "note": "첫 프레임에 정지선 앞 흰 승용차 1대. 정지선과 관측 차로가 지속해서 보인다.",
+          "actual": 1
+        },
+        {
+          "t": 4.099822,
+          "from": 3.799822,
+          "direction": "신천로 남측 · 중앙선 옆 차로",
+          "kind": "crossing",
+          "note": "첫 흰 승용차 앞범퍼가 정지선을 넘었다. 근거 약 3.80~4.10초(원본 PTS).",
+          "actual": 1
+        },
+        {
+          "t": 12.099844,
+          "from": 11.799867,
+          "direction": "신천로 남측 · 중앙선 옆 차로",
+          "kind": "crossing",
+          "note": "흰 승합차의 앞범퍼가 원본 PTS 약 11.80~12.10초에 정지선을 넘었다.",
+          "actual": 2
+        },
+        {
+          "t": 13.699867,
+          "from": 13.499867,
+          "direction": "신천로 남측 · 중앙선 옆 차로",
+          "kind": "crossing",
+          "note": "같은 차로 이륜차의 앞바퀴가 원본 PTS 약 13.50~13.70초에 정지선을 넘었다. 다른 이륜차 및 이후 노란 버스는 옆 차로였다.",
+          "actual": 3
+        },
+        {
+          "t": 15.903,
+          "direction": "신천로 남측 · 중앙선 옆 차로",
+          "kind": "cumulativePassages",
+          "note": "첫 화면으로부터 15초 시점. 사륜 2대·이륜 1대, 이후 추가 통과 없음.",
+          "actual": 3
+        },
+        {
+          "t": 29.969911,
+          "direction": "신천로 남측 · 중앙선 옆 차로",
+          "kind": "visibleWaiting",
+          "note": "마지막 프레임 정지선 앞 가시구간 정차 0대. 남측에 적용되는 녹색 종료는 확인되지 않아 녹색 종료 잔류로 집계하지 않았다.",
+          "actual": 0
+        }
+      ],
+      "firstCrossing": [
+        3.799822,
+        4.099822
+      ],
+      "passedAt15": 3,
+      "passedTotal": 3,
+      "composition15": {
+        "fourWheel": 2,
+        "twoWheel": 1
+      },
+      "compositionTotal": {
+        "fourWheel": 2,
+        "twoWheel": 1
+      },
+      "benchmarkEligible": false,
+      "benchmarkReason": "첫 승용차와 다음 승합차의 통과 간격은 약 8초다. 그 사이 정지선 앞 차로가 비어 연속 대기열 방출을 확인할 수 없다.",
+      "evidence": "../../assets/evidence/1042-1042-south-passages.jpg",
+      "firstPts": 0.903,
+      "lastPts": 29.969911,
+      "sha256": "b25e2fb667352edc311f15f509750517f8934ae1cc031946c0b4507b059120a6",
+      "receivedIn": [
+        "1042",
+        "1044",
+        "1046"
+      ]
+    },
+    {
+      "scene": "1048",
+      "summary": "은행사거리 쪽 4구등에서 제1구 적색이 유지된 채 제3구 점등이 제2구 황색으로 바뀌었다. 같은 접근로에서 온 차가 신천로로 좌회전하는 궤적과 일치한다. 신천로 남측 중앙선 옆에는 검은 승용차 1대가 계속 서 있었다.",
+      "events": [
+        {
+          "t": 7.2293,
+          "from": 7.199478,
+          "direction": "은행사거리 → 신천로 좌회전",
+          "kind": "greenEnd",
+          "note": "제3구의 밝기가 감소하면서 제2구 황색이 켜지고 제1구 적색은 유지됐다. 작은 원본에서 화살표 도형 자체는 분해되지 않아, 등기구 배열과 은행에서 진입한 흰 승용차의 좌회전 궤적(원본 5.36~8.36초)으로 해석했다. 해당 정지선은 화면 아래다.",
+          "actual": null
+        },
+        {
+          "t": 11.229322,
+          "from": 11.199489,
+          "direction": "은행사거리 쪽 좌회전 표시",
+          "kind": "yellowEnd",
+          "note": "제2구 황색이 꺼지고 제1구 적색은 유지됐다.",
+          "actual": null
+        },
+        {
+          "t": 29.998744,
+          "direction": "신천로 남측 · 중앙선 옆 차로",
+          "kind": "visibleWaiting",
+          "note": "검은 승용차 1대가 정지선 앞에 관측 내내 정차했다. 해당 차로 정지선 통과 0대.",
+          "actual": 1
+        }
+      ],
+      "firstCrossing": null,
+      "passedAt15": 0,
+      "passedTotal": 0,
+      "composition15": {
+        "fourWheel": 0,
+        "twoWheel": 0
+      },
+      "compositionTotal": {
+        "fourWheel": 0,
+        "twoWheel": 0
+      },
+      "benchmarkEligible": false,
+      "benchmarkReason": "관측 차로에서 통과한 차량이 없었다.",
+      "evidence": "../../assets/evidence/1048-1048-turn-and-signal.jpg",
+      "firstPts": 0.362,
+      "lastPts": 29.998744,
+      "sha256": "563793cce636eb52d0fe523a2a5ae12f85af785de53b0b0d822c5659ff66911e",
+      "directionEvidence": "등기구 제3구 위치, 제2구 황색과 교대, 동일 접근로 차량 좌회전 경로를 결합한 판독",
+      "receivedIn": [
+        "1048",
+        "1050"
+      ]
+    },
+    {
+      "scene": "1052",
+      "summary": "은행사거리에서 신천고가로 가는 직진 신호가 녹색에서 황색, 적색으로 바뀌었다. 해당 접근로의 정지선은 화면 아래다. 신천로 남측 중앙선 옆의 검은 승용차는 같은 자리에 계속 서 있었다.",
+      "events": [
+        {
+          "t": 10.829956,
+          "from": 10.800056,
+          "direction": "은행사거리 → 신천고가 직진",
+          "kind": "greenEnd",
+          "note": "마지막 녹색 10.800056초, 첫 황색 10.829956초. 해당 차량의 정지선과 대기열은 화면 밖이다.",
+          "actual": null
+        },
+        {
+          "t": 14.829944,
+          "from": 14.770044,
+          "direction": "은행사거리 → 신천고가 직진",
+          "kind": "redStart",
+          "note": "마지막 황색 14.770044초, 중간 14.800178초 소등, 첫 적색 14.829944초.",
+          "actual": null
+        },
+        {
+          "t": 29.997444,
+          "direction": "신천로 남측 · 중앙선 옆 차로",
+          "kind": "visibleWaiting",
+          "note": "정지선 앞 검은 승용차 1대가 영상 내내 정차했다. 같은 차로 통과는 0대.",
+          "actual": 1
+        }
+      ],
+      "firstCrossing": null,
+      "passedAt15": 0,
+      "passedTotal": 0,
+      "composition15": {
+        "fourWheel": 0,
+        "twoWheel": 0
+      },
+      "compositionTotal": {
+        "fourWheel": 0,
+        "twoWheel": 0
+      },
+      "benchmarkEligible": false,
+      "benchmarkReason": "정지선 앞 차가 그대로 머물러 연속 통과가 없었다.",
+      "evidence": "../../assets/evidence/1052-1052-detail.jpg",
+      "firstPts": 0.0,
+      "lastPts": 29.997444,
+      "sha256": "45f2f37a932fe8bbaa548307ef00be0d4dbf5f9aa2d9e4a29ad395bcce7c78c6",
+      "receivedIn": [
+        "1052"
+      ]
+    }
+  ],
+  "counts": {
+    "retrievals": 11,
+    "uniqueClips": 5,
+    "straightGreenEnds": 2,
+    "inferredLeftTurnEnds": 1,
+    "observedResidualsAtTheseEnds": 0
+  }
+}

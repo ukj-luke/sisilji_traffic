@@ -1,0 +1,81 @@
+.intersection-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: clamp(4px, 1.1vw, 16px);
+}
+.intersection-playback {
+  min-width: 0;
+  margin-top: 12px;
+}
+.cycle-scrub {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 0 9px;
+  font-size: .82rem;
+  color: var(--dim);
+}
+.cycle-scrub span { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.cycle-scrub b { color: var(--ink); margin-left: 5px; }
+.cycle-scrub input { min-width: 0; flex: 1; }
+.movie-controls, .movie-options, .movie-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px 12px;
+  flex-wrap: wrap;
+}
+.movie-controls { justify-content: space-between; margin-bottom: 10px; }
+.movie-controls .sim-buttons { margin: 0; }
+.movie-options { font-size: .82rem; color: var(--dim); }
+.movie-options label { gap: 5px; }
+.movie-options select { border: 1px solid #cddadd; border-radius: 4px; background: white; color: var(--ink); padding: 5px; }
+.movie-caption { font-size: .78rem; color: var(--dim); margin: 10px 0 16px; }
+.phase-windows {
+  padding: 9px 12px 11px;
+  border: 1px solid #dce6e5;
+  border-radius: 6px;
+  font-variant-numeric: tabular-nums;
+}
+.phase-windows h4 { margin: 0 0 4px; font-size: .82rem; }
+.phase-window {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 4.5em minmax(0, 1fr) auto;
+  column-gap: 8px;
+  color: var(--dim);
+  font-size: .76rem;
+}
+.phase-window small { text-align: right; font-size: inherit; }
+.phase-window strong { color: var(--ink); margin-left: 3px; }
+.phase-track {
+  position: relative;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 22px;
+  background: transparent;
+  cursor: pointer;
+}
+.phase-track::before, .phase-track i {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  border-radius: 2px;
+}
+.phase-track::before {
+  left: 0;
+  right: 0;
+  background: repeating-linear-gradient(to right, #e7eeed 0 calc(25% - 1px), #b9c8c6 calc(25% - 1px) 25%);
+}
+.phase-track i { background: #36977d; }
+.phase-track b {
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  width: 2px;
+  background: #1c3038;
+  transform: translateX(-1px);
+}
