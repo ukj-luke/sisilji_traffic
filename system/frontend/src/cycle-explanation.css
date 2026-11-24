@@ -5,7 +5,7 @@
 }
 .cycle-preview {
   padding: 14px 16px;
-  background: #f2f6f6;
+  background: var(--brand-soft);
   border-radius: 8px;
   line-height: 1.6;
 }
@@ -34,8 +34,8 @@
   border-radius: 8px;
   background: var(--ledger-bg);
 }
-.cycle-fixed { --ledger-bg: #eff4f8; --ledger-ink: #3b5f7e; }
-.cycle-auto { --ledger-bg: #edf6f1; --ledger-ink: #0b6b57; }
+.cycle-fixed { --ledger-bg: #eff2f7; --ledger-ink: var(--fixed-series); }
+.cycle-auto { --ledger-bg: var(--brand-tint); --ledger-ink: var(--brand); }
 .cycle-ledgers h4,
 .cycle-ledgers dl > div {
   display: flex;
@@ -57,7 +57,7 @@
 .cycle-ledgers dd { white-space: nowrap; }
 .cycle-ledgers .cycle-balance {
   margin-top: 4px;
-  border-top: 1px solid #cedcda;
+  border-top: 1px solid var(--line);
   padding-top: 7px;
   font-weight: 700;
 }

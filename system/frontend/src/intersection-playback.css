@@ -29,11 +29,11 @@
 .movie-controls .sim-buttons { margin: 0; }
 .movie-options { font-size: .82rem; color: var(--dim); }
 .movie-options label { gap: 5px; }
-.movie-options select { border: 1px solid #cddadd; border-radius: 4px; background: white; color: var(--ink); padding: 5px; }
+.movie-options select { border: 1px solid var(--line); border-radius: 4px; background: white; color: var(--ink); padding: 5px; }
 .movie-caption { font-size: .78rem; color: var(--dim); margin: 10px 0 16px; }
 .phase-windows {
   padding: 9px 12px 11px;
-  border: 1px solid #dce6e5;
+  border: 1px solid var(--line);
   border-radius: 6px;
   font-variant-numeric: tabular-nums;
 }
@@ -68,7 +68,7 @@
 .phase-track::before {
   left: 0;
   right: 0;
-  background: repeating-linear-gradient(to right, #e7eeed 0 calc(25% - 1px), #b9c8c6 calc(25% - 1px) 25%);
+  background: repeating-linear-gradient(to right, #edf1f7 0 calc(25% - 1px), #b9c8c6 calc(25% - 1px) 25%);
 }
 .phase-track i { background: #36977d; }
 .phase-track b {
@@ -78,4 +78,8 @@
   width: 2px;
   background: #1c3038;
   transform: translateX(-1px);
+}
+
+@media screen and (max-width: 580px) {
+  .intersection-pair { grid-template-columns: minmax(0, 1fr); gap: 12px; }
 }

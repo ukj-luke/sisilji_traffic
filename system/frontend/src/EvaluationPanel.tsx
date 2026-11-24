@@ -34,7 +34,7 @@ type Result = {
 }
 const methods: Method[] = ['fixed', 'tod', 'adaptive']
 const names = { fixed: '기준 고정', tod: '시간대별 고정', adaptive: '자동 배분' }
-const colors = { fixed: '#5c7391', tod: '#b16921', adaptive: '#007e68' }
+const colors = { fixed: 'var(--fixed-series)', tod: 'var(--tod-series)', adaptive: 'var(--adaptive-series)' }
 const directions = ['동서 직진', '동서 좌회전', '남북 직진', '남북 좌회전']
 const profileNames = { steady: '일정한 평균 수요', surge: '중간 구간 동서 직진 50% 증가' }
 const numeric = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 1 })

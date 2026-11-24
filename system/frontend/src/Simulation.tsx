@@ -17,10 +17,9 @@ import {
 } from 'lucide-react'
 
 const DundaeCase = lazy(() => import('./DundaeCase'))
-const SincheonComparison = lazy(() => import('./SincheonComparison'))
 
 const phases = ['동서 직진', '동서 좌회전', '남북 직진', '남북 좌회전']
-const colors = ['#26cda2', '#47accb', '#d2aa64', '#ab99d7']
+const colors = ['#8db5ff', '#6fc2da', '#e3b76b', '#b8a7e5']
 const plan = [30, 20, 30, 20]
 const scenarios = {
   evening: {
@@ -172,7 +171,7 @@ function Junction({ queues, overlay }: { queues: number[]; overlay: boolean }) {
                       width="12"
                       height="18"
                       fill="none"
-                      stroke="#67ebc6"
+                      stroke="#a3c7ff"
                     />
                   )}
                 </g>
@@ -196,7 +195,7 @@ function Junction({ queues, overlay }: { queues: number[]; overlay: boolean }) {
         </text>
       </g>
       {overlay && (
-        <g fill="#81e8cb" fontFamily="sans-serif" fontSize="12">
+        <g fill="#bed8ff" fontFamily="sans-serif" fontSize="12">
           <text x="12" y="226">
             동서 잔류 {Math.round(queues[0] + queues[1])}대
           </text>
@@ -210,7 +209,6 @@ function Junction({ queues, overlay }: { queues: number[]; overlay: boolean }) {
 }
 const views = [
   { key: 'dundae', title: '둔대교차로 실측 사례', hash: '#simulation/dundae' },
-  { key: 'sincheon', title: '신천사거리 CCTV 비교', hash: '#simulation/sincheon' },
   { key: 'evaluation', title: '운영안 비교 실험', hash: '#simulation/evaluation' },
   { key: 'replay', title: '교차로 재생', hash: '#simulation' },
   { key: 'field', title: '현장자료 대조', hash: '#simulation/field' },
@@ -379,9 +377,22 @@ export function Simulation() {
   )
   return (
     <div className="simulation">
+      <label className="study-picker">
+        <span id="study-view-label">분석 화면</span>
+        <select
+          aria-labelledby="study-view-label"
+          value={views.find(v => v.key === view)?.hash}
+          onChange={e => window.location.assign(e.target.value)}
+        >
+          {views.map(v => (
+            <option key={v.key} value={v.hash}>{v.title}</option>
+          ))}
+          <option value="/cases/city-hall-survey.html">시청입구 삼거리 교통량</option>
+        </select>
+      </label>
       <nav className="study-views" aria-label="시뮬레이션 분석 화면">
         {views.map(v => <a key={v.key} href={v.hash} aria-current={view === v.key ? 'page' : undefined}>{v.title}</a>)}
-        <a href="/cases/siheung-daytime.html">주간 영상·시간대별 교통량</a>
+        <a href="/cases/city-hall-survey.html">시청입구 삼거리 교통량</a>
       </nav>
       {view === 'replay' && <div className="sim-overview">
         <div>
@@ -413,7 +424,6 @@ export function Simulation() {
         </div>
       </div>}
       {view === 'dundae' && <Suspense fallback={<p role="status">둔대교차로 조사표와 비교 결과를 불러오고 있습니다.</p>}><DundaeCase /></Suspense>}
-      {view === 'sincheon' && <Suspense fallback={<p role="status">신천사거리 CCTV 비교 화면을 불러오고 있습니다.</p>}><SincheonComparison /></Suspense>}
       {view === 'field' && <FieldValidation />}
       {(view === 'replay' || view === 'evaluation') && <>
       <div className={view === 'evaluation' ? 'study-layout' : mode === 'compare' ? 'sim-layout comparison-layout' : 'sim-layout'}>

@@ -5,12 +5,12 @@
   border-radius: 8px;
   overflow: hidden;
   background: white;
-  --scene-accent: #335f80;
-  --scene-head: #ecf3f8;
+  --scene-accent: var(--fixed-series);
+  --scene-head: #eff2f7;
 }
 .junction-scene.scene-auto {
-  --scene-accent: #106955;
-  --scene-head: #edf6f1;
+  --scene-accent: var(--brand);
+  --scene-head: var(--brand-tint);
 }
 .scene-heading, .scene-footer {
   display: flex;

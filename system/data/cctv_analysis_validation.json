@@ -1,0 +1,4436 @@
+{
+  "dateKST": "2026-11-23",
+  "basis": "Codex가 분석 영역에서 화면으로 판독 가능한 차량의 바닥 중심을 표시했습니다. 같은 프레임에서 차량 수와 점유 구간 수를 비교한 야간 소표본이며, 전체 도로 속도나 혼잡 등급 자체의 정답은 측정하지 않았습니다.",
+  "judgedLaneFrames": 28,
+  "uniqueCameras": 7,
+  "metrics": {
+    "base": {
+      "vehiclesMAE": 0.5,
+      "absoluteOccupancyErrorPp": 5.952
+    },
+    "release": {
+      "vehiclesMAE": 0.321,
+      "absoluteOccupancyErrorPp": 4.762
+    }
+  },
+  "samples": [
+    {
+      "camera": "6578",
+      "sampleSet": "comparison",
+      "frameSha256": "8cadff1f321dd4fb1c0afd935aeb28477debd521f3fda6cbc96b95114bee3776",
+      "lanes": [
+        {
+          "lane": "A",
+          "manual": {
+            "vehicles": 2,
+            "occupiedBins": 2
+          },
+          "base": {
+            "vehicles": 2,
+            "occupiedBins": 2
+          },
+          "release": {
+            "vehicles": 2,
+            "occupiedBins": 2
+          }
+        },
+        {
+          "lane": "B",
+          "manual": {
+            "vehicles": 3,
+            "occupiedBins": 3
+          },
+          "base": {
+            "vehicles": 2,
+            "occupiedBins": 2
+          },
+          "release": {
+            "vehicles": 2,
+            "occupiedBins": 2
+          }
+        }
+      ]
+    },
+    {
+      "camera": "6579",
+      "sampleSet": "comparison",
+      "frameSha256": "ce5393a733cb57cc16e0129a8bb0755d3d9566bfcb3ccac618bbf0df51aa428f",
+      "lanes": [
+        {
+          "lane": "A",
+          "manual": {
+            "vehicles": 2,
+            "occupiedBins": 1
+          },
+          "base": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          },
+          "release": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          }
+        },
+        {
+          "lane": "B",
+          "manual": {
+            "vehicles": 3,
+            "occupiedBins": 3
+          },
+          "base": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          },
+          "release": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          }
+        }
+      ]
+    },
+    {
+      "camera": "6581",
+      "sampleSet": "comparison",
+      "frameSha256": "8fe59ef29e05bfa807522835b1e059377dd148b0061706ef5648d9f7647eef61",
+      "lanes": [
+        {
+          "lane": "B",
+          "manual": {
+            "vehicles": 3,
+            "occupiedBins": 3
+          },
+          "base": {
+            "vehicles": 2,
+            "occupiedBins": 2
+          },
+          "release": {
+            "vehicles": 3,
+            "occupiedBins": 3
+          }
+        },
+        {
+          "lane": "C",
+          "manual": {
+            "vehicles": 2,
+            "occupiedBins": 2
+          },
+          "base": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          },
+          "release": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          }
+        }
+      ]
+    },
+    {
+      "camera": "6602",
+      "sampleSet": "comparison",
+      "frameSha256": "8523468f0110faa9f3d691ab279fa44510709f0218198044234545f939b484fb",
+      "lanes": [
+        {
+          "lane": "A",
+          "manual": {
+            "vehicles": 3,
+            "occupiedBins": 3
+          },
+          "base": {
+            "vehicles": 6,
+            "occupiedBins": 3
+          },
+          "release": {
+            "vehicles": 3,
+            "occupiedBins": 2
+          }
+        }
+      ]
+    },
+    {
+      "camera": "8927",
+      "sampleSet": "comparison",
+      "frameSha256": "f6988a8004944928381205b6ff1d2a6baeba256a6276d85efe71b6a38decce95",
+      "lanes": [
+        {
+          "lane": "A",
+          "manual": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "base": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "release": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          }
+        },
+        {
+          "lane": "B",
+          "manual": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          },
+          "base": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          },
+          "release": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          }
+        },
+        {
+          "lane": "C",
+          "manual": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          },
+          "base": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          },
+          "release": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          }
+        }
+      ]
+    },
+    {
+      "camera": "60119",
+      "sampleSet": "comparison",
+      "frameSha256": "211ad1fc83a394959e8dcc8e90d6240dd2da9f05c397a386ab0ee5813bb5280c",
+      "lanes": [
+        {
+          "lane": "A",
+          "manual": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "base": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "release": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          }
+        }
+      ]
+    },
+    {
+      "camera": "1216",
+      "sampleSet": "comparison",
+      "frameSha256": "53fe44cfdafc4e1f91c8d7cd58fc4c14d3395fdf934cd6a42bb08951bf1948f6",
+      "lanes": [
+        {
+          "lane": "A",
+          "manual": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "base": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "release": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          }
+        },
+        {
+          "lane": "B",
+          "manual": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "base": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "release": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          }
+        }
+      ]
+    },
+    {
+      "camera": "6579",
+      "sampleSet": "comparison",
+      "frameSha256": "f32ae20224604de9a32a40164960435763e1dd568dc2154a2c231c8b4f514a23",
+      "lanes": [
+        {
+          "lane": "A",
+          "manual": {
+            "vehicles": 3,
+            "occupiedBins": 3
+          },
+          "base": {
+            "vehicles": 3,
+            "occupiedBins": 3
+          },
+          "release": {
+            "vehicles": 3,
+            "occupiedBins": 3
+          }
+        },
+        {
+          "lane": "B",
+          "manual": {
+            "vehicles": 3,
+            "occupiedBins": 3
+          },
+          "base": {
+            "vehicles": 2,
+            "occupiedBins": 2
+          },
+          "release": {
+            "vehicles": 3,
+            "occupiedBins": 3
+          }
+        }
+      ]
+    },
+    {
+      "camera": "6602",
+      "sampleSet": "comparison",
+      "frameSha256": "701c06d233151d0183968a8d964948166ec304aec47082aba713af9ae24ea1d9",
+      "lanes": [
+        {
+          "lane": "A",
+          "manual": {
+            "vehicles": 2,
+            "occupiedBins": 2
+          },
+          "base": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          },
+          "release": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          }
+        }
+      ]
+    },
+    {
+      "camera": "8927",
+      "sampleSet": "comparison",
+      "frameSha256": "e3dd503f6054ccfacab7799cc401e88a1820f6547d6e7d233e9cadd9d968b7ed",
+      "lanes": [
+        {
+          "lane": "A",
+          "manual": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "base": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "release": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          }
+        },
+        {
+          "lane": "B",
+          "manual": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          },
+          "base": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          },
+          "release": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          }
+        },
+        {
+          "lane": "C",
+          "manual": {
+            "vehicles": 2,
+            "occupiedBins": 2
+          },
+          "base": {
+            "vehicles": 2,
+            "occupiedBins": 2
+          },
+          "release": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          }
+        }
+      ]
+    },
+    {
+      "camera": "60119",
+      "sampleSet": "comparison",
+      "frameSha256": "0a6f8a0a9ab64e3683a3ba1980d50aed0e434d6369cfa1f9fde70af2087404ed",
+      "lanes": [
+        {
+          "lane": "A",
+          "manual": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "base": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "release": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          }
+        }
+      ]
+    },
+    {
+      "camera": "6578",
+      "sampleSet": "additional",
+      "frameSha256": "266e2541eb54b6e6b43d2d7da68e9bc9fcbce99a750ec04404306ee59f2571a8",
+      "lanes": [
+        {
+          "lane": "A",
+          "manual": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          },
+          "base": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "release": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          }
+        },
+        {
+          "lane": "B",
+          "manual": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          },
+          "base": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          },
+          "release": {
+            "vehicles": 1,
+            "occupiedBins": 1
+          }
+        }
+      ]
+    },
+    {
+      "camera": "6579",
+      "sampleSet": "additional",
+      "frameSha256": "12f545e12b28ecc45783d944c0336340f1d0af8bd93a1e11160fa36bd030a4f2",
+      "lanes": [
+        {
+          "lane": "A",
+          "manual": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "base": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "release": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          }
+        },
+        {
+          "lane": "B",
+          "manual": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "base": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "release": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          }
+        }
+      ]
+    },
+    {
+      "camera": "6602",
+      "sampleSet": "additional",
+      "frameSha256": "dbfc5f79a0df333d732a48370bec56799f765f4ca273dfc1113bf31cbf5b6524",
+      "lanes": [
+        {
+          "lane": "A",
+          "manual": {
+            "vehicles": 2,
+            "occupiedBins": 2
+          },
+          "base": {
+            "vehicles": 2,
+            "occupiedBins": 2
+          },
+          "release": {
+            "vehicles": 2,
+            "occupiedBins": 2
+          }
+        }
+      ]
+    },
+    {
+      "camera": "8927",
+      "sampleSet": "additional",
+      "frameSha256": "addb12f6559314719badae534fa28374e02025a5d3487515dfe393257575098c",
+      "lanes": [
+        {
+          "lane": "A",
+          "manual": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "base": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "release": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          }
+        },
+        {
+          "lane": "B",
+          "manual": {
+            "vehicles": 3,
+            "occupiedBins": 2
+          },
+          "base": {
+            "vehicles": 3,
+            "occupiedBins": 2
+          },
+          "release": {
+            "vehicles": 3,
+            "occupiedBins": 2
+          }
+        },
+        {
+          "lane": "C",
+          "manual": {
+            "vehicles": 2,
+            "occupiedBins": 2
+          },
+          "base": {
+            "vehicles": 0,
+            "occupiedBins": 0
+          },
+          "release": {
+            "vehicles": 3,
+            "occupiedBins": 2
+          }
+        }
+      ]
+    }
+  ],
+  "movingVideoComparison": {
+    "method": "같은 공개 클립을 Chrome에서 1배속으로 재생했습니다. Codex가 450×290 좌표계에 먼저 표시한 이동 차량 상자를 3·5·7초의 화면 표시 상자와 일대일로 대응했습니다. IoU 0.5 이상을 일치로 집계했습니다. 같은 차가 다른 시점에도 포함됩니다. 전체 차량의 정밀도나 혼잡 등급 정확도를 측정한 값은 아닙니다.",
+    "labeledPositions": 47,
+    "beforeMatched": 8,
+    "afterMatched": 28,
+    "cameras": [
+      {
+        "camera": "6581",
+        "clipSha256": "02ccc6a11aef754efa487a34191c77d979b98c09891142f4d22360682195062a",
+        "frames": [
+          {
+            "mediaSeconds": 3,
+            "referenceBoxesXYXY": [
+              [
+                362,
+                216,
+                409,
+                246
+              ]
+            ],
+            "beforeIoU": [
+              0.0423
+            ],
+            "afterIoU": [
+              0.0427
+            ]
+          },
+          {
+            "mediaSeconds": 5,
+            "referenceBoxesXYXY": [
+              [
+                266,
+                163,
+                295,
+                184
+              ]
+            ],
+            "beforeIoU": [
+              0.0
+            ],
+            "afterIoU": [
+              0.56
+            ]
+          },
+          {
+            "mediaSeconds": 7,
+            "referenceBoxesXYXY": [
+              [
+                211,
+                122,
+                230,
+                137
+              ]
+            ],
+            "beforeIoU": [
+              0.0
+            ],
+            "afterIoU": [
+              0.354
+            ]
+          }
+        ]
+      },
+      {
+        "camera": "6602",
+        "clipSha256": "a2895c70bd40acf51819a4f8776878845ed6a0066fadce321e2565898b9fba31",
+        "frames": [
+          {
+            "mediaSeconds": 3,
+            "referenceBoxesXYXY": [
+              [
+                208,
+                205,
+                239,
+                233
+              ],
+              [
+                282,
+                241,
+                324,
+                283
+              ],
+              [
+                330,
+                118,
+                347,
+                139
+              ]
+            ],
+            "beforeIoU": [
+              0.0,
+              0.0744,
+              0.0
+            ],
+            "afterIoU": [
+              0.0,
+              0.4273,
+              0.0
+            ]
+          },
+          {
+            "mediaSeconds": 5,
+            "referenceBoxesXYXY": [
+              [
+                297,
+                128,
+                317,
+                148
+              ],
+              [
+                311,
+                208,
+                340,
+                237
+              ],
+              [
+                344,
+                147,
+                363,
+                168
+              ],
+              [
+                338,
+                103,
+                354,
+                119
+              ]
+            ],
+            "beforeIoU": [
+              0.0,
+              0.035,
+              0.0,
+              0.0
+            ],
+            "afterIoU": [
+              0.51,
+              0.6835,
+              0.5798,
+              0.0
+            ]
+          },
+          {
+            "mediaSeconds": 7,
+            "referenceBoxesXYXY": [
+              [
+                207,
+                199,
+                247,
+                234
+              ],
+              [
+                320,
+                103,
+                335,
+                117
+              ],
+              [
+                342,
+                102,
+                356,
+                120
+              ],
+              [
+                355,
+                136,
+                368,
+                153
+              ]
+            ],
+            "beforeIoU": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "afterIoU": [
+              0.0,
+              0.0,
+              0.0,
+              0.6903
+            ]
+          }
+        ]
+      },
+      {
+        "camera": "8927",
+        "clipSha256": "6c4d5b54fdfdb4ec75ab0a4d2c0096bdf5acae4ddcc947b5d707eb91029fe6b0",
+        "frames": [
+          {
+            "mediaSeconds": 3,
+            "referenceBoxesXYXY": [
+              [
+                173,
+                174,
+                192,
+                196
+              ],
+              [
+                198,
+                166,
+                216,
+                192
+              ],
+              [
+                204,
+                195,
+                224,
+                222
+              ],
+              [
+                150,
+                226,
+                175,
+                258
+              ],
+              [
+                216,
+                141,
+                230,
+                159
+              ],
+              [
+                234,
+                141,
+                247,
+                158
+              ],
+              [
+                284,
+                136,
+                297,
+                151
+              ]
+            ],
+            "beforeIoU": [
+              0.1001,
+              0.2608,
+              0.033,
+              0.0403,
+              0.2268,
+              0.0,
+              0.0
+            ],
+            "afterIoU": [
+              0.7568,
+              0.6054,
+              0.6024,
+              0.6105,
+              0.5658,
+              0.3679,
+              0.0
+            ]
+          },
+          {
+            "mediaSeconds": 5,
+            "referenceBoxesXYXY": [
+              [
+                183,
+                157,
+                202,
+                178
+              ],
+              [
+                182,
+                187,
+                203,
+                216
+              ],
+              [
+                198,
+                202,
+                220,
+                231
+              ],
+              [
+                146,
+                229,
+                173,
+                264
+              ],
+              [
+                100,
+                240,
+                135,
+                278
+              ],
+              [
+                280,
+                165,
+                297,
+                184
+              ],
+              [
+                232,
+                141,
+                247,
+                162
+              ]
+            ],
+            "beforeIoU": [
+              0.1385,
+              0.0786,
+              0.0186,
+              0.1224,
+              0.082,
+              0.0,
+              0.1599
+            ],
+            "afterIoU": [
+              0.6561,
+              0.0,
+              0.7294,
+              0.6679,
+              0.573,
+              0.0,
+              0.4805
+            ]
+          },
+          {
+            "mediaSeconds": 7,
+            "referenceBoxesXYXY": [
+              [
+                132,
+                221,
+                162,
+                250
+              ],
+              [
+                193,
+                211,
+                218,
+                241
+              ],
+              [
+                203,
+                157,
+                221,
+                180
+              ],
+              [
+                230,
+                141,
+                246,
+                163
+              ],
+              [
+                279,
+                146,
+                297,
+                177
+              ],
+              [
+                257,
+                162,
+                275,
+                181
+              ]
+            ],
+            "beforeIoU": [
+              0.082,
+              0.0491,
+              0.2509,
+              0.1951,
+              0.0,
+              0.0
+            ],
+            "afterIoU": [
+              0.7908,
+              0.5309,
+              0.5706,
+              0.6057,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      {
+        "camera": "6579",
+        "clipSha256": "72c6241cd88b4bc7d0f6a7dfc45f1250452d989378a6b8067c5db5be922be8c8",
+        "frames": [
+          {
+            "mediaSeconds": 3,
+            "referenceBoxesXYXY": [
+              [
+                217,
+                181,
+                245,
+                210
+              ],
+              [
+                250,
+                177,
+                276,
+                201
+              ],
+              [
+                283,
+                174,
+                309,
+                201
+              ],
+              [
+                287,
+                141,
+                312,
+                164
+              ],
+              [
+                317,
+                139,
+                336,
+                161
+              ]
+            ],
+            "beforeIoU": [
+              0.0979,
+              0.5868,
+              0.4053,
+              0.2996,
+              0.2835
+            ],
+            "afterIoU": [
+              0.066,
+              0.5821,
+              0.7471,
+              0.4407,
+              0.5385
+            ]
+          },
+          {
+            "mediaSeconds": 5,
+            "referenceBoxesXYXY": [
+              [
+                248,
+                180,
+                274,
+                206
+              ],
+              [
+                266,
+                190,
+                292,
+                219
+              ],
+              [
+                270,
+                158,
+                295,
+                180
+              ],
+              [
+                303,
+                153,
+                324,
+                177
+              ]
+            ],
+            "beforeIoU": [
+              0.7459,
+              0.6855,
+              0.6956,
+              0.5149
+            ],
+            "afterIoU": [
+              0.6261,
+              0.6934,
+              0.8754,
+              0.7932
+            ]
+          },
+          {
+            "mediaSeconds": 7,
+            "referenceBoxesXYXY": [
+              [
+                248,
+                179,
+                273,
+                204
+              ],
+              [
+                262,
+                198,
+                289,
+                221
+              ],
+              [
+                269,
+                157,
+                295,
+                181
+              ],
+              [
+                294,
+                157,
+                316,
+                181
+              ]
+            ],
+            "beforeIoU": [
+              0.6396,
+              0.7032,
+              0.0,
+              0.5636
+            ],
+            "afterIoU": [
+              0.6252,
+              0.727,
+              0.7631,
+              0.3922
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "popupStartup": {
+    "method": "물왕교차로 공개 페이지에서 영상 재생을 확인한 뒤 AI 토글 클릭부터 첫 분석 오버레이가 나타날 때까지 측정했습니다. Chrome 새 브라우저 환경 3개에서 첫 실행과 같은 팝업에서 끈 뒤 재실행을 각각 측정했습니다. 처음 페이지와 영상에 연결하는 시간은 제외합니다.",
+    "units": "seconds",
+    "beforeFirstAndRepeat": [
+      [
+        2.944,
+        1.793
+      ],
+      [
+        3.365,
+        3.304
+      ],
+      [
+        6.336,
+        3.299
+      ]
+    ],
+    "afterFirstAndRepeat": [
+      [
+        0.321,
+        0.317
+      ],
+      [
+        0.328,
+        0.317
+      ],
+      [
+        0.322,
+        0.315
+      ]
+    ],
+    "modelAndRuntimeBytes": {
+      "identity": 16359727,
+      "gzip": 7244944
+    }
+  },
+  "mulwangFixedObjectsAndLaneCoverage": {
+    "camera": "gits-6581",
+    "date": "2026-11-23",
+    "method": "서로 다른 물왕교차로 야간 영상 3개를 기존 화면과 수정 화면에서 각각 재생하고 영상 2초부터 24초까지 2초마다 화면에 표시된 차량 상자를 확인했습니다. 방향 자막·안내판·신호등 위치의 상자가 고정물 크기와 겹치는지 비교했습니다. 첫 두 영상의 일부 프레임은 고정물 보정에도 사용했습니다. 전체 차량 검출률이나 혼잡도 정확도를 측정한 자료는 아닙니다.",
+    "directions": {
+      "목감동": [
+        "우회전 전용",
+        "직진 · 바깥쪽",
+        "직진 · 안쪽",
+        "좌회전 전용"
+      ],
+      "시흥시청": [
+        "직진 · 안쪽",
+        "직진 · 바깥쪽",
+        "우회전 합류"
+      ]
+    },
+    "stoppedVehicleCheck": "세 번째 영상에서는 정차 차량 4대의 위치를 같은 12개 시점에 비교했습니다. 검출 상자와 판독 상자의 IoU가 0.50 이상이면 일치로 판정했습니다.",
+    "clips": [
+      {
+        "clipSha256": "bb787d287e7706deb4137c4613414920d07377fe1748c7e39e55074a94538037",
+        "before": {
+          "samples": 12,
+          "samplesWithFixtureBox": 9,
+          "fixtureBoxes": {
+            "overheadSign": 5,
+            "signalAssembly": 9,
+            "caption": 17
+          }
+        },
+        "after": {
+          "samples": 12,
+          "samplesWithFixtureBox": 0,
+          "fixtureBoxes": {}
+        }
+      },
+      {
+        "clipSha256": "2939c70100e331ee874cb45871f8e09da4509f8e0cc6b83db713bea61fe630ae",
+        "before": {
+          "samples": 12,
+          "samplesWithFixtureBox": 12,
+          "fixtureBoxes": {
+            "caption": 23,
+            "signalAssembly": 11,
+            "overheadSign": 1
+          }
+        },
+        "after": {
+          "samples": 12,
+          "samplesWithFixtureBox": 0,
+          "fixtureBoxes": {}
+        }
+      },
+      {
+        "clipSha256": "c405aabf31aa2123e70a5f33b1725a8c48d8aab1c60726d4d40c0139fec74f9c",
+        "before": {
+          "samples": 12,
+          "samplesWithFixtureBox": 12,
+          "fixtureBoxes": {
+            "caption": 51
+          },
+          "stoppedVehicleMatchesAtIoU50": 33,
+          "checkedVehiclePositions": 48
+        },
+        "after": {
+          "samples": 12,
+          "samplesWithFixtureBox": 1,
+          "fixtureBoxes": {
+            "signalAssembly": 1
+          },
+          "stoppedVehicleMatchesAtIoU50": 30,
+          "checkedVehiclePositions": 48
+        }
+      }
+    ]
+  },
+  "mulwangRearApproachAndPlayback": {
+    "date": "2026-11-23",
+    "camera": "gits-6581",
+    "rearApproach": {
+      "sourceFrame": [
+        720,
+        480
+      ],
+      "verticalRangePx": [
+        96,
+        235
+      ],
+      "count": "차량 상자 하단 중심이 점선 안에 있는 차량을 집계합니다. 앞쪽 7개 차로에 배정한 차량은 제외합니다. 확대 검사를 번갈아 수행하므로 최근 후방 검사값은 최대 1초 동안 표시합니다.",
+      "fieldCheck": "공개 센터의 야간 클립을 재생해 점선 안에서 실제 차량이 감지되는 것을 확인했습니다. 전조등이 겹치면 차량을 놓치는 장면이 있습니다."
+    },
+    "playback": {
+      "method": "공개 Odroid 주소를 macOS Chrome에서 열고, 첫 프레임 재생 후 브라우저에 표시된 연속 프레임의 시간 간격을 측정했습니다. 각 72초 측정은 서로 다른 시각의 센터 영상과 네트워크 상태에서 진행했습니다. 수정 후 AI 꺼짐은 모바일 너비 390px로 확인했습니다. 수치는 해당 관측 구간의 값입니다.",
+      "beforeAiOn": {
+        "observedSeconds": 72,
+        "transitions": 2,
+        "gapsOver350ms": [
+          750,
+          3450,
+          3633
+        ]
+      },
+      "beforeAiOff": {
+        "observedSeconds": 72,
+        "transitions": 1,
+        "gapsOver350ms": [
+          4783,
+          7033,
+          1900,
+          483,
+          1033,
+          517,
+          633,
+          2917,
+          400,
+          1550,
+          883
+        ]
+      },
+      "afterAiOn": {
+        "observedSeconds": 72,
+        "transitions": 2,
+        "gapsOver350ms": [
+          550,
+          1067,
+          783
+        ],
+        "transitionGapsMs": [
+          83,
+          100
+        ]
+      },
+      "afterAiOff": {
+        "observedSeconds": 72,
+        "transitions": 2,
+        "gapsOver350ms": [],
+        "transitionGapsMs": [
+          100,
+          67
+        ]
+      },
+      "finalAiOn": {
+        "observedSeconds": 35,
+        "transitions": 1,
+        "gapsOver350ms": [
+          400
+        ],
+        "transitionGapsMs": [
+          100
+        ]
+      }
+    }
+  },
+  "mulwangDaytimeRearAndSign": {
+    "date": "2026-11-24",
+    "camera": "gits-6581",
+    "method": "주간 센터 영상에서 눈으로 구분한 차량 상자와 같은 원본 프레임에 표시될 모델 검출 상자를 비교했습니다. 후방 확대 검사를 마친 결과 중 신뢰도 0.28 이상을 대상으로 IoU 0.40 이상인 쌍을 일대일로 대응했습니다. 반복 검출로 확인되는 약한 후보와 재생 중 추적 상자는 이 수치에서 제외했습니다. 혼잡도 분류 정확도를 측정한 값은 아닙니다.",
+    "clipsSha256": {
+      "train": "533e4f8eaaff1927dc35fcd0d0a706929a5c7f23f16dc16974d4561cf26b82cd",
+      "field": "7042ee753503d283baa1d53004aebb814266bf51c3eef00e35ea0de701f7a72b",
+      "holdout": "e5cd48dcd949f80bdc502ab81291aa1dd4003d86e6adc2483d8028b5f16ce071",
+      "stopped": "44e7a825b8bbf23328f88834b983270e932256c3a0a717ac19247ccb3e63f5fd"
+    },
+    "frames": {
+      "train4": {
+        "referenceXYWH": [
+          [
+            188.75,
+            103.88,
+            7.5,
+            11.25
+          ],
+          [
+            202.25,
+            100.25,
+            7.0,
+            9.0
+          ],
+          [
+            200.38,
+            109.0,
+            11.75,
+            21.0
+          ],
+          [
+            212.38,
+            112.0,
+            9.75,
+            12.0
+          ],
+          [
+            203.88,
+            125.75,
+            10.25,
+            9.5
+          ],
+          [
+            216.12,
+            121.75,
+            10.25,
+            10.5
+          ],
+          [
+            207.5,
+            131.25,
+            9.0,
+            11.5
+          ],
+          [
+            220.25,
+            129.88,
+            8.5,
+            8.75
+          ],
+          [
+            211.0,
+            138.12,
+            10.5,
+            13.25
+          ],
+          [
+            222.5,
+            133.88,
+            10.5,
+            10.75
+          ],
+          [
+            216.38,
+            148.75,
+            11.25,
+            14.5
+          ],
+          [
+            228.5,
+            141.88,
+            10.0,
+            14.25
+          ],
+          [
+            219.38,
+            160.88,
+            10.75,
+            12.25
+          ],
+          [
+            235.62,
+            153.38,
+            12.25,
+            13.75
+          ],
+          [
+            224.5,
+            172.12,
+            13.5,
+            15.25
+          ],
+          [
+            248.75,
+            163.12,
+            12.0,
+            13.75
+          ],
+          [
+            233.62,
+            185.38,
+            13.25,
+            16.25
+          ],
+          [
+            250.0,
+            175.88,
+            14.0,
+            14.75
+          ],
+          [
+            239.75,
+            200.0,
+            13.5,
+            15.5
+          ],
+          [
+            261.62,
+            189.88,
+            14.25,
+            16.75
+          ],
+          [
+            246.12,
+            211.38,
+            15.25,
+            19.25
+          ],
+          [
+            266.88,
+            204.75,
+            16.25,
+            17.5
+          ]
+        ],
+        "beforeMatches": 4,
+        "afterMatches": 12
+      },
+      "field4": {
+        "referenceXYWH": [
+          [
+            189.5,
+            98.5,
+            6.5,
+            9.5
+          ],
+          [
+            201.12,
+            100.0,
+            6.75,
+            7.5
+          ],
+          [
+            195.5,
+            108.75,
+            7.0,
+            8.0
+          ],
+          [
+            200.38,
+            116.12,
+            9.25,
+            14.75
+          ],
+          [
+            212.25,
+            113.75,
+            8.5,
+            10.0
+          ],
+          [
+            218.12,
+            125.88,
+            9.25,
+            10.25
+          ],
+          [
+            208.38,
+            139.5,
+            11.25,
+            13.0
+          ],
+          [
+            229.5,
+            139.12,
+            10.5,
+            12.75
+          ],
+          [
+            224.88,
+            171.0,
+            11.25,
+            14.0
+          ],
+          [
+            248.75,
+            170.12,
+            12.5,
+            14.25
+          ],
+          [
+            233.5,
+            177.75,
+            22.5,
+            41.5
+          ]
+        ],
+        "beforeMatches": 5,
+        "afterMatches": 10
+      },
+      "field14": {
+        "referenceXYWH": [
+          [
+            189.88,
+            99.75,
+            6.25,
+            7.5
+          ],
+          [
+            201.5,
+            97.75,
+            6.5,
+            7.0
+          ],
+          [
+            203.38,
+            106.5,
+            7.25,
+            9.5
+          ],
+          [
+            193.5,
+            111.75,
+            8.0,
+            9.0
+          ],
+          [
+            208.88,
+            111.5,
+            8.25,
+            10.0
+          ],
+          [
+            202.5,
+            126.38,
+            8.5,
+            9.75
+          ],
+          [
+            217.25,
+            124.38,
+            9.5,
+            9.75
+          ],
+          [
+            209.38,
+            134.75,
+            8.75,
+            13.0
+          ],
+          [
+            214.88,
+            149.12,
+            12.25,
+            12.75
+          ],
+          [
+            234.38,
+            145.62,
+            10.75,
+            12.75
+          ],
+          [
+            221.62,
+            160.38,
+            14.25,
+            24.75
+          ],
+          [
+            240.12,
+            154.62,
+            12.75,
+            15.25
+          ],
+          [
+            233.25,
+            183.88,
+            13.0,
+            17.25
+          ],
+          [
+            257.5,
+            185.38,
+            14.5,
+            16.25
+          ],
+          [
+            271.25,
+            209.62,
+            16.5,
+            20.75
+          ]
+        ],
+        "beforeMatches": 7,
+        "afterMatches": 14
+      },
+      "holdout4": {
+        "referenceXYWH": [
+          [
+            200.38,
+            91.62,
+            6.25,
+            7.75
+          ],
+          [
+            201.12,
+            99.88,
+            7.75,
+            7.75
+          ],
+          [
+            190.5,
+            105.0,
+            7.5,
+            9.5
+          ],
+          [
+            208.88,
+            109.0,
+            7.25,
+            8.0
+          ],
+          [
+            217.38,
+            122.38,
+            8.75,
+            8.75
+          ],
+          [
+            205.5,
+            132.38,
+            10.5,
+            11.25
+          ],
+          [
+            226.62,
+            134.25,
+            10.75,
+            13.0
+          ],
+          [
+            221.25,
+            158.5,
+            13.5,
+            15.5
+          ],
+          [
+            250.5,
+            166.38,
+            12.5,
+            14.25
+          ],
+          [
+            232.88,
+            183.12,
+            13.75,
+            17.25
+          ],
+          [
+            265.12,
+            197.75,
+            15.75,
+            20.0
+          ]
+        ],
+        "beforeMatches": 6,
+        "afterMatches": 10
+      },
+      "holdout14": {
+        "referenceXYWH": [
+          [
+            189.0,
+            100.88,
+            7.5,
+            8.75
+          ],
+          [
+            202.0,
+            103.38,
+            7.5,
+            6.75
+          ],
+          [
+            199.5,
+            115.88,
+            8.0,
+            11.75
+          ],
+          [
+            216.88,
+            121.75,
+            9.75,
+            10.5
+          ],
+          [
+            203.0,
+            126.5,
+            10.0,
+            12.0
+          ],
+          [
+            246.62,
+            159.5,
+            15.25,
+            24.0
+          ],
+          [
+            229.38,
+            171.88,
+            12.75,
+            13.75
+          ],
+          [
+            239.88,
+            194.5,
+            13.25,
+            18.0
+          ],
+          [
+            271.12,
+            199.0,
+            16.25,
+            20.5
+          ]
+        ],
+        "beforeMatches": 6,
+        "afterMatches": 9
+      },
+      "stopped4": {
+        "referenceXYWH": [
+          [
+            189.12,
+            98.5,
+            6.75,
+            7.5
+          ],
+          [
+            201.5,
+            98.62,
+            6.0,
+            6.25
+          ],
+          [
+            193.62,
+            104.62,
+            7.75,
+            7.75
+          ],
+          [
+            203.62,
+            103.0,
+            7.25,
+            6.0
+          ],
+          [
+            196.5,
+            111.12,
+            7.0,
+            8.25
+          ],
+          [
+            206.38,
+            107.5,
+            7.75,
+            8.5
+          ],
+          [
+            200.25,
+            118.12,
+            8.5,
+            9.75
+          ],
+          [
+            209.12,
+            113.5,
+            7.75,
+            8.0
+          ],
+          [
+            212.62,
+            120.12,
+            9.25,
+            9.75
+          ],
+          [
+            204.75,
+            124.38,
+            12.0,
+            14.75
+          ],
+          [
+            219.62,
+            124.75,
+            10.25,
+            11.0
+          ],
+          [
+            209.62,
+            137.0,
+            9.75,
+            10.0
+          ],
+          [
+            221.75,
+            132.12,
+            9.5,
+            9.75
+          ],
+          [
+            212.62,
+            142.0,
+            9.75,
+            9.5
+          ],
+          [
+            228.0,
+            137.5,
+            11.0,
+            13.0
+          ],
+          [
+            217.88,
+            148.62,
+            11.75,
+            14.25
+          ],
+          [
+            232.62,
+            147.25,
+            10.75,
+            11.0
+          ],
+          [
+            222.5,
+            160.88,
+            12.0,
+            11.25
+          ],
+          [
+            240.25,
+            154.38,
+            11.5,
+            10.75
+          ],
+          [
+            224.38,
+            170.25,
+            13.75,
+            17.0
+          ],
+          [
+            244.25,
+            163.12,
+            13.5,
+            15.25
+          ],
+          [
+            231.38,
+            184.75,
+            13.75,
+            16.0
+          ],
+          [
+            255.12,
+            178.62,
+            15.25,
+            21.25
+          ],
+          [
+            277.38,
+            204.5,
+            16.25,
+            19.5
+          ]
+        ],
+        "beforeMatches": 3,
+        "afterMatches": 10
+      }
+    },
+    "comparisonFrames": [
+      "field4",
+      "field14",
+      "holdout4",
+      "holdout14",
+      "stopped4"
+    ],
+    "signMethod": "4개 영상에서 2~24초 구간을 2초 간격으로 확인했습니다. 표지판 윤곽을 덮은 상자와 실제 버스를 원본에서 구분했습니다. field10에서는 표지판 뒤에 보이는 실제 버스의 지붕과 차체를 확인했습니다. train은 보정에 사용했고 holdout2의 표지판 하단 범위도 보정 과정에서 확인했습니다.",
+    "beforeSignAsBus": [
+      "train2",
+      "train6",
+      "train14",
+      "field18",
+      "holdout2"
+    ],
+    "afterSignAsBus": [],
+    "signCheckedFrames": 48
+  },
+  "mulwangLaneViewValidation": {
+    "date": "2026-11-24",
+    "method": "물왕교차로의 서로 다른 주간 클립 2개를 수정 전후 웹 화면에서 같은 속도로 재생했습니다. 각 영상에서 2초부터 24초까지 2초 간격으로 목감동 4개와 시흥시청 3개 차로가 영상에 표시됐는지 확인했습니다.",
+    "clips": [
+      {
+        "sha256": "94ceea4e3d6fc67fedbb5f1ff0ec7d681bfec0f0debfc07eb2f36b268f10821d",
+        "samples": 12,
+        "sevenLanesBefore": 1,
+        "sevenLanesAfter": 12
+      },
+      {
+        "sha256": "94ceea4e3d6fc67fedbb5f1ff0ec7d681bfec0f0debfc07eb2f36b268f10821d",
+        "samples": 12,
+        "sevenLanesBefore": 0,
+        "sevenLanesAfter": 12
+      }
+    ],
+    "cameraViewChecks": {
+      "current4.png": {
+        "original": true,
+        "bright": true,
+        "shade": true,
+        "coverSign": true,
+        "pan": false,
+        "zoom": false,
+        "mirror": false,
+        "captions": false
+      },
+      "current16.png": {
+        "original": true,
+        "bright": true,
+        "shade": true,
+        "coverSign": true,
+        "pan": false,
+        "zoom": false,
+        "mirror": false,
+        "captions": false
+      },
+      "check2.png": {
+        "original": true,
+        "bright": true,
+        "shade": true,
+        "coverSign": true,
+        "pan": false,
+        "zoom": false,
+        "mirror": false,
+        "captions": false
+      },
+      "check14.png": {
+        "original": true,
+        "bright": true,
+        "shade": true,
+        "coverSign": true,
+        "pan": false,
+        "zoom": false,
+        "mirror": false,
+        "captions": false
+      }
+    }
+  },
+  "fixedCameraLanes": {
+    "date": "2026-11-24",
+    "method": "차량 모델 요청이 실패하도록 설정한 시험 화면에서 CCTV 14대를 차례로 선택해 각 카메라의 고정 차로가 표시되는지 확인했습니다. 물왕교차로에서 차로 한 개를 직접 지정하고 새로고침한 뒤 복원했을 때 공용 7개 차로가 다시 표시됐습니다.",
+    "renderedLaneCounts": {
+      "gits-6601": 6,
+      "gits-6580": 2,
+      "gits-8927": 5,
+      "gits-1216": 4,
+      "gits-8941": 1,
+      "gits-6603": 1,
+      "gits-8939": 2,
+      "gits-8940": 2,
+      "gits-6602": 1,
+      "gits-6581": 7,
+      "gits-6579": 2,
+      "gits-6590": 2,
+      "gits-6578": 2,
+      "gits-60119": 1
+    }
+  },
+  "mulwangDaytimeRoadPaint": {
+    "date": "2026-11-24",
+    "method": "보정용 클립과 서로 다른 주간 클립 두 개의 0~28초를 2초 간격으로 판독했습니다. 기존·수정 브라우저 워커에서 전체 화면과 확대 검사 결과를 수집했습니다. 신뢰도 0.28 이상인 승용차 상자가 실제 노면표시에 붙은 경우를 같은 시점·같은 표시당 한 번으로 셌습니다. 원본 영상에서 차량이거나 차량과 도색을 구분하기 어려운 상자는 오탐에서 제외했습니다. 표시 중심을 덮은 기존 차량 상자를 육안 확인한 뒤 같은 프레임의 수정 결과에 IoU 0.6 이상으로 대응되는지 확인했습니다. 반복 관측을 포함합니다.",
+    "markIndices": [
+      "outerDiamond",
+      "middleDiamond",
+      "innerDiamond",
+      "outerArrow",
+      "middleArrow",
+      "innerArrow"
+    ],
+    "calibrationClipSha256": "8e89e389bc5116414b7f70ebf655cd77eb5da13a80a3c2c7edaa020e1cbec378",
+    "clips": {
+      "traffic": {
+        "clipSha256": "304df8002325da66c62e8163094ea388c96765a5c11c3f1aeac854bb312ce9eb",
+        "timesChecked": 15,
+        "falseCarsOnPaint": {
+          "before": 21,
+          "after": 1
+        },
+        "markIndicesByTime": {
+          "before": {
+            "traffic00": [
+              0
+            ],
+            "traffic02": [
+              0
+            ],
+            "traffic04": [],
+            "traffic06": [
+              0,
+              1
+            ],
+            "traffic08": [],
+            "traffic10": [
+              0
+            ],
+            "traffic12": [
+              0
+            ],
+            "traffic14": [],
+            "traffic16": [
+              0,
+              2
+            ],
+            "traffic18": [
+              0,
+              2
+            ],
+            "traffic20": [
+              0,
+              2
+            ],
+            "traffic22": [
+              2,
+              5
+            ],
+            "traffic24": [
+              0,
+              2
+            ],
+            "traffic26": [
+              0,
+              2,
+              5
+            ],
+            "traffic28": [
+              0,
+              1
+            ]
+          },
+          "after": {
+            "traffic00": [],
+            "traffic02": [],
+            "traffic04": [],
+            "traffic06": [],
+            "traffic08": [],
+            "traffic10": [],
+            "traffic12": [],
+            "traffic14": [],
+            "traffic16": [],
+            "traffic18": [],
+            "traffic20": [],
+            "traffic22": [],
+            "traffic24": [],
+            "traffic26": [
+              2
+            ],
+            "traffic28": []
+          }
+        },
+        "overlappingVehiclesChecked": 26,
+        "overlappingVehiclesRetained": 26,
+        "matchedVehiclesBefore": [
+          {
+            "frame": "traffic00",
+            "boxXYWH": [
+              239.24,
+              194.77,
+              17.36,
+              21.39
+            ]
+          },
+          {
+            "frame": "traffic00",
+            "boxXYWH": [
+              244.48,
+              163.63,
+              16.1,
+              12.48
+            ]
+          },
+          {
+            "frame": "traffic02",
+            "boxXYWH": [
+              224.99,
+              166.78,
+              16.22,
+              17.93
+            ]
+          },
+          {
+            "frame": "traffic02",
+            "boxXYWH": [
+              263.25,
+              186.79,
+              40.46,
+              26.68
+            ]
+          },
+          {
+            "frame": "traffic04",
+            "boxXYWH": [
+              241.06,
+              200.14,
+              19.89,
+              22.17
+            ]
+          },
+          {
+            "frame": "traffic04",
+            "boxXYWH": [
+              240.23,
+              156.17,
+              16.24,
+              17.21
+            ]
+          },
+          {
+            "frame": "traffic04",
+            "boxXYWH": [
+              226.01,
+              168.43,
+              14.8,
+              17.26
+            ]
+          },
+          {
+            "frame": "traffic06",
+            "boxXYWH": [
+              241.88,
+              201.62,
+              18.22,
+              21.78
+            ]
+          },
+          {
+            "frame": "traffic06",
+            "boxXYWH": [
+              241.72,
+              156.77,
+              14.72,
+              16.64
+            ]
+          },
+          {
+            "frame": "traffic10",
+            "boxXYWH": [
+              250.01,
+              210.69,
+              17.88,
+              23.92
+            ]
+          },
+          {
+            "frame": "traffic10",
+            "boxXYWH": [
+              243.74,
+              161.85,
+              15.22,
+              15.11
+            ]
+          },
+          {
+            "frame": "traffic10",
+            "boxXYWH": [
+              227.52,
+              170.24,
+              21.26,
+              27.19
+            ]
+          },
+          {
+            "frame": "traffic10",
+            "boxXYWH": [
+              263.56,
+              190.97,
+              24.27,
+              20.85
+            ]
+          },
+          {
+            "frame": "traffic12",
+            "boxXYWH": [
+              265.08,
+              193.22,
+              19.14,
+              20.12
+            ]
+          },
+          {
+            "frame": "traffic12",
+            "boxXYWH": [
+              243.71,
+              169.5,
+              21.2,
+              17.64
+            ]
+          },
+          {
+            "frame": "traffic12",
+            "boxXYWH": [
+              244.98,
+              206.95,
+              20.67,
+              23.76
+            ]
+          },
+          {
+            "frame": "traffic14",
+            "boxXYWH": [
+              241.5,
+              159.29,
+              18.68,
+              16.63
+            ]
+          },
+          {
+            "frame": "traffic16",
+            "boxXYWH": [
+              267.43,
+              197.43,
+              28.06,
+              23.76
+            ]
+          },
+          {
+            "frame": "traffic16",
+            "boxXYWH": [
+              227.67,
+              171.53,
+              15.17,
+              15.08
+            ]
+          },
+          {
+            "frame": "traffic18",
+            "boxXYWH": [
+              262.07,
+              189.52,
+              18.46,
+              22.77
+            ]
+          },
+          {
+            "frame": "traffic18",
+            "boxXYWH": [
+              223.57,
+              168.6,
+              17.21,
+              15.78
+            ]
+          },
+          {
+            "frame": "traffic18",
+            "boxXYWH": [
+              246.0,
+              210.81,
+              21.23,
+              21.8
+            ]
+          },
+          {
+            "frame": "traffic20",
+            "boxXYWH": [
+              263.48,
+              194.92,
+              21.93,
+              20.02
+            ]
+          },
+          {
+            "frame": "traffic26",
+            "boxXYWH": [
+              249.89,
+              213.81,
+              21.04,
+              21.81
+            ]
+          },
+          {
+            "frame": "traffic26",
+            "boxXYWH": [
+              227.86,
+              171.15,
+              14.56,
+              15.05
+            ]
+          },
+          {
+            "frame": "traffic28",
+            "boxXYWH": [
+              245.66,
+              209.77,
+              21.44,
+              21.64
+            ]
+          }
+        ]
+      },
+      "eval": {
+        "clipSha256": "8ffcff7712842e89bd4e9055a5ec6cdc23355b8e1345f31506de654f34739216",
+        "timesChecked": 15,
+        "falseCarsOnPaint": {
+          "before": 7,
+          "after": 0
+        },
+        "markIndicesByTime": {
+          "before": {
+            "eval00": [],
+            "eval02": [],
+            "eval04": [],
+            "eval06": [],
+            "eval08": [],
+            "eval10": [
+              0
+            ],
+            "eval12": [
+              0
+            ],
+            "eval14": [],
+            "eval16": [],
+            "eval18": [
+              0
+            ],
+            "eval20": [
+              0
+            ],
+            "eval22": [
+              0
+            ],
+            "eval24": [
+              0
+            ],
+            "eval26": [
+              0
+            ],
+            "eval28": []
+          },
+          "after": {
+            "eval00": [],
+            "eval02": [],
+            "eval04": [],
+            "eval06": [],
+            "eval08": [],
+            "eval10": [],
+            "eval12": [],
+            "eval14": [],
+            "eval16": [],
+            "eval18": [],
+            "eval20": [],
+            "eval22": [],
+            "eval24": [],
+            "eval26": [],
+            "eval28": []
+          }
+        },
+        "overlappingVehiclesChecked": 35,
+        "overlappingVehiclesRetained": 35,
+        "matchedVehiclesBefore": [
+          {
+            "frame": "eval04",
+            "boxXYWH": [
+              242.92,
+              166.04,
+              16.31,
+              13.45
+            ]
+          },
+          {
+            "frame": "eval04",
+            "boxXYWH": [
+              266.53,
+              201.39,
+              17.72,
+              17.42
+            ]
+          },
+          {
+            "frame": "eval04",
+            "boxXYWH": [
+              226.41,
+              165.14,
+              16.22,
+              28.97
+            ]
+          },
+          {
+            "frame": "eval10",
+            "boxXYWH": [
+              237.82,
+              187.22,
+              28.31,
+              35.44
+            ]
+          },
+          {
+            "frame": "eval10",
+            "boxXYWH": [
+              227.5,
+              167.41,
+              14.96,
+              18.58
+            ]
+          },
+          {
+            "frame": "eval12",
+            "boxXYWH": [
+              248.13,
+              169.07,
+              15.64,
+              15.42
+            ]
+          },
+          {
+            "frame": "eval12",
+            "boxXYWH": [
+              237.22,
+              187.55,
+              28.31,
+              36.52
+            ]
+          },
+          {
+            "frame": "eval12",
+            "boxXYWH": [
+              267.11,
+              201.09,
+              18.36,
+              18.12
+            ]
+          },
+          {
+            "frame": "eval12",
+            "boxXYWH": [
+              228.01,
+              166.86,
+              13.65,
+              18.22
+            ]
+          },
+          {
+            "frame": "eval14",
+            "boxXYWH": [
+              269.33,
+              201.09,
+              17.84,
+              18.61
+            ]
+          },
+          {
+            "frame": "eval16",
+            "boxXYWH": [
+              246.35,
+              168.76,
+              16.77,
+              15.72
+            ]
+          },
+          {
+            "frame": "eval16",
+            "boxXYWH": [
+              268.11,
+              200.68,
+              18.36,
+              18.99
+            ]
+          },
+          {
+            "frame": "eval16",
+            "boxXYWH": [
+              236.87,
+              187.22,
+              29.39,
+              35.07
+            ]
+          },
+          {
+            "frame": "eval16",
+            "boxXYWH": [
+              227.42,
+              168.1,
+              14.55,
+              16.85
+            ]
+          },
+          {
+            "frame": "eval18",
+            "boxXYWH": [
+              248.23,
+              170.12,
+              15.54,
+              14.42
+            ]
+          },
+          {
+            "frame": "eval18",
+            "boxXYWH": [
+              226.76,
+              164.75,
+              15.15,
+              22.18
+            ]
+          },
+          {
+            "frame": "eval18",
+            "boxXYWH": [
+              269.34,
+              200.93,
+              18.25,
+              18.74
+            ]
+          },
+          {
+            "frame": "eval18",
+            "boxXYWH": [
+              237.59,
+              184.53,
+              29.28,
+              42.57
+            ]
+          },
+          {
+            "frame": "eval20",
+            "boxXYWH": [
+              227.3,
+              166.37,
+              15.54,
+              19.63
+            ]
+          },
+          {
+            "frame": "eval20",
+            "boxXYWH": [
+              268.48,
+              199.72,
+              18.18,
+              19.37
+            ]
+          },
+          {
+            "frame": "eval20",
+            "boxXYWH": [
+              248.34,
+              167.3,
+              14.96,
+              16.21
+            ]
+          },
+          {
+            "frame": "eval20",
+            "boxXYWH": [
+              237.53,
+              186.88,
+              28.51,
+              36.56
+            ]
+          },
+          {
+            "frame": "eval22",
+            "boxXYWH": [
+              268.45,
+              200.29,
+              17.71,
+              19.56
+            ]
+          },
+          {
+            "frame": "eval22",
+            "boxXYWH": [
+              237.26,
+              187.6,
+              29.23,
+              34.58
+            ]
+          },
+          {
+            "frame": "eval22",
+            "boxXYWH": [
+              227.55,
+              167.5,
+              14.57,
+              17.96
+            ]
+          },
+          {
+            "frame": "eval24",
+            "boxXYWH": [
+              267.06,
+              200.3,
+              19.39,
+              19.92
+            ]
+          },
+          {
+            "frame": "eval24",
+            "boxXYWH": [
+              226.89,
+              167.16,
+              15.3,
+              18.23
+            ]
+          },
+          {
+            "frame": "eval24",
+            "boxXYWH": [
+              237.43,
+              187.14,
+              28.37,
+              34.71
+            ]
+          },
+          {
+            "frame": "eval26",
+            "boxXYWH": [
+              267.79,
+              200.87,
+              19.36,
+              22.13
+            ]
+          },
+          {
+            "frame": "eval26",
+            "boxXYWH": [
+              237.72,
+              187.29,
+              28.43,
+              35.61
+            ]
+          },
+          {
+            "frame": "eval26",
+            "boxXYWH": [
+              224.68,
+              163.4,
+              16.07,
+              21.13
+            ]
+          },
+          {
+            "frame": "eval28",
+            "boxXYWH": [
+              248.34,
+              169.32,
+              15.26,
+              14.69
+            ]
+          },
+          {
+            "frame": "eval28",
+            "boxXYWH": [
+              265.71,
+              198.98,
+              19.07,
+              19.79
+            ]
+          },
+          {
+            "frame": "eval28",
+            "boxXYWH": [
+              236.8,
+              186.92,
+              29.46,
+              36.43
+            ]
+          },
+          {
+            "frame": "eval28",
+            "boxXYWH": [
+              227.0,
+              164.6,
+              14.68,
+              20.88
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "wolgotAndSiheungPoliceCalibration": {
+    "dateKST": "2026-11-24",
+    "method": "보정용 영상과 별도로 받은 720×480 주간 영상에서 판독 가능한 차량을 골라 상자를 표시했습니다. 보정 전후 배포 빌드의 브라우저 워커로 같은 프레임을 각각 세 번 분석했습니다. 전체 화면과 순환 확대 검사에서 얻은 점수 0.28 이상 상자를 모아 IoU 0.5 이상에서 일대일로 대조했습니다. 연속 재생에서의 검출률, 전체 차량 재현율 또는 야간 혼잡도 정확도를 뜻하지 않습니다.",
+    "wolgot": {
+      "calibrationClipSha256": "afd22842bfac3852279724e758c08ec5724074081ffdb9b42943b5299fb21444",
+      "evaluationClipSha256": "5eb1b33af3c3c82793f949f8455a57776cb30b3f3f6911f342a5e18b7d68f677",
+      "labelledBoxes": 18,
+      "matchedBefore": 2,
+      "matchedAfter": 11,
+      "frames": [
+        {
+          "seconds": 0,
+          "manualXYWH": [
+            [
+              236.5,
+              15.5,
+              12.5,
+              13.0
+            ],
+            [
+              229.0,
+              34.5,
+              12.0,
+              16.5
+            ],
+            [
+              222.0,
+              71.0,
+              17.0,
+              23.0
+            ],
+            [
+              199.0,
+              115.0,
+              17.5,
+              26.0
+            ],
+            [
+              249.5,
+              4.5,
+              12.5,
+              11.0
+            ]
+          ],
+          "before": 0,
+          "after": 2
+        },
+        {
+          "seconds": 8,
+          "manualXYWH": [
+            [
+              239.5,
+              13.0,
+              15.5,
+              14.5
+            ],
+            [
+              229.5,
+              36.0,
+              10.5,
+              14.5
+            ],
+            [
+              247.0,
+              39.0,
+              14.0,
+              14.5
+            ],
+            [
+              221.5,
+              56.5,
+              16.5,
+              17.5
+            ],
+            [
+              245.5,
+              80.0,
+              18.0,
+              21.5
+            ],
+            [
+              227.0,
+              115.0,
+              18.0,
+              25.5
+            ]
+          ],
+          "before": 1,
+          "after": 4
+        },
+        {
+          "seconds": 16,
+          "manualXYWH": [
+            [
+              237.5,
+              18.0,
+              11.5,
+              13.0
+            ],
+            [
+              228.0,
+              31.5,
+              13.5,
+              16.0
+            ],
+            [
+              246.5,
+              45.5,
+              15.5,
+              16.0
+            ],
+            [
+              220.5,
+              68.5,
+              16.0,
+              18.0
+            ],
+            [
+              253.5,
+              110.5,
+              19.5,
+              22.5
+            ]
+          ],
+          "before": 1,
+          "after": 3
+        },
+        {
+          "seconds": 24,
+          "manualXYWH": [
+            [
+              249.0,
+              4.0,
+              14.0,
+              13.5
+            ],
+            [
+              223.5,
+              89.5,
+              17.5,
+              17.0
+            ]
+          ],
+          "before": 0,
+          "after": 2
+        }
+      ]
+    },
+    "siheungPolice": {
+      "calibrationClipSha256": "1080cb96299cd3612f70e4bbecec4de83d47ef1e0dd9b5c7b9252b5c24d5cb11",
+      "evaluationClipSha256": "f3651ff3d9c077313e287aaf690a69c3be5f05bed77debdbe51b01c316e7e829",
+      "labelledBoxes": 9,
+      "matchedBefore": 3,
+      "matchedAfter": 5,
+      "frames": [
+        {
+          "seconds": 0,
+          "manualXYWH": [
+            [
+              172.5,
+              176.5,
+              20.5,
+              20.5
+            ],
+            [
+              197.5,
+              139.5,
+              17.5,
+              17.5
+            ],
+            [
+              294.5,
+              194.5,
+              36.0,
+              27.0
+            ]
+          ],
+          "before": 1,
+          "after": 2
+        },
+        {
+          "seconds": 8,
+          "manualXYWH": [
+            [
+              208.5,
+              178.0,
+              21.5,
+              26.5
+            ]
+          ],
+          "before": 0,
+          "after": 0
+        },
+        {
+          "seconds": 16,
+          "manualXYWH": [
+            [
+              115.5,
+              144.5,
+              16.0,
+              14.5
+            ],
+            [
+              184.5,
+              141.5,
+              16.5,
+              17.0
+            ],
+            [
+              172.0,
+              176.0,
+              19.5,
+              18.5
+            ]
+          ],
+          "before": 0,
+          "after": 1
+        },
+        {
+          "seconds": 24,
+          "manualXYWH": [
+            [
+              210.5,
+              150.0,
+              21.0,
+              17.5
+            ],
+            [
+              254.0,
+              170.0,
+              20.0,
+              18.0
+            ]
+          ],
+          "before": 2,
+          "after": 2
+        }
+      ],
+      "fixedLocations": {
+        "evaluationClipSha256": "386822f1650abedc2ef2a0319db5f7629d60b7409af350e71db274da6a9834dc",
+        "frames": 15,
+        "sampleIntervalSeconds": 2,
+        "measure": "각 고정물의 사각형 안에 점수 0.28 이상 후보 중심이 한 번이라도 들어간 프레임 수입니다.",
+        "regionsXYXY": {
+          "군자동 자막": [
+            0,
+            334,
+            117,
+            374
+          ],
+          "마름모 두 곳": [
+            163,
+            170,
+            198,
+            186
+          ]
+        },
+        "before": {
+          "군자동 자막": 6,
+          "마름모 두 곳": 12
+        },
+        "after": {
+          "군자동 자막": 0,
+          "마름모 두 곳": 3
+        }
+      }
+    }
+  },
+  "wolgotMovingTracks": {
+    "dateKST": "2026-11-24",
+    "camera": "gits-6578",
+    "method": "같은 주간 CCTV 클립 두 개를 변경 전후 Chrome에서 재생했습니다. 원본에서 움직이는 차량 6대를 골라 0.5초 간격으로 상자를 표시하고, 가장 가까운 영상 표시 시각의 화면 상자와 비교했습니다. IoU 0.5 이상을 일치로 셌습니다. 추적 번호는 각 재생 중에만 유효합니다. 한 기기의 재생 표본이며 모든 차량의 검출률, 야간 성능이나 혼잡도 정확도는 측정하지 않았습니다.",
+    "clips": [
+      {
+        "clipSha256": "d3522f32b51694a19f178f5b8d1b5240c919452848553cc1639daa19bde8568a",
+        "tracks": [
+          {
+            "vehicle": "yellow",
+            "samples": [
+              {
+                "seconds": 11.0,
+                "manualXYWH": [
+                  427,
+                  324,
+                  46,
+                  60
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.563,
+                "matchedTrackId": 98
+              },
+              {
+                "seconds": 11.5,
+                "manualXYWH": [
+                  388,
+                  274,
+                  40,
+                  52
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.779,
+                "matchedTrackId": 98
+              },
+              {
+                "seconds": 12.0,
+                "manualXYWH": [
+                  361,
+                  230,
+                  38,
+                  48
+                ],
+                "beforeIoU": 0.69,
+                "afterIoU": 0.835,
+                "matchedTrackId": 98
+              },
+              {
+                "seconds": 12.5,
+                "manualXYWH": [
+                  341,
+                  199,
+                  34,
+                  42
+                ],
+                "beforeIoU": 0.681,
+                "afterIoU": 0.866,
+                "matchedTrackId": 98
+              },
+              {
+                "seconds": 13.0,
+                "manualXYWH": [
+                  325,
+                  164,
+                  30,
+                  36
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.638,
+                "matchedTrackId": 98
+              },
+              {
+                "seconds": 13.5,
+                "manualXYWH": [
+                  311,
+                  144,
+                  26,
+                  32
+                ],
+                "beforeIoU": 0.701,
+                "afterIoU": 0.736,
+                "matchedTrackId": 98
+              },
+              {
+                "seconds": 14.0,
+                "manualXYWH": [
+                  302,
+                  120,
+                  24,
+                  28
+                ],
+                "beforeIoU": 0.455,
+                "afterIoU": 0.764,
+                "matchedTrackId": 98
+              },
+              {
+                "seconds": 14.5,
+                "manualXYWH": [
+                  293,
+                  107,
+                  22,
+                  26
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.438,
+                "matchedTrackId": null
+              }
+            ]
+          },
+          {
+            "vehicle": "rightTurn",
+            "samples": [
+              {
+                "seconds": 11.0,
+                "manualXYWH": [
+                  201,
+                  191,
+                  22,
+                  30
+                ],
+                "beforeIoU": 0.632,
+                "afterIoU": 0.451,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 11.5,
+                "manualXYWH": [
+                  199,
+                  216,
+                  22,
+                  36
+                ],
+                "beforeIoU": 0.753,
+                "afterIoU": 0.64,
+                "matchedTrackId": 99
+              },
+              {
+                "seconds": 12.0,
+                "manualXYWH": [
+                  187,
+                  245,
+                  26,
+                  38
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.778,
+                "matchedTrackId": 99
+              },
+              {
+                "seconds": 12.5,
+                "manualXYWH": [
+                  164,
+                  281,
+                  32,
+                  42
+                ],
+                "beforeIoU": 0.639,
+                "afterIoU": 0.413,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 13.0,
+                "manualXYWH": [
+                  134,
+                  322,
+                  40,
+                  48
+                ],
+                "beforeIoU": 0.31,
+                "afterIoU": 0.486,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 13.5,
+                "manualXYWH": [
+                  82,
+                  371,
+                  52,
+                  54
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.296,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 14.0,
+                "manualXYWH": [
+                  13,
+                  404,
+                  66,
+                  56
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.584,
+                "matchedTrackId": 99
+              }
+            ]
+          },
+          {
+            "vehicle": "through",
+            "samples": [
+              {
+                "seconds": 11.0,
+                "manualXYWH": [
+                  252,
+                  254,
+                  32,
+                  44
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.562,
+                "matchedTrackId": 62
+              },
+              {
+                "seconds": 11.5,
+                "manualXYWH": [
+                  260,
+                  285,
+                  36,
+                  50
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.51,
+                "matchedTrackId": 62
+              },
+              {
+                "seconds": 12.0,
+                "manualXYWH": [
+                  272,
+                  328,
+                  40,
+                  52
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.375,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 12.5,
+                "manualXYWH": [
+                  288,
+                  362,
+                  40,
+                  60
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.065,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 13.0,
+                "manualXYWH": [
+                  311,
+                  425,
+                  46,
+                  54
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.0,
+                "matchedTrackId": null
+              }
+            ]
+          },
+          {
+            "vehicle": "following",
+            "samples": [
+              {
+                "seconds": 12.0,
+                "manualXYWH": [
+                  250,
+                  182,
+                  20,
+                  32
+                ],
+                "beforeIoU": 0.676,
+                "afterIoU": 0.624,
+                "matchedTrackId": 93
+              },
+              {
+                "seconds": 12.5,
+                "manualXYWH": [
+                  255,
+                  210,
+                  26,
+                  36
+                ],
+                "beforeIoU": 0.224,
+                "afterIoU": 0.48,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 13.0,
+                "manualXYWH": [
+                  257,
+                  246,
+                  34,
+                  44
+                ],
+                "beforeIoU": 0.287,
+                "afterIoU": 0.233,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 13.5,
+                "manualXYWH": [
+                  260,
+                  277,
+                  36,
+                  50
+                ],
+                "beforeIoU": 0.359,
+                "afterIoU": 0.153,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 14.0,
+                "manualXYWH": [
+                  267,
+                  304,
+                  38,
+                  48
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.373,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 14.5,
+                "manualXYWH": [
+                  278,
+                  341,
+                  44,
+                  58
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.016,
+                "matchedTrackId": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "clipSha256": "442156307be33eac36b3ce7bc9fd99e0edfaa4924c03b36eed8def26e75a8c56",
+        "tracks": [
+          {
+            "vehicle": "whiteTurn",
+            "samples": [
+              {
+                "seconds": 13.0,
+                "manualXYWH": [
+                  202,
+                  230,
+                  20,
+                  40
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.0,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 13.5,
+                "manualXYWH": [
+                  191,
+                  255,
+                  26,
+                  42
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.0,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 14.0,
+                "manualXYWH": [
+                  173,
+                  286,
+                  30,
+                  44
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.0,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 14.5,
+                "manualXYWH": [
+                  143,
+                  318,
+                  38,
+                  48
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.299,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 15.0,
+                "manualXYWH": [
+                  105,
+                  354,
+                  46,
+                  52
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.807,
+                "matchedTrackId": 36
+              },
+              {
+                "seconds": 15.5,
+                "manualXYWH": [
+                  52,
+                  384,
+                  60,
+                  56
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.284,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 16.0,
+                "manualXYWH": [
+                  0,
+                  420,
+                  60,
+                  52
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.0,
+                "matchedTrackId": null
+              }
+            ]
+          },
+          {
+            "vehicle": "darkTurn",
+            "samples": [
+              {
+                "seconds": 13.5,
+                "manualXYWH": [
+                  198,
+                  175,
+                  20,
+                  34
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.0,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 14.0,
+                "manualXYWH": [
+                  196,
+                  202,
+                  24,
+                  36
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.0,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 14.5,
+                "manualXYWH": [
+                  195,
+                  224,
+                  26,
+                  40
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.0,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 15.0,
+                "manualXYWH": [
+                  186,
+                  246,
+                  28,
+                  44
+                ],
+                "beforeIoU": 0.408,
+                "afterIoU": 0.0,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 15.5,
+                "manualXYWH": [
+                  169,
+                  279,
+                  34,
+                  46
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.0,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 16.0,
+                "manualXYWH": [
+                  150,
+                  314,
+                  40,
+                  48
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.0,
+                "matchedTrackId": null
+              },
+              {
+                "seconds": 16.5,
+                "manualXYWH": [
+                  110,
+                  343,
+                  48,
+                  46
+                ],
+                "beforeIoU": 0.0,
+                "afterIoU": 0.0,
+                "matchedTrackId": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "samples": 40,
+    "beforeMatches": 7,
+    "afterMatches": 14
+  },
+  "wolgotStoppedTracks": {
+    "dateKST": "2026-11-24",
+    "camera": "gits-6578",
+    "method": "서로 다른 주간 클립 두 개에서 대기 중인 차량을 직접 표시했습니다. 같은 영상을 두 Chrome 빌드에서 재생하고, 0.1초마다 가장 가까운 표시 시각의 상자를 IoU 0.35 이상에서 일대일 대조했습니다. gaps는 한 차량에서 상자가 사라졌다 다시 나타난 횟수입니다. idChanges는 해당 차량과 일치한 추적 번호가 바뀐 횟수이며 한 번 사라졌다 돌아온 경우도 포함합니다. 미검출 상태가 계속되면 gaps가 늘지 않으므로 표시 표본 수도 함께 기록했습니다.",
+    "clips": [
+      {
+        "sha256": "24e508361359205a5782d623d453f138a265d4562eddde0d8d7ddb82fae75f79",
+        "fromSeconds": 3,
+        "untilSecondsExclusive": 20,
+        "manualBoxesXYWH": [
+          [
+            268,
+            267,
+            33,
+            50
+          ],
+          [
+            253,
+            231,
+            31,
+            41
+          ],
+          [
+            237,
+            169,
+            25,
+            33
+          ],
+          [
+            232,
+            144,
+            21,
+            27
+          ],
+          [
+            224,
+            103,
+            20,
+            29
+          ],
+          [
+            296,
+            246,
+            36,
+            50
+          ],
+          [
+            280,
+            183,
+            32,
+            47
+          ],
+          [
+            266,
+            140,
+            22,
+            28
+          ],
+          [
+            261,
+            117,
+            18,
+            25
+          ],
+          [
+            250,
+            89,
+            18,
+            22
+          ]
+        ],
+        "before": {
+          "perVehicle": [
+            {
+              "visible": 50,
+              "samples": 170,
+              "gaps": 13,
+              "idChanges": 15
+            },
+            {
+              "visible": 50,
+              "samples": 170,
+              "gaps": 12,
+              "idChanges": 14
+            },
+            {
+              "visible": 162,
+              "samples": 170,
+              "gaps": 1,
+              "idChanges": 10
+            },
+            {
+              "visible": 32,
+              "samples": 170,
+              "gaps": 12,
+              "idChanges": 13
+            },
+            {
+              "visible": 87,
+              "samples": 170,
+              "gaps": 10,
+              "idChanges": 12
+            },
+            {
+              "visible": 29,
+              "samples": 170,
+              "gaps": 8,
+              "idChanges": 8
+            },
+            {
+              "visible": 170,
+              "samples": 170,
+              "gaps": 0,
+              "idChanges": 0
+            },
+            {
+              "visible": 166,
+              "samples": 170,
+              "gaps": 1,
+              "idChanges": 12
+            },
+            {
+              "visible": 27,
+              "samples": 170,
+              "gaps": 7,
+              "idChanges": 7
+            },
+            {
+              "visible": 44,
+              "samples": 170,
+              "gaps": 12,
+              "idChanges": 12
+            }
+          ],
+          "visible": 817,
+          "samples": 1700,
+          "gaps": 76,
+          "idChanges": 103
+        },
+        "after": {
+          "perVehicle": [
+            {
+              "visible": 170,
+              "samples": 170,
+              "gaps": 0,
+              "idChanges": 0
+            },
+            {
+              "visible": 170,
+              "samples": 170,
+              "gaps": 0,
+              "idChanges": 0
+            },
+            {
+              "visible": 163,
+              "samples": 170,
+              "gaps": 4,
+              "idChanges": 7
+            },
+            {
+              "visible": 165,
+              "samples": 170,
+              "gaps": 2,
+              "idChanges": 2
+            },
+            {
+              "visible": 170,
+              "samples": 170,
+              "gaps": 0,
+              "idChanges": 0
+            },
+            {
+              "visible": 170,
+              "samples": 170,
+              "gaps": 0,
+              "idChanges": 0
+            },
+            {
+              "visible": 170,
+              "samples": 170,
+              "gaps": 0,
+              "idChanges": 0
+            },
+            {
+              "visible": 170,
+              "samples": 170,
+              "gaps": 0,
+              "idChanges": 3
+            },
+            {
+              "visible": 146,
+              "samples": 170,
+              "gaps": 1,
+              "idChanges": 1
+            },
+            {
+              "visible": 156,
+              "samples": 170,
+              "gaps": 6,
+              "idChanges": 6
+            }
+          ],
+          "visible": 1650,
+          "samples": 1700,
+          "gaps": 13,
+          "idChanges": 19
+        }
+      },
+      {
+        "sha256": "6458070396f9f32867511f9a7d7882242d8c8ffd1c383e6f7867b95f0ba3139d",
+        "fromSeconds": 17.5,
+        "untilSecondsExclusive": 23,
+        "manualBoxesXYWH": [
+          [
+            261,
+            262,
+            33,
+            52
+          ],
+          [
+            244,
+            210,
+            29,
+            38
+          ],
+          [
+            226,
+            122,
+            35,
+            69
+          ],
+          [
+            289,
+            231,
+            34,
+            42
+          ],
+          [
+            282,
+            194,
+            30,
+            38
+          ]
+        ],
+        "before": {
+          "perVehicle": [
+            {
+              "visible": 0,
+              "samples": 55,
+              "gaps": 0,
+              "idChanges": 0
+            },
+            {
+              "visible": 43,
+              "samples": 55,
+              "gaps": 1,
+              "idChanges": 1
+            },
+            {
+              "visible": 37,
+              "samples": 55,
+              "gaps": 2,
+              "idChanges": 2
+            },
+            {
+              "visible": 25,
+              "samples": 55,
+              "gaps": 5,
+              "idChanges": 5
+            },
+            {
+              "visible": 21,
+              "samples": 55,
+              "gaps": 5,
+              "idChanges": 2
+            }
+          ],
+          "visible": 126,
+          "samples": 275,
+          "gaps": 13,
+          "idChanges": 10
+        },
+        "after": {
+          "perVehicle": [
+            {
+              "visible": 0,
+              "samples": 55,
+              "gaps": 0,
+              "idChanges": 0
+            },
+            {
+              "visible": 30,
+              "samples": 55,
+              "gaps": 4,
+              "idChanges": 4
+            },
+            {
+              "visible": 55,
+              "samples": 55,
+              "gaps": 0,
+              "idChanges": 0
+            },
+            {
+              "visible": 33,
+              "samples": 55,
+              "gaps": 3,
+              "idChanges": 3
+            },
+            {
+              "visible": 27,
+              "samples": 55,
+              "gaps": 4,
+              "idChanges": 3
+            }
+          ],
+          "visible": 145,
+          "samples": 275,
+          "gaps": 11,
+          "idChanges": 10
+        }
+      }
+    ]
+  },
+  "wolgotPlaybackContinuity": {
+    "dateKST": "2026-11-24",
+    "camera": "gits-6578",
+    "method": "같은 월곶교차로 주간 원본을 변경 전후 Chrome에서 재생했습니다. 분석 프레임 콜백만 세 구간 지연시키고 영상 17초 지점에서 0.45초 일시정지했습니다. 독립된 브라우저 콜백에서 실제로 그려진 상자와 번호를 수집했습니다. 이 시험은 사용자 기기의 지연 원인이나 전체 차량 검출률을 측정하지 않습니다.",
+    "clipSha256": "cdbcf35067baf4d3ddb06f927a6c295ba4f21e031f513a8f6117ef50c1f6c99b",
+    "delayIntervalsSeconds": [
+      [
+        6,
+        6.72
+      ],
+      [
+        12,
+        13.32
+      ],
+      [
+        21,
+        21.74
+      ]
+    ],
+    "runs": {
+      "before": {
+        "allBoxesLostAtSeconds": [
+          6.76,
+          13.0,
+          17.03,
+          21.8
+        ],
+        "pauseCounts": [
+          11,
+          0
+        ],
+        "pauseSameIDs": 0,
+        "delays": [
+          {
+            "sampleTimes": [
+              5.859956,
+              6.859967
+            ],
+            "beforeCount": 6,
+            "afterCount": 0,
+            "sameIDs": 0
+          },
+          {
+            "sampleTimes": [
+              11.859956,
+              13.459967
+            ],
+            "beforeCount": 7,
+            "afterCount": 0,
+            "sameIDs": 0
+          },
+          {
+            "sampleTimes": [
+              20.999944,
+              21.859811
+            ],
+            "beforeCount": 11,
+            "afterCount": 0,
+            "sameIDs": 0
+          }
+        ],
+        "twoAdjacentClips": {
+          "sourceIntervalsSeconds": [
+            [
+              3,
+              12
+            ],
+            [
+              12,
+              22
+            ]
+          ],
+          "sampleTimes": [
+            8.9944,
+            0.2033
+          ],
+          "beforeCount": 8,
+          "afterCount": 0,
+          "sameIDs": 0
+        }
+      },
+      "after": {
+        "allBoxesLostAtSeconds": [],
+        "pauseCounts": [
+          9,
+          9
+        ],
+        "pauseSameIDs": 9,
+        "delays": [
+          {
+            "sampleTimes": [
+              5.859956,
+              6.859967
+            ],
+            "beforeCount": 8,
+            "afterCount": 5,
+            "sameIDs": 5
+          },
+          {
+            "sampleTimes": [
+              11.859956,
+              13.459967
+            ],
+            "beforeCount": 10,
+            "afterCount": 9,
+            "sameIDs": 9
+          },
+          {
+            "sampleTimes": [
+              20.999944,
+              21.859811
+            ],
+            "beforeCount": 13,
+            "afterCount": 13,
+            "sameIDs": 11
+          }
+        ],
+        "twoAdjacentClips": {
+          "sourceIntervalsSeconds": [
+            [
+              3,
+              12
+            ],
+            [
+              12,
+              22
+            ]
+          ],
+          "sampleTimes": [
+            8.9875,
+            0.2171
+          ],
+          "beforeCount": 9,
+          "afterCount": 6,
+          "sameIDs": 6
+        }
+      }
+    }
+  },
+  "threeCameraQueueAndTracking": {
+    "dateKST": "2026-11-24",
+    "method": "세 교차로 주간 클립을 Chrome에서 같은 구간으로 재생했습니다. 0.5초 간격으로 40회씩 화면 상자의 바닥 중심을 SVG 차로와 대조했습니다. 차종이 불확실해 차량으로 표시한 작은 상자도 표시에 포함합니다. 이동 예시는 2초 동안 번호를 유지한 한 차량씩을 원본 화면과 대조했습니다.",
+    "clips": {
+      "wol": {
+        "clipSha256": "bfcc4b1ed2f8450542f528e00476d4da26899be1cbe27a9e0e1c5069d2af2f3e",
+        "samples": 40,
+        "matchingHeaderBefore": 6,
+        "matchingLanesBefore": 8,
+        "matchingHeaderAndLanesAfter": 40,
+        "labelledSmallBoxesAfter": 142,
+        "sampleMovingTrack": {
+          "id": 17,
+          "times": [
+            10.5,
+            11,
+            11.5,
+            12.54
+          ],
+          "displacementPixels": 183,
+          "label": "승용차"
+        },
+        "highQueueSamples": 0
+      },
+      "mul": {
+        "clipSha256": "915979c527b4dd5f8ebff49115438f41c423649886f9c875b1599bcaa24ae504",
+        "samples": 40,
+        "matchingHeaderBefore": 21,
+        "matchingLanesBefore": 13,
+        "matchingHeaderAndLanesAfter": 40,
+        "labelledSmallBoxesAfter": 127,
+        "sampleMovingTrack": {
+          "id": 125,
+          "times": [
+            20.0,
+            20.5,
+            21.0,
+            22.0
+          ],
+          "displacementPixels": 136,
+          "label": "차량"
+        },
+        "highQueueSamples": 36
+      },
+      "police": {
+        "clipSha256": "7c7e3eb909a2bf1a3b1cde340e09e505fa34fb3c23c5715e1e537f7a10bbe972",
+        "samples": 40,
+        "matchingHeaderBefore": 22,
+        "matchingLanesBefore": 14,
+        "matchingHeaderAndLanesAfter": 40,
+        "labelledSmallBoxesAfter": 305,
+        "sampleMovingTrack": {
+          "id": 115,
+          "times": [
+            13.53,
+            14.03,
+            14.53,
+            15.53
+          ],
+          "displacementPixels": 70,
+          "label": "승용차"
+        },
+        "highQueueSamples": 10
+      }
+    },
+    "policeSign": {
+      "method": "각 클립에서 0.5초 간격으로 59프레임을 추출하고 프레임당 확대 영역을 바꿔 세 번 검사했습니다. 원본 720×480에서 화물차 상자의 폭 ≥67, 중심 x 225~272, 중심 y 192~268, 왼쪽 ≤221, 오른쪽 ≥277, 위 ≤231, 아래 ≥247을 만족한 프레임 수입니다.",
+      "clips": [
+        {
+          "clipSha256": "7c7e3eb909a2bf1a3b1cde340e09e505fa34fb3c23c5715e1e537f7a10bbe972",
+          "before": {
+            "frames": 59,
+            "framesWithSignSizedTruck": 59
+          },
+          "after": {
+            "frames": 59,
+            "framesWithSignSizedTruck": 1
+          }
+        },
+        {
+          "clipSha256": "87d7b6ff6333b725aeb708387e4c637fec4e9998a4613b9af36432aa4e9a1a36",
+          "before": {
+            "frames": 59,
+            "framesWithSignSizedTruck": 56
+          },
+          "after": {
+            "frames": 59,
+            "framesWithSignSizedTruck": 0
+          }
+        }
+      ]
+    },
+    "limits": "상자와 수치의 일치는 화면 집계의 일관성을 측정합니다. 차종별 정확도, 전체 차량 검출률, 실제 안내판 가림 후 재식별률, 신호 주기별 대기열 오차 및 야간 성능은 별도 현장 표본이 필요합니다. 2초 이상 가린 이동 차량의 재연결은 합성 영상에서 검증했습니다."
+  },
+  "siheungPoliceNightRoadMarkings": {
+    "checkedKST": "2026-11-24",
+    "camera": "gits-6590",
+    "calibration": "첫 클립의 1·2·3·4·5·6초 주변에서 추출한 720×480 야간 프레임의 중앙값입니다. 마름모·점선·화살표 등 도색 15곳과 차로 위 가로등 한 곳의 무늬와 주변 노면을 저장했습니다.",
+    "method": "원본에서 도색이 드러난 구간을 육안 확인하고 0.5초마다 같은 프레임을 변경 전후 Chrome의 WASM 검출기로 각각 세 차례 검사했습니다. 도색 기준 영역(각 변에 1.5px 여유) 안에 중심이 있고 폭 28px·높이 23px 이하인 후보를 집계했습니다. strongPaintFrames는 점수 0.28 이상입니다. 별도로 실제 웹 재생기에서 4~23.5초 구간의 표시 상자와 차로 대수를 0.5초마다 읽었습니다. uiPaintSamples는 도색에 상자가 하나라도 있었던 시점 수입니다. 두 추가 클립의 검출기 비교 구간은 각각 1~28초입니다.",
+    "controls": "moving과 stopped는 [차체에 표시한 점을 포함한 검출 사례 수, 판독 사례 수]입니다. 같은 차량도 다른 시각에 다시 판독했습니다. 폭 66px 미만, 높이 85px 미만의 검출기 상자에서 모든 차량 종류와 점수를 포함했습니다.",
+    "controlPoints720x480": {
+      "calibrationClipMoving": {
+        "20": [
+          [
+            144,
+            160
+          ],
+          [
+            175,
+            162
+          ]
+        ],
+        "23": [
+          [
+            152,
+            169
+          ],
+          [
+            195,
+            179
+          ],
+          [
+            157,
+            148
+          ]
+        ],
+        "26": [
+          [
+            158,
+            181
+          ],
+          [
+            215,
+            193
+          ],
+          [
+            178,
+            161
+          ]
+        ],
+        "29": [
+          [
+            165,
+            193
+          ],
+          [
+            197,
+            175
+          ]
+        ],
+        "32": [
+          [
+            173,
+            201
+          ],
+          [
+            221,
+            188
+          ]
+        ],
+        "35": [
+          [
+            248,
+            194
+          ]
+        ],
+        "38": [
+          [
+            216,
+            171
+          ]
+        ],
+        "40": [
+          [
+            197,
+            158
+          ]
+        ]
+      },
+      "calibrationClipStopped": {
+        "6": [
+          [
+            226,
+            271
+          ],
+          [
+            323,
+            277
+          ]
+        ],
+        "20": [
+          [
+            226,
+            271
+          ],
+          [
+            323,
+            277
+          ]
+        ],
+        "36": [
+          [
+            226,
+            271
+          ],
+          [
+            323,
+            277
+          ]
+        ]
+      },
+      "firstAdditionalClipStopped": {
+        "6": [
+          [
+            259,
+            260
+          ]
+        ],
+        "20": [
+          [
+            259,
+            260
+          ]
+        ],
+        "36": [
+          [
+            259,
+            260
+          ]
+        ],
+        "50": [
+          [
+            259,
+            260
+          ]
+        ]
+      }
+    },
+    "clips": [
+      {
+        "purpose": "calibrationAndVehicleControls",
+        "sha256": "da7dd96f3c76d79c12735b88f836b3f29e7b393850786b2192dd4d4114b473d2",
+        "before": {
+          "emptyFrames": 22,
+          "framesWithPaint": 22,
+          "strongPaintFrames": 22,
+          "markFrames": 197,
+          "uiEmptySamples": 7,
+          "uiPaintSamples": 7,
+          "uiMarkSamples": 34,
+          "vehicles": {
+            "moving": [
+              15,
+              15
+            ],
+            "stopped": [
+              2,
+              6
+            ]
+          },
+          "uiLampSamples": 4
+        },
+        "after": {
+          "emptyFrames": 22,
+          "framesWithPaint": 0,
+          "strongPaintFrames": 0,
+          "markFrames": 0,
+          "uiEmptySamples": 7,
+          "uiPaintSamples": 0,
+          "uiMarkSamples": 0,
+          "vehicles": {
+            "moving": [
+              15,
+              15
+            ],
+            "stopped": [
+              2,
+              6
+            ]
+          },
+          "uiLampSamples": 0
+        }
+      },
+      {
+        "purpose": "additionalNightClip",
+        "sha256": "21c0cad676a9cd85f1e3faaa3a01e61f8f69bc80109c3d7871491601b3568565",
+        "before": {
+          "emptyFrames": 55,
+          "framesWithPaint": 55,
+          "strongPaintFrames": 55,
+          "markFrames": 491,
+          "uiEmptySamples": 40,
+          "uiPaintSamples": 40,
+          "uiMarkSamples": 197,
+          "vehicles": {
+            "moving": [
+              0,
+              0
+            ],
+            "stopped": [
+              0,
+              4
+            ]
+          },
+          "uiLampSamples": 9
+        },
+        "after": {
+          "emptyFrames": 55,
+          "framesWithPaint": 0,
+          "strongPaintFrames": 0,
+          "markFrames": 0,
+          "uiEmptySamples": 40,
+          "uiPaintSamples": 0,
+          "uiMarkSamples": 0,
+          "vehicles": {
+            "moving": [
+              0,
+              0
+            ],
+            "stopped": [
+              0,
+              4
+            ]
+          },
+          "uiLampSamples": 0
+        }
+      },
+      {
+        "purpose": "additionalNightClip",
+        "sha256": "7e1e33766ae05565d0fee4c3a0993ded03c06d57c801286cb5b92d706f1c9d0f",
+        "before": {
+          "emptyFrames": 55,
+          "framesWithPaint": 55,
+          "strongPaintFrames": 55,
+          "markFrames": 492,
+          "uiEmptySamples": 40,
+          "uiPaintSamples": 35,
+          "uiMarkSamples": 152,
+          "vehicles": {
+            "moving": [
+              0,
+              0
+            ],
+            "stopped": [
+              0,
+              0
+            ]
+          },
+          "uiLampSamples": 24
+        },
+        "after": {
+          "emptyFrames": 55,
+          "framesWithPaint": 0,
+          "strongPaintFrames": 0,
+          "markFrames": 0,
+          "uiEmptySamples": 40,
+          "uiPaintSamples": 0,
+          "uiMarkSamples": 0,
+          "vehicles": {
+            "moving": [
+              0,
+              0
+            ],
+            "stopped": [
+              0,
+              0
+            ]
+          },
+          "uiLampSamples": 0
+        }
+      }
+    ],
+    "otherCameraNightPlayback": [
+      {
+        "camera": "gits-6578",
+        "sha256": "be37b1956e8a94a589debb56c4ec66a224bc1d4d7185249f311edd15a35e7f89",
+        "samples": 40,
+        "samplesWithBoxes": 39,
+        "samplesMatchingOverlayAndLanes": 40
+      },
+      {
+        "camera": "gits-6581",
+        "sha256": "caefeebc8cd51c6709177238a5ac8ddb0f677d3770559920e4a9cd3d92d7c25e",
+        "samples": 40,
+        "samplesWithBoxes": 38,
+        "samplesMatchingOverlayAndLanes": 40
+      }
+    ],
+    "limits": "표본 기반 검사입니다. 표지판에 가려진 정차 차량을 자주 놓쳤습니다. 다른 교차로의 야간 검출률, 모든 차량의 분류 정확도 및 악천후 성능은 이 자료로 판단할 수 없습니다."
+  },
+  "siheungPoliceSignalBetweenEandF": {
+    "dateKST": "2026-11-25",
+    "camera": "gits-6590",
+    "position": "연성2교차로 방향 E·F차로 경계 위 가로 신호등 뒷면",
+    "reference720x480": {
+      "coreXYWH": [
+        352,
+        244,
+        30,
+        17
+      ],
+      "paddingPixels": 17,
+      "sampleTimesSeconds": [
+        8,
+        11,
+        14,
+        17,
+        20,
+        23,
+        26
+      ]
+    },
+    "method": "정지선 주변이 드러난 두 야간 클립을 0.5초 간격으로 비교했습니다. 검출기는 시점당 전체 화면과 확대 검사를 세 차례 시행했고 웹 재생기는 동일 클립의 표시 상자·차로를 직접 판독했습니다. 신호등 후보는 720×480 기준 중심 x가 351~384, y가 239~265 사이이고 폭 50px·높이 41px 미만인 상자입니다. 첫 클립은 차체·불빛의 영향이 남은 2.5~5.5초를 오탐 집계에서 제외했습니다. 차량 대조는 같은 승용차의 2.5~5.5초 수동 상자와 IoU 0.5 이상인 검출 상자가 있었는지 확인했습니다.",
+    "vehicleReferenceBoxesXYWH": {
+      "2.5": [
+        363,
+        258,
+        50,
+        31
+      ],
+      "3.0": [
+        350,
+        242,
+        46,
+        31
+      ],
+      "3.5": [
+        326,
+        228,
+        45,
+        31
+      ],
+      "4.0": [
+        305,
+        216,
+        43,
+        27
+      ],
+      "4.5": [
+        291,
+        205,
+        37,
+        23
+      ],
+      "5.0": [
+        276,
+        193,
+        34,
+        24
+      ],
+      "5.5": [
+        262,
+        183,
+        30,
+        22
+      ]
+    },
+    "clips": [
+      {
+        "purpose": "calibrationAndPassingVehicle",
+        "sha256": "182c13df853c87840b1f2d9618166811347453e069d8220bd5e47f25bce4efed",
+        "before": {
+          "emptyDetectorFrames": 52,
+          "detectorFramesWithSignalBox": 8,
+          "uiSamples": 36,
+          "uiSamplesWithSignalBox": 36,
+          "uiSamplesWithSignalBoxCountedInEorF": 36,
+          "vehicleIoU": {
+            "5": 0.133,
+            "6": 0.0,
+            "7": 0.819,
+            "8": 0.801,
+            "9": 0.762,
+            "10": 0.73,
+            "11": 0.919
+          },
+          "vehicleMatches": 5
+        },
+        "after": {
+          "emptyDetectorFrames": 52,
+          "detectorFramesWithSignalBox": 0,
+          "uiSamples": 36,
+          "uiSamplesWithSignalBox": 0,
+          "uiSamplesWithSignalBoxCountedInEorF": 0,
+          "vehicleIoU": {
+            "5": 0.133,
+            "6": 0.0,
+            "7": 0.819,
+            "8": 0.801,
+            "9": 0.762,
+            "10": 0.73,
+            "11": 0.919
+          },
+          "vehicleMatches": 5
+        }
+      },
+      {
+        "purpose": "separateNightClip",
+        "sha256": "29ffea2ecb6a4d3c0357cb78e27a295541fa02f8312ca8b32e569ebea77f570d",
+        "before": {
+          "emptyDetectorFrames": 59,
+          "detectorFramesWithSignalBox": 10,
+          "uiSamples": 40,
+          "uiSamplesWithSignalBox": 35,
+          "uiSamplesWithSignalBoxCountedInEorF": 35,
+          "vehicleIoU": {},
+          "vehicleMatches": 0
+        },
+        "after": {
+          "emptyDetectorFrames": 59,
+          "detectorFramesWithSignalBox": 0,
+          "uiSamples": 40,
+          "uiSamplesWithSignalBox": 0,
+          "uiSamplesWithSignalBoxCountedInEorF": 0,
+          "vehicleIoU": {},
+          "vehicleMatches": 0
+        }
+      }
+    ],
+    "limits": "첫 클립은 신호등 기준 생성에도 썼습니다. 두 번째 클립은 별도 표본입니다. 통과 중인 차량 하나를 여러 번 관측했고, 주간·악천후 및 해당 차로의 전체 검출률은 검증하지 않았습니다."
+  }
+}

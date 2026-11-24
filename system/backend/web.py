@@ -6,15 +6,17 @@ from pathlib import Path
 from typing import Annotated, Literal
 
 from fastapi import FastAPI, HTTPException
-from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
+from .static_assets import TrafficAssets
 from .engine import GreenSplitController, MovementMeasure
 from .engine.evaluation import PHASES, cycle_rng, evaluate, generate_arrivals, observe_cycle, serve_cycle
 from .field_validation import validate_field_csv
+from .regional_cctv import router as regional_cctv_router, camera_lifespan
 
 SYSTEM = Path(__file__).resolve().parents[1]
-app = FastAPI(title="시흥 교통관제")
+app = FastAPI(title="시흥 교통관제", lifespan=camera_lifespan)
+app.include_router(regional_cctv_router)
 # 행정동 경계에 걸친 법정동은 기획서의 교차로별 분류를 따릅니다.
 DISTRICTS = {
     "월곶동": (7, 37, 38, 45, 46, 82), "군자동": (5, 72), "장곡동": (31,),
@@ -162,4 +164,4 @@ def validate_observations(data: FieldObservations):
 
 dist = SYSTEM / "frontend" / "dist"
 if dist.is_dir():
-    app.mount("/", StaticFiles(directory=dist, html=True), name="frontend")
+    app.mount("/", TrafficAssets(directory=dist, html=True), name="frontend")

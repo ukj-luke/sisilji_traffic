@@ -1,0 +1,59 @@
+[
+  {
+    "name": "gunjaCaption",
+    "rect": [
+      7,
+      336,
+      108,
+      33
+    ],
+    "edges": "BAQCBC0HAQcDLQwBDAMtDQENAy0EBgcDLQYHAwotDAgRCC0QCBADLSAGIwktIwYmCS0mBiMJLSoIKg0tMAguCC0xCC4LLTkIPAstPQg4CC1DCEgILUUISAUtSgdMBy1UCFkILVYIUwUtWgZaCy1gBmAILWIGYgstBAsBCC0GCQMMLQwJEQktDgwRCS0gDCMJKyIKIgUmLwsxCy0xCTELLToKPQ0tPwk/By1CCUIHLUUKSA0tSwtICC1UDFcPLVYKUwctWgxaDi1dDFoPLWQMYQ8tZQxiDy0EEAETLQYQAxMtDA0RDS0OEBETLRIQFRMrHw8cDC0kDyQRLSUQIhMtKg8qDS0vDSoNLTIPMhEtQA9AFC1BED4TLUsPSBItThBOEi1TEFYTLVUQUg0tWhBaDi1fDloOLWMQZg0tZhBjEy0DFAMSLQUTAxMtDBMREy0PExETLRQUEREtFRQXFC0iFCcULSgTKA4tKhIqDS0yEjINIzsUQBQtPRFAFC1CFEQULUoSSBItThFODy1TEk4SLVcRWg4tWhRaGS1fFGQULWISZRUtZhJmDS0DGAMTLQYWAxMtDxgUGC0TFhYTLR8WIhMtIhYnFi0oFiUZLSkVKxUtMhg3GCU4Fj0WLToXOhItQxdBFy1FF0UZLUsVThItVBhUGi1VGFMYLVoVWhctXRVdGi1jFWYYLWUYZRotAxoAFy0GGQYeLQkbBh4tDxsPHS0SHBAcLR4cIxwnIhklHC0nGycWLSsaKxUtLhorFy0xGzEZLUkaTB0tVBlZGS1WGlQaLVobWhktXRxaGS1jG2YYLWUZYBktASABHisIHgYeLQwgDx0tDR0PHS0RHQ8dLRYdFhgeIB8jHCgiHyUcKzEeMRwq",
+    "strokes": "f//wAAAAAAAAAAAAAAf//wAAAAAAAAAAAAAAf//wAAAAAAAD/gAAAAf//wB///+AAD/n///wf//wB///+AAD/n///wf//wB///+////n///w///wB///+////n///w///wB///+////n///w///wB///+////n///w///wB///+////n///4///wB///+////n///4///wH////////n///4///wH////////n///4///8H////////////+///8H////j/7/////+f////////n///////+f////////v///////+/////////////////+/////////////////+/////////////////+///////9/////////+///////9/////////+////3//9/////n///4////3////////n///4////H////////n///4////H////////n///4////3/////z//n///4////3/////h//n///4/////////wAD/n///4/////////wAD/j///w/////////wAD/h///g/////////wAD/gf/+A/////////wAAAAAAAAA="
+  },
+  {
+    "name": "signal",
+    "rect": [
+      330,
+      235,
+      31,
+      29
+    ],
+    "edges": "AQQBBiEBBAYEGAkJCQQUEAkQBAcTCRMEDgEEAQYhCQkGBioJCQkHFBMJEAYOEwsTBhETCxYIDwEEAQkdBwgHChwJCQYGKg0LCAsPEwwTERoVDBURFBwMHBESCA8DDxAHCAcNGgsOCAsYEw0QEBgUEBcTIxcPFxQbFBAZEBYBEgQVFAsUBhQjCxQIFy0LFQ4SHRMTFhYtFRQXFCoWExsTIgkVBBUcCxQIFy0MFQkYLA4YCRgkERURGiITExYWLRYTGRYlCxYIGSULFAsZKgsXDholExQTGSYVFBUZIw=="
+  },
+  {
+    "name": "innerLamp",
+    "rect": [
+      195,
+      174,
+      24,
+      16
+    ],
+    "edges": "AQYEAwYICAgDHQkHCQIdCgcNBBsOBhEDFgcJBAYgCAgFBR8KBwUHHQ0GEAMYDwgSBRMHCQIJHQcJCgwgBwkKDCAOCQ4EFhAHEwoV"
+  },
+  {
+    "name": "outerLamp",
+    "rect": [
+      176,
+      192,
+      22,
+      16
+    ],
+    "edges": "AAYDAx0EBwcEHgcHCgQcCgYNAxoTABMCCAYIAwUfBggDBR8LCBAIHA0IEAscDAcRBxcABgMJHwgHBQodDAoRChwNCBALHAwKEQoc"
+  },
+  {
+    "name": "policeOverheadSign",
+    "rect": [
+      185,
+      204,
+      122,
+      67
+    ],
+    "core": [
+      206,
+      220,
+      83,
+      32
+    ],
+    "edges": "Ew4TDBsXDRcSGRsNGxIbIgwiERkmDCYKGCoNLRAbLQstEB0wDS0QGzQNMRAWOAw1Dxc5ETwOFz8LPA4PSg5FDhtKDkUOG0oOTQsSTw5PEAtTDFUMDVkNWQsOWw5YCwliDV8KCGMNYAoHFg8TDBcXDRcSGRsNGxIbJBIfEiAkEh8SIC4RKREcLQstEB0xCzEQGTkQNBAaORA0EBo5EDsQEEQPPw8QRA9EDRVKDkcREkoOTRETTw5PEAtZDVYQCFgQWAsIWQ1cEAhgD2AKBmsVaBIGGRMUEx4ZExcTHh4UIREVHxQiERQkEycQFSoTLRAWLRUtEBUxFTEQEzQTMRASOBQ4Dw05EDwTDD8TPw4GRA9EFA1KDkoTEE4OThMITw5PEwppFWwYBxQYFBMWFxcSFxIbFxsSEh8XHxIPJBIkFwxoGWscDRQbEhsTFxsSGxFmHGscDWgcax8QFSITIhUYIhMiE2Yfax8QaCJrHw8VIxMjFRgkEyQUZiZrJg5oJmspEBUnEycTGCcTJxIdKh0vBh8pHy4GTS5NKRZPL08qDVopXSwIXilhLA1iKWIuD2YnaSoQZydqKhEWKxMoDBgrEysMHiweMQkgLCAxCSMsIzEIKjIqLR8rMysuI00uSC4WTi5OLB1QMFAuI1ExVC4hWixfLAlcK18uC2IpYi4PYyljLg9oKGgtEBcsFC8JGDATMAYhNB4xCyM0IDELKjIlMiEqMiowKSszLjAkLDQvMSFPMEowFlIyTTIlUjJSMC1TM1MxJ1IyVzIoXiteMAphKmEvDGQqZC8NajRqLwg="
+  }
+]

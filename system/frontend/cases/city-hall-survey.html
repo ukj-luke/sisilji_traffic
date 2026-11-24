@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>시청입구 삼거리 교통량 조사</title>
+<link rel="stylesheet" href="../src/theme.css">
+<meta name="theme-color" content="#024ad8">
+<style>
+:root{color-scheme:light;--muted:var(--dim);--accent:var(--brand);--pale:var(--brand-tint)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--canvas);color:var(--ink);font:1rem/1.65 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all}
+main,header>div{max-width:940px;margin:auto}
+header{background:var(--brand);color:white;padding:2.3rem 1.3rem}
+h1,h2,h3,p{margin:0}
+h1{font-size:clamp(1.85rem,4vw,2.8rem);letter-spacing:-.04em;line-height:1.3}
+header p{color:#ecf3ff;margin-top:.65rem}
+main{padding:1.4rem 1.1rem 3rem}
+section{background:white;border:1px solid var(--line);border-radius:15px;padding:clamp(1rem,3vw,1.85rem);margin-bottom:1.1rem}
+h2{font-size:clamp(1.3rem,3vw,1.65rem);letter-spacing:-.025em}
+h3{font-size:1rem;margin:1.25rem 0 .5rem}
+.meta{font-size:.9rem;color:var(--muted);margin:.15rem 0 1rem}
+a{color:var(--accent);text-underline-offset:.18em}
+.links{display:flex;flex-wrap:wrap;gap:.35rem 1.2rem;margin-top:.8rem;font-size:.92rem}
+.action{display:inline-block;background:var(--accent);color:white;font-weight:650;text-decoration:none;border-radius:7px;padding:.45rem .9rem}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+details{border-top:1px solid var(--line);margin-top:1rem;padding-top:.65rem}
+summary{font-weight:650;cursor:pointer;color:var(--accent)}
+.note{color:var(--muted);margin:.7rem 0}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin:.8rem 0}
+th,td{text-align:left;border-bottom:1px solid var(--line);padding:.45rem .5rem}
+th{font-size:.88rem;color:var(--muted)}
+.result{border-left:4px solid var(--accent);background:var(--pale);padding:.8rem 1rem;margin:1rem 0}
+.times{display:grid;grid-template-columns:repeat(6,1fr);gap:.4rem}
+.times button{appearance:none;background:white;border:1px solid var(--brand-line);color:var(--ink);text-align:center;border-radius:8px;padding:.65rem .15rem;cursor:pointer;font:inherit;font-size:.9rem;font-variant-numeric:tabular-nums}
+.times button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:white}
+.times b{display:block;font-size:1.05rem}
+.period{display:flex;align-items:baseline;justify-content:space-between;margin:1.15rem 0 .6rem;gap:.6rem;flex-wrap:wrap}
+.period h3{margin:0}.period strong{font-size:1.5rem}
+.bar-row{display:grid;grid-template-columns:7.3rem 1fr 3.2rem;align-items:center;gap:.65rem;padding:.22rem 0;font-variant-numeric:tabular-nums;font-size:.94rem}
+.bar-row i{background:#edf2f0;border-radius:3px;display:block;overflow:hidden}
+.bar-row i span{display:block;height:10px;background:#27816d}
+.bar-row b{text-align:right}
+#movements{display:flex;flex-wrap:wrap;gap:.3rem 1rem}
+#movements span{white-space:nowrap}
+@media (max-width:620px){.times{grid-template-columns:repeat(3,1fr)}main{padding:1rem .65rem}header{padding:1.5rem 1rem}.bar-row{grid-template-columns:6.6rem 1fr 3rem;gap:.4rem}th,td{padding:.45rem .25rem}}
+</style>
+</head>
+<body>
+<header><div><h1>시청입구 삼거리 교통량 조사</h1><p>출근·점심·퇴근 시간대의 현장 조사 기록</p></div></header>
+<main>
+<section aria-labelledby="survey-title">
+<h2 id="survey-title">시청입구 삼거리의 시간대별 통과 차량</h2>
+<p class="meta">국토교통부 교통영향평가 조사 · 2024년 3월 29일 금요일 · 맑음</p>
+<p>조사한 여섯 시간 중 하나를 선택하면 15분마다 몇 대가 지나갔는지 볼 수 있습니다.</p>
+<h3>조사 시간대</h3><div id="hours" class="times" role="group" aria-label="조사 시간대"></div>
+<div aria-live="polite" aria-atomic="true">
+<div class="period"><h3 id="period-title"></h3><strong id="period-total"></strong></div>
+<div id="quarters"></div>
+</div>
+<details><summary>진행방향 코드별 합계와 신호 시간</summary>
+<p class="note">선택한 한 시간의 통과 대수를 원표의 진행방향 코드 순으로 표시합니다.</p>
+<div id="movements"></div>
+<p class="note">여섯 시간대 모두 1·2·3현시의 녹색은 각각 56·41·44초, 황색은 각 4초입니다. 공개 표에는 방향 코드와 현시를 연결하는 도면, 각 녹색이 끝날 때의 차량 대기열이 없습니다.</p>
+</details>
+<div class="links"><a href="https://tia.molit.go.kr/search/businessCrsrdView.do?bsns_id=2210015054&amp;strct_id=221001505402&amp;examin_dd=2024-03-29" target="_blank" rel="noopener noreferrer">국토교통부 교통량 원표</a><a href="https://tia.molit.go.kr/search/businessGeoView.do?bsns_id=2210015054&amp;strct_id=221001505402&amp;examin_dd=2024-03-29" target="_blank" rel="noopener noreferrer">현시별 녹색·황색 조사표</a></div>
+</section>
+<nav aria-label="관련 화면" id="localnav" hidden><a href="/#simulation/dundae" id="back">시뮬레이션 화면으로 돌아가기</a></nav>
+</main>
+<script>
+const survey = [
+  {hour:7, quarters:[169,193,212,255], movements:[89,169,0,0,0,0,0,177,118,128,0,148]},
+  {hour:8, quarters:[251,335,380,334], movements:[228,272,0,0,0,0,0,234,188,152,0,226]},
+  {hour:12, quarters:[161,193,203,193], movements:[119,127,0,0,0,0,0,183,105,106,0,110]},
+  {hour:13, quarters:[210,198,184,235], movements:[124,119,0,0,0,0,0,208,147,112,0,117]},
+  {hour:17, quarters:[331,331,318,313], movements:[214,374,0,0,0,0,0,261,147,121,0,176]},
+  {hour:18, quarters:[344,362,308,288], movements:[212,312,0,0,0,0,0,286,180,138,0,174]}
+];
+const sum = values => values.reduce((total,n) => total+n,0);
+const format = value => value.toLocaleString('ko-KR');
+const clock = (hour,minute) => String(hour+Math.floor(minute/60)).padStart(2,'0')+':'+String(minute%60).padStart(2,'0');
+const select = id => document.getElementById(id);
+const maximum = Math.max(...survey.flatMap(row=>row.quarters));
+const period = row => clock(row.hour,0)+'~'+clock(row.hour+1,0);
+const timeButtons = survey.map((row,index)=>{
+  const button=document.createElement('button');
+  button.type='button';
+  button.innerHTML=period(row)+'<b>'+format(sum(row.quarters))+'대</b>';
+  button.onclick=()=>show(index);
+  select('hours').append(button);
+  return button;
+});
+function show(index){
+  const row=survey[index];
+  timeButtons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));
+  select('period-title').textContent=period(row)+' · 15분별 통과 대수';
+  select('period-total').textContent=format(sum(row.quarters))+'대';
+  select('quarters').innerHTML=row.quarters.map((count,n)=>{
+    const label=clock(row.hour,15*n)+'~'+clock(row.hour,15*(n+1));
+    return '<div class="bar-row"><span>'+label+'</span><i aria-hidden="true"><span style="width:'+100*count/maximum+'%"></span></i><b>'+count+'대</b></div>';
+  }).join('');
+  select('movements').innerHTML=row.movements.map((count,n)=>'<span>코드 '+(n+1)+' · '+count+'대</span>').join('');
+}
+if(location.protocol!=='file:') select('localnav').hidden=false;
+show(1);
+</script>
+</body></html>

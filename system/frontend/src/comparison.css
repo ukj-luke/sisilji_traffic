@@ -13,8 +13,8 @@
 }
 .comparison-direction select {
   padding: 6px 9px;
-  border: 1px solid #cddadd;
-  background: #f9fbfb;
+  border: 1px solid var(--line);
+  background: #f9fbff;
   border-radius: 5px;
   color: var(--ink);
   font: inherit;
@@ -52,14 +52,14 @@
   margin: 0 0 24px;
 }
 .comparison-fixed {
-  --method-ink: #3b5f7e;
-  --method-bar: #5883a8;
-  --method-tint: #eff4f8;
+  --method-ink: var(--fixed-series);
+  --method-bar: #879ab5;
+  --method-tint: #eff2f7;
 }
 .comparison-auto {
-  --method-ink: #0b6b57;
-  --method-bar: #159175;
-  --method-tint: #edf6f1;
+  --method-ink: var(--brand);
+  --method-bar: var(--brand);
+  --method-tint: var(--brand-tint);
 }
 .comparison-method {
   background: var(--method-tint);
@@ -110,7 +110,7 @@
   height: 5px;
   overflow: hidden;
   border-radius: 3px;
-  background: #e9eef0;
+  background: #e7edf6;
 }
 .comparison-track span {
   display: block;

@@ -67,7 +67,7 @@ function SurveyTable() {
         <thead><tr><th scope="col">방향 코드</th>{times.map(t=><th key={t} scope="col">{t}</th>)}<th scope="col">1시간</th></tr></thead>
         <tbody>{codes.map(code=><tr key={code}>
           <th scope="row">{String(code).padStart(2, '0')}</th>
-          {data.quarterCountsByDirection[code].map((count,i)=><td key={i} style={{backgroundColor:'rgba(14, 132, 111,' + (count ? .03 + count / top * .33 : 0) + ')'}}>{number(count)}</td>)}
+          {data.quarterCountsByDirection[code].map((count,i)=><td key={i} style={{backgroundColor:`color-mix(in srgb, var(--brand) ${count ? 3 + count / top * 33 : 0}%, transparent)`}}>{number(count)}</td>)}
           <td>{number(sum(data.quarterCountsByDirection[code]))}</td>
         </tr>)}</tbody><tfoot><tr><th scope="row">전체</th>{data.quarterTotals.map((n,i)=><td key={i}>{number(n)}</td>)}<td>{number(data.totalVehicles)}</td></tr></tfoot>
       </table></div>

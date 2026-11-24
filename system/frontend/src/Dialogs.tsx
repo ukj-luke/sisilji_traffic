@@ -7,7 +7,15 @@ import {
   RadioTower,
   X,
 } from 'lucide-react'
+import {
+  CameraPlayer,
+  adjacentCamera,
+  distance,
+  formatDistance,
+  type Camera,
+} from './LiveCctv'
 import { displayName, siteNumber, type Intersection } from './types'
+import { AnalysisSwitch } from './traffic-ai/AnalysisView'
 
 export function Dialog({
   title,
@@ -25,7 +33,7 @@ export function Dialog({
     dialog.showModal()
     return () => {
       dialog.close()
-      previous?.focus()
+      previous?.focus({ preventScroll: true })
     }
   }, [])
   return (
@@ -37,7 +45,10 @@ export function Dialog({
         close()
       }}
       onClick={(e) => {
-        if (e.target === ref.current) close()
+        if (e.target !== e.currentTarget) return
+        const bounds = e.currentTarget.getBoundingClientRect()
+        if (e.clientX < bounds.left || e.clientX > bounds.right ||
+            e.clientY < bounds.top || e.clientY > bounds.bottom) close()
       }}
     >
       <div className="dialog-inner">
@@ -55,13 +66,19 @@ export function Dialog({
 export function SiteDialog({
   site,
   close,
+  cameras,
+  openNearby,
 }: {
   site: Intersection
+  cameras: Camera[]
+  openNearby: () => void
   close: () => void
 }) {
   const [file, setFile] = useState<File | null>(null)
   const [url, setUrl] = useState('')
   const [bad, setBad] = useState(false)
+  const [analysis, setAnalysis] = useState(false)
+  const camera = adjacentCamera(site, cameras)
   useEffect(() => {
     if (!file) return
     const src = URL.createObjectURL(file)
@@ -71,6 +88,7 @@ export function SiteDialog({
   }, [file])
   return (
     <Dialog title={displayName(site)} close={close}>
+      {camera && !file && <AnalysisSwitch enabled={analysis} change={setAnalysis} />}
       <div className="site-sub">
         <span className="id-chip">SI-{siteNumber(site)}</span>
         <span>
@@ -78,23 +96,38 @@ export function SiteDialog({
           {site.address}
         </span>
       </div>
-      <div className="camera-pane">
-        {url && !bad ? (
-          <video controls playsInline src={url} onError={() => setBad(true)} />
-        ) : (
-          <>
-            <Cctv size={38} />
-            <strong>
-              {bad ? '이 영상을 재생할 수 없어요' : '영상 연계 전'}
-            </strong>
-            <p>
-              {bad
-                ? '브라우저가 지원하는 동영상 파일을 선택해 주세요.'
-                : '이 교차로에 연결된 CCTV 영상이 없어요.'}
-            </p>
-          </>
-        )}
-      </div>
+      {camera && !file ? (
+        <>
+          <p className="live-source">
+            {camera.agency} 제공 · {camera.name} ({camera.district}) · 교차로 좌표에서{' '}
+            {formatDistance(distance(site, camera))}
+          </p>
+          <CameraPlayer key={camera.id} camera={camera} analysis={analysis} />
+        </>
+      ) : (
+        <div className="camera-pane">
+          {url && !bad ? (
+            <video
+              controls
+              playsInline
+              src={url}
+              onError={() => setBad(true)}
+            />
+          ) : (
+            <>
+              <Cctv size={38} />
+              <strong>
+                {bad ? '이 영상을 재생할 수 없어요' : '현장 영상 미확인'}
+              </strong>
+              <p>
+                {bad
+                  ? '브라우저가 지원하는 동영상 파일을 선택해 주세요.'
+                  : '이 지점에서 확인된 시내 교차로 CCTV가 없어요.'}
+              </p>
+            </>
+          )}
+        </div>
+      )}
       <div className="file-row">
         <span>{file ? '녹화 · ' + file.name : '이 기기의 녹화 영상'}</span>
         <label className="subtle-button file-button">
@@ -110,6 +143,22 @@ export function SiteDialog({
           />
         </label>
       </div>
+      {camera && file && (
+        <button
+          className="subtle-button site-live-link"
+          onClick={() => {
+            setUrl('')
+            setFile(null)
+            setBad(false)
+          }}
+        >
+          센터 영상으로 돌아가기
+        </button>
+      )}
+      <button className="subtle-button site-live-link" onClick={openNearby}>
+        <Cctv size={15} />
+        중부권 교차로 CCTV 목록
+      </button>
       <div className="plan-note">
         <RadioTower size={20} />
         <div>

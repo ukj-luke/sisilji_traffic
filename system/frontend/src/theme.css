@@ -1,0 +1,16 @@
+:root {
+  --brand: #024ad8;
+  --brand-hover: #0039ad;
+  --brand-deep: #102d65;
+  --brand-soft: #f2f6ff;
+  --brand-tint: #e7efff;
+  --brand-line: #bbcff5;
+  --brand-light: #abcaff;
+  --ink: #152642;
+  --dim: #52627a;
+  --line: #d9e2ef;
+  --canvas: #f3f6fc;
+  --fixed-series: #536782;
+  --tod-series: #a45c12;
+  --adaptive-series: var(--brand);
+}
